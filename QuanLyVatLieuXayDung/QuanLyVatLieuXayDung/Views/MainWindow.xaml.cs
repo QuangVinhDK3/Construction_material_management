@@ -1,5 +1,7 @@
-﻿using System;
+﻿using QuanLyVatLieuXayDung.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +24,17 @@ namespace QuanLyVatLieuXayDung.Views
         public MainWindow()
         {
             InitializeComponent();
+            using (var db = new QuanLyVatLieuXayDungEntities1())
+            {
+                if (db.Database.Exists())
+                {
+                    System.Windows.MessageBox.Show("KẾT NỐI THÀNH CÔNG! Database đã sẵn sàng.");
+                }
+                else
+                {
+                    System.Windows.MessageBox.Show("KẾT NỐI THẤT BẠI! Kiểm tra lại SQL Server hoặc App.config.");
+                }
+            }
         }
     }
 }

@@ -2,7 +2,6 @@ D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanL
 D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\MainWindow.g.cs
 D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\MainWindow.g.cs
 D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\App.g.cs
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung_Content.g.cs
 D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung_MarkupCompile.cache
 D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung_MarkupCompile.lref
 D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\QuanLyVatLieuXayDung.exe.config
@@ -109,3 +108,4 @@ D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanL
 D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVa.76280529.Up2Date
 D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.exe
 D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.pdb
+D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung_Content.g.cs
