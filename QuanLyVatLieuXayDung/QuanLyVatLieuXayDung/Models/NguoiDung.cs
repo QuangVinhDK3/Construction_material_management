@@ -18,18 +18,16 @@ namespace QuanLyVatLieuXayDung.Models
         public NguoiDung()
         {
             this.HoaDons = new HashSet<HoaDon>();
-            this.PhieuNhaps = new HashSet<PhieuNhap>();
         }
     
-        public int MaND { get; set; }
-        public string HoTen { get; set; }
-        public string TenDangNhap { get; set; }
-        public string MatKhau { get; set; }
-        public string VaiTro { get; set; }
+        public string ID { get; set; }
+        public string DisplayName { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public string IDRole { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PhieuNhap> PhieuNhaps { get; set; }
+        public virtual NguoiDungRole NguoiDungRole { get; set; }
     }
 }

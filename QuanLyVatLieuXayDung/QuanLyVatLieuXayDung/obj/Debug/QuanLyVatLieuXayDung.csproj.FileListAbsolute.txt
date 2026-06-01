@@ -1,111 +1,190 @@
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.csproj.AssemblyReference.cache
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\MainWindow.g.cs
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\MainWindow.g.cs
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\App.g.cs
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung_MarkupCompile.cache
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung_MarkupCompile.lref
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\QuanLyVatLieuXayDung.exe.config
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\QuanLyVatLieuXayDung.exe
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\QuanLyVatLieuXayDung.pdb
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\EntityFramework.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\EntityFramework.SqlServer.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\MaterialDesignColors.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\MaterialDesignThemes.Wpf.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Bcl.HashCode.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Data.SqlClient.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.Design.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Configuration.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Logging.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Options.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Primitives.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Identity.Client.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.Logging.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.Protocols.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.Tokens.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Xaml.Behaviors.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Newtonsoft.Json.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Buffers.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Collections.Immutable.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.ComponentModel.Annotations.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Memory.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Numerics.Vectors.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Threading.Tasks.Extensions.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\EntityFramework.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\EntityFramework.SqlServer.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\MaterialDesignThemes.Wpf.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Bcl.HashCode.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Data.SqlClient.pdb
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Data.SqlClient.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.Design.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.Relational.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Configuration.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Logging.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Options.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Primitives.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Identity.Client.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.Logging.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.Protocols.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.Tokens.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Xaml.Behaviors.pdb
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Xaml.Behaviors.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Newtonsoft.Json.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Buffers.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Collections.Immutable.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Memory.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Numerics.Vectors.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Threading.Tasks.Extensions.xml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\de\Microsoft.Data.SqlClient.resources.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\es\Microsoft.Data.SqlClient.resources.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\it\Microsoft.Data.SqlClient.resources.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Resources\MainResource.baml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\App.baml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\MainWindow.baml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\MainWindow.baml
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.g.resources
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.Properties.Resources.resources
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.csproj.GenerateResource.cache
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.csproj.CoreCompileInputs.cache
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVa.76280529.Up2Date
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.exe
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.pdb
-D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung_Content.g.cs
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.csproj.AssemblyReference.cache
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Resources\MainResource.baml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\UserControlVLXD\ucControlBar.g.cs
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\CRUDDoiTuongView.g.cs
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\CRUDKhachHangView.g.cs
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\CRUDLoaiVatLieuView.g.cs
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\CRUDNhaCungCapView.g.cs
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\CRUDNhanVienView.g.cs
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\CRUDPhieuNhapView.g.cs
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\CRUDPhieuXuatView.g.cs
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\MainWindow.g.cs
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\TrangChuView.g.cs
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\App.g.cs
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung_Content.g.cs
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung_MarkupCompile.cache
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung_MarkupCompile.lref
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\QuanLyVatLieuXayDung.exe.config
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\QuanLyVatLieuXayDung.exe
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\QuanLyVatLieuXayDung.pdb
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Azure.Core.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Azure.Identity.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\EntityFramework.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\EntityFramework.SqlServer.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\EPPlus.Interfaces.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\EPPlus.System.Drawing.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\LiveCharts.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\LiveCharts.Wpf.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\MaterialDesignColors.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\MaterialDesignThemes.Wpf.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Bcl.Cryptography.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Bcl.HashCode.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Bcl.TimeProvider.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Data.SqlClient.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Data.SqlClient.Extensions.Abstractions.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Data.SqlClient.Internal.Logging.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFramework.SqlServer.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.Design.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Expression.Interactions.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Configuration.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Logging.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Options.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Primitives.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Identity.Client.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.Logging.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Xaml.Behaviors.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Newtonsoft.Json.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\QRCoder.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Buffers.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.ClientModel.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Collections.Immutable.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.ComponentModel.Annotations.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Configuration.ConfigurationManager.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Formats.Asn1.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.IO.FileSystem.AccessControl.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.IO.Pipelines.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Memory.Data.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Memory.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Numerics.Vectors.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Security.AccessControl.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Security.Cryptography.Pkcs.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Security.Cryptography.ProtectedData.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Security.Permissions.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Security.Principal.Windows.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Text.Encodings.Web.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Text.Json.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Threading.Channels.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Threading.Tasks.Extensions.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Windows.Interactivity.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Azure.Core.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Azure.Identity.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\EntityFramework.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\EntityFramework.SqlServer.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\LiveCharts.pdb
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\LiveCharts.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\LiveCharts.Wpf.pdb
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\LiveCharts.Wpf.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\MaterialDesignThemes.Wpf.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Bcl.Cryptography.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Bcl.HashCode.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Bcl.TimeProvider.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Data.SqlClient.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Data.SqlClient.Extensions.Abstractions.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Data.SqlClient.Internal.Logging.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFramework.SqlServer.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.Design.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.Relational.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Expression.Interactions.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Configuration.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Logging.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Options.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Extensions.Primitives.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Identity.Client.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.Abstractions.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.Logging.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.Protocols.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Microsoft.Xaml.Behaviors.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\Newtonsoft.Json.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\QRCoder.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Buffers.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.ClientModel.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Collections.Immutable.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Configuration.ConfigurationManager.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Formats.Asn1.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.IO.FileSystem.AccessControl.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.IO.Pipelines.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Memory.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Memory.Data.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Numerics.Vectors.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Security.AccessControl.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Security.Cryptography.Pkcs.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Security.Permissions.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Security.Principal.Windows.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Text.Encodings.Web.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Text.Json.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Threading.Channels.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Threading.Tasks.Extensions.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\System.Windows.Interactivity.xml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\cs\Microsoft.Data.SqlClient.resources.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\de\Microsoft.Data.SqlClient.resources.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\es\Microsoft.Data.SqlClient.resources.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\it\Microsoft.Data.SqlClient.resources.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\pl\Microsoft.Data.SqlClient.resources.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\tr\Microsoft.Data.SqlClient.resources.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\App.baml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\UserControlVLXD\ucControlBar.baml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\CRUDDoiTuongView.baml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\CRUDKhachHangView.baml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\CRUDLoaiVatLieuView.baml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\CRUDNhaCungCapView.baml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\CRUDNhanVienView.baml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\CRUDPhieuNhapView.baml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\CRUDPhieuXuatView.baml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\MainWindow.baml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\TrangChuView.baml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.g.resources
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.Properties.Resources.resources
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.csproj.GenerateResource.cache
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.csproj.CoreCompileInputs.cache
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVa.76280529.Up2Date
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.exe
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.pdb

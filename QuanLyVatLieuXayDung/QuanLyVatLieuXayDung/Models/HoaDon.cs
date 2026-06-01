@@ -20,11 +20,11 @@ namespace QuanLyVatLieuXayDung.Models
             this.ChiTietHoaDons = new HashSet<ChiTietHoaDon>();
         }
     
-        public int MaHoaDon { get; set; }
-        public Nullable<System.DateTime> NgayBan { get; set; }
-        public Nullable<int> MaKH { get; set; }
-        public Nullable<int> MaND { get; set; }
-        public Nullable<decimal> TongTien { get; set; }
+        public string ID { get; set; }
+        public string IDCustomer { get; set; }
+        public string IDUser { get; set; }
+        public Nullable<System.DateTime> DateBill { get; set; }
+        public Nullable<double> Total { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }

@@ -1,0 +1,172 @@
+﻿<Window x:Class="QuanLyVatLieuXayDung.Views.CRUDPhieuNhapView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLyVatLieuXayDung.ViewModels"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:uc="clr-namespace:QuanLyVatLieuXayDung.UserControlVLXD"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Name="window"
+        Title="Chi tiết phiếu nhập" Height="500" Width="850">
+    <Window.DataContext>
+        <local:PhieuNhapViewModel/>
+    </Window.DataContext>
+    <Grid Background="#ECF0F1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <uc:ucControlBar Tag="{Binding Title,ElementName=window}"></uc:ucControlBar>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <materialDesign:Card Grid.Row="0" Margin="5">
+                <GroupBox Height="auto" Header=" Thông tin phiếu nhập " Margin="5">
+                    <StackPanel Height="auto">
+                        <TextBlock Height="5"></TextBlock>
+
+                        <StackPanel Orientation="Horizontal" Height="35" >
+                            <Label Content="Vật liệu: " Margin="15 0 0 0" Width="110" VerticalAlignment="Center"/>
+                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="240" Height="30" Background="White">
+                                <ComboBox ItemsSource="{Binding DSVatLieu}" 
+                                          SelectedItem="{Binding SelectedVL}"
+                                          SelectedValue="{Binding IDVatLieu, Mode=TwoWay}"
+                                          SelectedValuePath="DisplayName"
+                                          DisplayMemberPath="DisplayName"
+                                          Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
+                            </Border>
+
+                            <Label Content="Ngày nhập: " Margin="5 0 0 0" Width="85" VerticalAlignment="Center"/>
+                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="240" Height="30" Background="White">
+                                <DatePicker IsEnabled="True" SelectedDate="{Binding DateInput,UpdateSourceTrigger=PropertyChanged}" 
+                                            Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
+                            </Border>
+                        </StackPanel>
+
+                        <TextBlock Height="10"></TextBlock>
+
+                        <StackPanel Orientation="Horizontal" Height="35" >
+                            <Label Content="Mã phiếu nhập: " Margin="15 0 0 0" Width="110" VerticalAlignment="Center"/>
+                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="240" Height="30" Background="White">
+                                <ComboBox ItemsSource="{Binding DSPhieuNhap}" 
+                                          SelectedItem="{Binding SelectedPN}"
+                                          SelectedValue="{Binding IDPhieuNhap, Mode=TwoWay}"
+                                          SelectedValuePath="ID"
+                                          DisplayMemberPath="ID"
+                                          Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
+                            </Border>
+
+                            <Label Content="Giá nhập: " Margin="5 0 0 0" Width="85" VerticalAlignment="Center"/>
+                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="240" Height="30" Background="White">
+                                <TextBox Text="{Binding PriceInput,UpdateSourceTrigger=PropertyChanged}" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
+                            </Border>
+                        </StackPanel>
+
+                        <TextBlock Height="10"></TextBlock>
+
+                        <StackPanel Orientation="Horizontal" Height="35" >
+                            <Label Content="Số lượng: " Margin="15 0 0 0" Width="110" VerticalAlignment="Center"/>
+                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="240" Height="30" Margin="0 0 5 0" Background="White">
+                                <TextBox Text="{Binding Count,UpdateSourceTrigger=PropertyChanged}" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
+                            </Border>
+
+                            <Label Content="Giá xuất: " Width="85" VerticalAlignment="Center"/>
+                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="240" Height="30" Background="White">
+                                <TextBox Text="{Binding PriceOutput,UpdateSourceTrigger=PropertyChanged}" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
+                            </Border>
+                        </StackPanel>
+
+                        <TextBlock Height="10"></TextBlock>
+
+                        <StackPanel Orientation="Horizontal" Height="35" >
+                            <Label Content="Trạng thái nhập: " Margin="15 0 0 0" Width="110" VerticalAlignment="Center"/>
+                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="240" Height="30" Margin="0 0 5 0" Background="White">
+                                <TextBox Text="{Binding Status,UpdateSourceTrigger=PropertyChanged}" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
+                            </Border>
+                        </StackPanel>
+                        <TextBlock Height="5"></TextBlock>
+                    </StackPanel>
+                </GroupBox>
+            </materialDesign:Card>
+
+            <materialDesign:Card Grid.Row="1" Margin="5" VerticalAlignment="Stretch">
+                <ListView ItemsSource="{Binding DSCTPhieuNhap}" 
+                          SelectedItem="{Binding SelectedCTPN,Mode=TwoWay}"
+                          ScrollViewer.VerticalScrollBarVisibility="Auto"
+                          ScrollViewer.HorizontalScrollBarVisibility="Auto">
+
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="STT" Width="45" DisplayMemberBinding="{Binding STT}"></GridViewColumn>
+                            <GridViewColumn Header="Mã chi tiết" Width="100" DisplayMemberBinding="{Binding ID}"></GridViewColumn>
+                            <GridViewColumn Header="Mã vật liệu" Width="100" DisplayMemberBinding="{Binding IDObject}"></GridViewColumn>
+                            <GridViewColumn Header="Mã phiếu nhập" Width="100" DisplayMemberBinding="{Binding IDINput}"></GridViewColumn>
+                            <GridViewColumn Header="Ngày nhập" Width="110" DisplayMemberBinding="{Binding PhieuNhap.DateInput, StringFormat='dd/MM/yyyy'}"></GridViewColumn>
+                            <GridViewColumn Header="Số lượng" Width="80" DisplayMemberBinding="{Binding Counts}"></GridViewColumn>
+                            <GridViewColumn Header="Giá nhập" Width="100" DisplayMemberBinding="{Binding PriceInput}"></GridViewColumn>
+                            <GridViewColumn Header="Giá xuất" Width="100" DisplayMemberBinding="{Binding PriceOutput}"></GridViewColumn>
+                            <GridViewColumn Header="Trạng thái" Width="120" DisplayMemberBinding="{Binding Status}"></GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </materialDesign:Card>
+
+            <materialDesign:Card Grid.Row="2" Margin="5">
+                <WrapPanel HorizontalAlignment="Center" Margin="0 5 0 5">
+                    <WrapPanel.Resources>
+                        <Style TargetType="Button">
+                            <Setter Property="Height" Value="35"/>
+                            <Setter Property="Width" Value="100"/>
+                            <Setter Property="Margin" Value="10 5 10 5"/>
+                            <Setter Property="Background" Value="#E67E22"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="{TemplateBinding Background}" CornerRadius="8">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#D2691E"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </WrapPanel.Resources>
+
+                    <Button Command="{Binding AddCommand}" Content="Thêm" />
+                    <Button Command="{Binding UpdateCommand}" Content="Sửa" />
+                    <Button Command="{Binding RemoveCommand}" Content="Xóa"/>
+                </WrapPanel>
+            </materialDesign:Card>
+        </Grid>
+    </Grid>
+</Window>

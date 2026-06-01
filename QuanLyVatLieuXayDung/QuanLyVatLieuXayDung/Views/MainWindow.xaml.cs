@@ -24,7 +24,8 @@ namespace QuanLyVatLieuXayDung.Views
         public MainWindow()
         {
             InitializeComponent();
-            using (var db = new QuanLyVatLieuXayDungEntities1())
+            btnDashBroad.Click += BtnDashBroad_Click;
+            using (var db = new QuanLyVatLieuXayDungEntities())
             {
                 if (db.Database.Exists())
                 {
@@ -35,6 +36,12 @@ namespace QuanLyVatLieuXayDung.Views
                     System.Windows.MessageBox.Show("KẾT NỐI THẤT BẠI! Kiểm tra lại SQL Server hoặc App.config.");
                 }
             }
+        }
+
+        private void BtnDashBroad_Click(object sender, RoutedEventArgs e)
+        {
+           Main.Children.Clear();
+            Main.Children.Add(new TrangChuView());
         }
     }
 }

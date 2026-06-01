@@ -3,154 +3,157 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:QuanLyVatLieuXayDung.Views"
+        xmlns:local="clr-namespace:QuanLyVatLieuXayDung.ViewModels"
+        xmlns:uc="clr-namespace:QuanLyVatLieuXayDung.UserControlVLXD"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        ResizeMode="NoResize" 
         mc:Ignorable="d"
-        Title="MainWindow" 
-        Height="700" 
-        Width="900"
+        Title="Phần mềm quản lí vật liệu xây dựng"
+        Name="MainWindows"
+        Height="800" 
+        Width="1230"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
-        AllowsTransparency="True"
-        >
-    <!--Background Grid-->
-    <Grid Background="#23262B">
-        <TextBlock Text="Tên Thương Hiệu"
-                   Foreground="#525965"
-                   FontFamily="../Resources/Fonts/Orbitron/#Orbitron Medium"
-                   FontSize="10"
-                   VerticalAlignment="Bottom"
-                   HorizontalAlignment="Right"
-                   Margin="0,0,15,10"/>
-        <Border Background="#D61734"
-                Height="15"
-                CornerRadius="3,0,0,3"
-                Width="5"
-                VerticalAlignment="Bottom"
-                HorizontalAlignment="Right"
-                Margin="0,0,0,8"/>
-        <!--Menu Panel-->
-        <StackPanel Background="#2E333A"
-                    Width="230"
-                    Orientation="Vertical"
-                    HorizontalAlignment="Left">
-            <!--Channel Name-->
-                <Grid Height="50"
-                  VerticalAlignment="Top"
-                  Margin="0,30,0,0">
-                <Border Background="#D61734"
-                        Height="25"
-                        CornerRadius="3,0,0,3"
-                        Width="6"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Right"/>
-                <TextBlock Text="Tên Thương Hiệu"
-                           Foreground="#FFFFFF"
-                           FontFamily="../Resources/Fonts/Orbitron/#Orbitron Medium"
-                           FontSize="15"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Center"/>
+        AllowsTransparency="True">
+
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <uc:ucControlBar Tag="{Binding Title,ElementName=MainWindows}"></uc:ucControlBar>
+        </Grid>
+
+        <Grid Grid.Row="1" Background="#1B3A4B">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="230"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Background="#1B3A4B" Grid.Column="0">
+                <Grid Height="50" Margin="0,30,0,0">
+                    <Border Background="#D61734" Height="25" CornerRadius="3,0,0,3" Width="6" HorizontalAlignment="Right"/>
+                    <TextBlock Text="Xây Dựng 3V"
+                               Foreground="#FFFFFF"
+                               FontFamily="../Resources/Fonts/Orbitron/#Orbitron Medium"
+                               FontSize="15"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"/>
+                </Grid>
+                <!-- Thêm FontSize="15" để phóng to toàn bộ chữ của Menu -->
+                <Menu Background="Transparent" Margin="0,15,0,0" FontSize="15">
+                    <Menu.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel Orientation="Vertical"/>
+                        </ItemsPanelTemplate>
+                    </Menu.ItemsPanel>
+                    <!-- Tổng quan -->
+                    <MenuItem  Header="Tổng quan" Template="{StaticResource Menu_Template}">
+                        <MenuItem.Icon>
+                            <Image Source="/Assets/Icon/analysis.png" Stretch="Uniform" Width="24" Height="24"/>
+                        </MenuItem.Icon>
+                        <MenuItem Name="btnDashBroad" Header="DashBoard" Template="{StaticResource Menu_SubMenu_Template}">
+                            <MenuItem.Icon>
+                                <Image Source="/Assets/Icon/construction.png" Width="18" Height="18"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </MenuItem>
+                    <!-- Quản Lý Kho -->
+                    <MenuItem Margin="0 15 0 0"  Header="Quản Lý Kho" Template="{StaticResource Menu_Template}">
+                        <MenuItem.Icon>
+                            <Image Source="/Assets/Icon/warehouse.png" Stretch="Uniform" Width="24" Height="24"/>
+                        </MenuItem.Icon>
+                        <MenuItem Command="{Binding DoiTuongCommand}" Header="Vật liệu" Template="{StaticResource Menu_SubMenu_Template}">
+                            <MenuItem.Icon>
+                                <Image Source="/Assets/Icon/construction.png" Width="18" Height="18"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Command="{Binding LoaiVatLieuCommand}" Header="Loại vật liệu" Template="{StaticResource Menu_SubMenu_Template}">
+                            <MenuItem.Icon>
+                                <Image Source="/Assets/Icon/classification.png" Width="18" Height="18"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </MenuItem>
+                    <!-- Bán hàng -->
+                    <MenuItem Margin="0 15 0 0" Header="Bán hàng" Template="{StaticResource Menu_Template}">
+                        <MenuItem.Icon>
+                            <Image Source="/Assets/Icon/cashier.png" Stretch="Uniform" Width="24" Height="24"/>
+                        </MenuItem.Icon>
+                        <MenuItem Header="Lập hóa đơn" Template="{StaticResource Menu_SubMenu_Template}">
+                            <MenuItem.Icon>
+                                <Image Source="/Assets/Icon/bill.png" Width="18" Height="18"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Lịch sử bán hàng" Template="{StaticResource Menu_SubMenu_Template}">
+                            <MenuItem.Icon>
+                                <Image Source="/Assets/Icon/file.png" Width="18" Height="18"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </MenuItem>
+                    <!-- Đối tác -->
+                    <MenuItem Margin="0 15 0 0" Header="Đối tác" Template="{StaticResource Menu_Template}">
+                        <MenuItem.Icon>
+                            <Image Source="/Assets/Icon/handshake.png" Stretch="Uniform" Width="24" Height="24"/>
+                        </MenuItem.Icon>
+                        <MenuItem Command="{Binding KhachHangCommand}" Header="Khách hàng" Template="{StaticResource Menu_SubMenu_Template}">
+                            <MenuItem.Icon>
+                                <Image Source="/Assets/Icon/rating.png" Width="18" Height="18"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Command="{Binding NhaCungCapCommand}" Header="Nhà cung cấp" Template="{StaticResource Menu_SubMenu_Template}">
+                            <MenuItem.Icon>
+                                <Image Source="/Assets/Icon/manufacture.png" Width="18" Height="18"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </MenuItem>
+                    <!-- Hệ thống -->
+                    <MenuItem Margin="0 15 0 0" Header="Hệ thống" Template="{StaticResource Menu_Template}">
+                        <MenuItem.Icon>
+                            <Image Source="/Assets/Icon/system.png" Stretch="Uniform" Width="24" Height="24"/>
+                        </MenuItem.Icon>
+                        <MenuItem Command="{Binding NhanVienCommand}" Header="Nhân viên" Template="{StaticResource Menu_SubMenu_Template}">
+                            <MenuItem.Icon>
+                                <Image Source="/Assets/Icon/engage-employee.png" Width="18" Height="18"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Command="{Binding NhapKhoCommand}" Header="Nhập kho vật liệu" Template="{StaticResource Menu_SubMenu_Template}">
+                            <MenuItem.Icon>
+                                <Image Source="/Assets/Icon/in.png" Width="18" Height="18"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Command="{Binding XuatKhoCommand}" Header="Xuất kho vật liệu" Template="{StaticResource Menu_SubMenu_Template}">
+                            <MenuItem.Icon>
+                                <Image Source="/Assets/Icon/out.png" Width="18" Height="18"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </MenuItem>
+                </Menu>
+            </StackPanel>
+
+            <Grid Name="Main" Grid.Column="1">
+                <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Orientation="Horizontal" Margin="0,0,15,10" Grid.Row="2" Height="15" Width="84">
+                    <TextBlock Text="Xây Dựng 3V"
+                       Foreground="#525965"
+                       FontFamily="../Resources/Fonts/Orbitron/#Orbitron Medium"
+                       FontSize="10"
+                       Margin="0,0,5,0"/>
+                    <Border Background="#D61734" Height="15" CornerRadius="3,0,0,3" Width="5"/>
+                </StackPanel>
+                
             </Grid>
-            <!--Main Menu-->
-            <Menu Height="450"
-                  Background="Transparent"
-                  Margin="0,40,0,0">
-                <Menu.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <VirtualizingStackPanel Orientation="Vertical"/>
-                    </ItemsPanelTemplate>
-                </Menu.ItemsPanel>
-                <!--Main Menu - Home-->
-                <MenuItem Header="Home"
-                          Template="{StaticResource Menu_Template}"
-                          >
-                    <MenuItem.Icon>
-                        <Image Source="/Assets/Icon/house.png"
-                               Stretch="Uniform"/>
-
-                    </MenuItem.Icon>
-                </MenuItem>
-                <!--Menu - Quản Lý Kho-->
-                <MenuItem Header="Quản Lý Kho" 
-                          Template="{StaticResource Menu_Template}">
-                    <MenuItem.Icon>
-                        <Image Source="/Assets/Icon/warehouse.png" Stretch="Uniform"/>
-                    </MenuItem.Icon>
-                    <!--SubMenu - Quản Lý Kho-->
-                        <MenuItem Header="Danh mục vật liệu" 
-                              Template="{StaticResource Menu_SubMenu_Template}">
-                        <MenuItem.Icon>
-                            <Image Source="/Assets/Icon/construction.png"/>
-                        </MenuItem.Icon>
-                    </MenuItem>
-
-                    <MenuItem Header="Nhập kho vật liệu" 
-                              Template="{StaticResource Menu_SubMenu_Template}">
-                        <MenuItem.Icon>
-                            <Image Source="/Assets/Icon/income.png"/>
-                        </MenuItem.Icon>
-                    </MenuItem>
-
-                    <MenuItem Header="Kiểm kê tồn kho" 
-                                Template="{StaticResource Menu_SubMenu_Template}">
-                        <MenuItem.Icon>
-                            <Image Source="/Assets/Icon/search.png"/>
-                        </MenuItem.Icon>
-                    </MenuItem>
-                </MenuItem>
-                <!--Menu - Bán Hàng-->
-                    <MenuItem Header="Bán hàng"
-                          Template="{StaticResource Menu_Template}">
-                    <MenuItem.Icon>
-                        <Image Source="/Assets/Icon/cashier.png"
-                               Stretch="Uniform"/>
-                    </MenuItem.Icon>
-                    <!--SubMenu - Bán Hàng-->
-                    <MenuItem Header="Lập hóa đơn" 
-                              Template="{StaticResource Menu_SubMenu_Template}">
-                        <MenuItem.Icon>
-                            <Image Source="/Assets/Icon/bill.png"/>
-                        </MenuItem.Icon>
-                    </MenuItem>
-
-                    <MenuItem Header="Lịch sử bán hàng" 
-                              Template="{StaticResource Menu_SubMenu_Template}">
-                        <MenuItem.Icon>
-                            <Image Source="/Assets/Icon/file.png"/>
-                        </MenuItem.Icon>
-                    </MenuItem>
-                </MenuItem>
-                <!--Menu - Đối tác-->
-                    <MenuItem Header="Đối tác"
-                          Template="{StaticResource Menu_Template}">
-                    <MenuItem.Icon>
-                        <Image Source="/Assets/Icon/handshake.png"
-                               Stretch="Uniform"/>
-
-                    </MenuItem.Icon>
-                    <!--SubMenu - Đối tác-->
-                    <MenuItem Header="Khách hàng" 
-                              Template="{StaticResource Menu_SubMenu_Template}">
-                        <MenuItem.Icon>
-                            <Image Source="/Assets/Icon/rating.png"/>
-                        </MenuItem.Icon>
-                    </MenuItem>
-
-                    <MenuItem Header="Nhà cung cấp" 
-                              Template="{StaticResource Menu_SubMenu_Template}">
-                        <MenuItem.Icon>
-                            <Image Source="/Assets/Icon/manufacture.png"/>
-                        </MenuItem.Icon>
-                    </MenuItem>
-                </MenuItem>
-                <!--Menu - Thống kê-->
-                    <MenuItem Header="Thống kê"
-                          Template="{StaticResource Menu_Template}">
-                    <MenuItem.Icon>
-                        <Image Source="/Assets/Icon/statistics.png"
-                               Stretch="Uniform"/>
-                    </MenuItem.Icon>
-                </MenuItem>
-            </Menu>
-        </StackPanel>
+        </Grid>
     </Grid>
 </Window>

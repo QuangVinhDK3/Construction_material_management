@@ -17,14 +17,20 @@ namespace QuanLyVatLieuXayDung.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public KhachHang()
         {
+            this.ChiTietPhieuXuats = new HashSet<ChiTietPhieuXuat>();
             this.HoaDons = new HashSet<HoaDon>();
         }
+        public int STT { get; set; }
+        public string ID { get; set; }
+        public string DisplayName { get; set; }
+        public string Address { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+        public string MoreInfo { get; set; }
+        public Nullable<System.DateTime> ContractDate { get; set; }
     
-        public int MaKH { get; set; }
-        public string TenKH { get; set; }
-        public string DiaChi { get; set; }
-        public string SDT { get; set; }
-    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietPhieuXuat> ChiTietPhieuXuats { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
     }
