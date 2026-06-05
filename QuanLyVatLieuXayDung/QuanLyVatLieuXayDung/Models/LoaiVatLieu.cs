@@ -19,9 +19,9 @@ namespace QuanLyVatLieuXayDung.Models
         {
             this.VatLieux = new HashSet<VatLieu>();
         }
-    
-        public int MaLoai { get; set; }
-        public string TenLoai { get; set; }
+        public int STT { get; set; }
+        public string ID { get; set; }
+        public string DisplayName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VatLieu> VatLieux { get; set; }

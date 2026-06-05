@@ -19,20 +19,23 @@ namespace QuanLyVatLieuXayDung.Models
         {
             this.ChiTietHoaDons = new HashSet<ChiTietHoaDon>();
             this.ChiTietPhieuNhaps = new HashSet<ChiTietPhieuNhap>();
+            this.ChiTietPhieuXuats = new HashSet<ChiTietPhieuXuat>();
         }
-    
-        public int MaVatLieu { get; set; }
-        public string TenVatLieu { get; set; }
-        public Nullable<int> MaLoai { get; set; }
-        public string DonViTinh { get; set; }
-        public Nullable<int> SoLuongTon { get; set; }
-        public Nullable<decimal> GiaNhap { get; set; }
-        public Nullable<decimal> GiaBan { get; set; }
+        public int STT {  get; set; }
+        public string ID { get; set; }
+        public string DisplayName { get; set; }
+        public string IDLoaiVatLieu { get; set; }
+        public string IDNhaCungCap { get; set; }
+        public string QRCode { get; set; }
+        public string Barcode { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietPhieuNhap> ChiTietPhieuNhaps { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietPhieuXuat> ChiTietPhieuXuats { get; set; }
         public virtual LoaiVatLieu LoaiVatLieu { get; set; }
+        public virtual NhaCungCap NhaCungCap { get; set; }
     }
 }

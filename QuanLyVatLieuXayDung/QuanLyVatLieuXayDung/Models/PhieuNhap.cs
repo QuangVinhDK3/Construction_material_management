@@ -20,15 +20,10 @@ namespace QuanLyVatLieuXayDung.Models
             this.ChiTietPhieuNhaps = new HashSet<ChiTietPhieuNhap>();
         }
     
-        public int MaPhieuNhap { get; set; }
-        public Nullable<System.DateTime> NgayNhap { get; set; }
-        public Nullable<int> MaNCC { get; set; }
-        public Nullable<int> MaND { get; set; }
-        public Nullable<decimal> TongTien { get; set; }
+        public string ID { get; set; }
+        public Nullable<System.DateTime> DateInput { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietPhieuNhap> ChiTietPhieuNhaps { get; set; }
-        public virtual NguoiDung NguoiDung { get; set; }
-        public virtual NhaCungCap NhaCungCap { get; set; }
     }
 }

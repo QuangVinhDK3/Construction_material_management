@@ -1,26 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\",
+  "WorkspaceRootPath": "F:\\DoAnTatCa\\DoAnVLXD_DotNet\\Construction_material_management\\QuanLyVatLieuXayDung\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|d:\\c\u00F4ng ngh\u1EC7.net (l\u1EDBp)\\\u0111\u1ED3_\u00E1n_net\\construction_material_management\\quanlyvatlieuxaydung\\quanlyvatlieuxaydung\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|f:\\doantatca\\doanvlxd_dotnet\\construction_material_management\\quanlyvatlieuxaydung\\quanlyvatlieuxaydung\\views\\trangchuview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\views\\trangchuview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|d:\\c\u00F4ng ngh\u1EC7.net (l\u1EDBp)\\\u0111\u1ED3_\u00E1n_net\\construction_material_management\\quanlyvatlieuxaydung\\quanlyvatlieuxaydung\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|f:\\doantatca\\doanvlxd_dotnet\\construction_material_management\\quanlyvatlieuxaydung\\quanlyvatlieuxaydung\\views\\crudphieunhapview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\views\\crudphieunhapview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|d:\\c\u00F4ng ngh\u1EC7.net (l\u1EDBp)\\\u0111\u1ED3_\u00E1n_net\\construction_material_management\\quanlyvatlieuxaydung\\quanlyvatlieuxaydung\\models\\quanlyvatlieuxaydungmodel.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\models\\quanlyvatlieuxaydungmodel.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|f:\\doantatca\\doanvlxd_dotnet\\construction_material_management\\quanlyvatlieuxaydung\\quanlyvatlieuxaydung\\models\\chitietphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\models\\chitietphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\resources\\mainresource.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\resources\\mainresource.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|d:\\c\u00F4ng ngh\u1EC7.net (l\u1EDBp)\\\u0111\u1ED3_\u00E1n_net\\construction_material_management\\quanlyvatlieuxaydung\\quanlyvatlieuxaydung\\models\\quanlyvatlieuxaydungmodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\models\\quanlyvatlieuxaydungmodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|f:\\doantatca\\doanvlxd_dotnet\\construction_material_management\\quanlyvatlieuxaydung\\quanlyvatlieuxaydung\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,66 +29,56 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "QuanLyVatLieuXayDungModel.Context.cs",
-              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Models\\QuanLyVatLieuXayDungModel.Context.cs",
-              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Models\\QuanLyVatLieuXayDungModel.Context.cs",
-              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Models\\QuanLyVatLieuXayDungModel.Context.cs",
-              "RelativeToolTip": "QuanLyVatLieuXayDung\\Models\\QuanLyVatLieuXayDungModel.Context.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T03:38:47.766Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "App.config",
-              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\App.config",
-              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\App.config",
-              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\App.config",
-              "RelativeToolTip": "QuanLyVatLieuXayDung\\App.config",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAADsAAACLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-04-22T03:11:05.007Z",
+              "Title": "TrangChuView.xaml",
+              "DocumentMoniker": "F:\\DoAnTatCa\\DoAnVLXD_DotNet\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\TrangChuView.xaml",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\TrangChuView.xaml",
+              "ToolTip": "F:\\DoAnTatCa\\DoAnVLXD_DotNet\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\TrangChuView.xaml",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\Views\\TrangChuView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-01T07:25:57.891Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "QuanLyVatLieuXayDungModel.edmx [Diagram1]",
-              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Models\\QuanLyVatLieuXayDungModel.edmx",
-              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Models\\QuanLyVatLieuXayDungModel.edmx",
-              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Models\\QuanLyVatLieuXayDungModel.edmx [Diagram1]",
-              "RelativeToolTip": "QuanLyVatLieuXayDung\\Models\\QuanLyVatLieuXayDungModel.edmx [Diagram1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2026-04-22T03:08:25.139Z",
-              "EditorCaption": " [Diagram1]"
+              "DocumentIndex": 2,
+              "Title": "ChiTietPhieuNhap.cs",
+              "DocumentMoniker": "F:\\DoAnTatCa\\DoAnVLXD_DotNet\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Models\\ChiTietPhieuNhap.cs",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Models\\ChiTietPhieuNhap.cs",
+              "ToolTip": "F:\\DoAnTatCa\\DoAnVLXD_DotNet\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Models\\ChiTietPhieuNhap.cs",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\Models\\ChiTietPhieuNhap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T07:25:17.502Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\MainWindow.xaml.cs",
-              "RelativeToolTip": "QuanLyVatLieuXayDung\\Views\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAmwBcAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T02:37:21.033Z",
+              "Title": "CRUDPhieuNhapView.xaml",
+              "DocumentMoniker": "F:\\DoAnTatCa\\DoAnVLXD_DotNet\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\CRUDPhieuNhapView.xaml",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\CRUDPhieuNhapView.xaml",
+              "ToolTip": "F:\\DoAnTatCa\\DoAnVLXD_DotNet\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\CRUDPhieuNhapView.xaml",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\Views\\CRUDPhieuNhapView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-01T07:25:01.999Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MainResource.xaml",
-              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Resources\\MainResource.xaml",
-              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Resources\\MainResource.xaml",
-              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Resources\\MainResource.xaml",
-              "RelativeToolTip": "QuanLyVatLieuXayDung\\Resources\\MainResource.xaml",
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "F:\\DoAnTatCa\\DoAnVLXD_DotNet\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
+              "ToolTip": "F:\\DoAnTatCa\\DoAnVLXD_DotNet\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-19T23:39:54.915Z",
+              "WhenOpened": "2026-06-01T07:05:30.197Z",
               "EditorCaption": ""
             }
           ]

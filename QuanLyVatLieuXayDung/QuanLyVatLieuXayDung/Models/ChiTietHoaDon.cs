@@ -14,12 +14,11 @@ namespace QuanLyVatLieuXayDung.Models
     
     public partial class ChiTietHoaDon
     {
-        public int MaCTHD { get; set; }
-        public Nullable<int> MaHoaDon { get; set; }
-        public Nullable<int> MaVatLieu { get; set; }
-        public Nullable<int> SoLuong { get; set; }
-        public Nullable<decimal> DonGiaBan { get; set; }
-        public Nullable<decimal> ThanhTien { get; set; }
+        public string ID { get; set; }
+        public string IDHoaDon { get; set; }
+        public string IDObject { get; set; }
+        public int Counts { get; set; }
+        public double Price { get; set; }
     
         public virtual HoaDon HoaDon { get; set; }
         public virtual VatLieu VatLieu { get; set; }
