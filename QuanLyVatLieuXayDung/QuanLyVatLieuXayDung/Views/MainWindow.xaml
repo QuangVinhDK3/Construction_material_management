@@ -22,11 +22,12 @@
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         AllowsTransparency="True">
-
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisConverter" />
+    </Window.Resources>
     <Window.DataContext>
         <local:MainWindowViewModel/>
     </Window.DataContext>
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -103,11 +104,11 @@
                         </MenuItem>
                     </MenuItem>
                     <!-- Quản Lý Kho -->
-                    <MenuItem Margin="0 15 0 0"  Header="Quản Lý Kho" Template="{StaticResource Menu_Template}">
+                    <MenuItem Margin="0 15 0 0"  Header="Quản Lý Kho" Template="{StaticResource Menu_Template}" Visibility="{Binding IsKho, Converter={StaticResource BoolToVisConverter}}">
                         <MenuItem.Icon>
                             <Image Source="/Assets/Icon/warehouse.png" Stretch="Uniform" Width="24" Height="24"/>
                         </MenuItem.Icon>
-                        <MenuItem Command="{Binding DoiTuongCommand}" Header="Vật liệu" Template="{StaticResource Menu_SubMenu_Template}">
+                        <MenuItem Command="{Binding DoiTuongCommand}" Header="Vật liệu" Template="{StaticResource Menu_SubMenu_Template}" >
                             <MenuItem.Icon>
                                 <Image Source="/Assets/Icon/construction.png" Width="18" Height="18"/>
                             </MenuItem.Icon>
@@ -119,7 +120,7 @@
                         </MenuItem>
                     </MenuItem>
                     <!-- Bán hàng -->
-                    <MenuItem Margin="0 15 0 0" Header="Bán hàng" Template="{StaticResource Menu_Template}">
+                    <MenuItem Margin="0 15 0 0" Header="Bán hàng" Template="{StaticResource Menu_Template}" Visibility="{Binding IsBanHang, Converter={StaticResource BoolToVisConverter}}">
                         <MenuItem.Icon>
                             <Image Source="/Assets/Icon/cashier.png" Stretch="Uniform" Width="24" Height="24"/>
                         </MenuItem.Icon>
@@ -135,27 +136,27 @@
                         </MenuItem>
                     </MenuItem>
                     <!-- Đối tác -->
-                    <MenuItem Margin="0 15 0 0" Header="Đối tác" Template="{StaticResource Menu_Template}">
+                    <MenuItem Margin="0 15 0 0" Header="Đối tác" Template="{StaticResource Menu_Template}" Visibility="{Binding IsDoiTac, Converter={StaticResource BoolToVisConverter}}">
                         <MenuItem.Icon>
                             <Image Source="/Assets/Icon/handshake.png" Stretch="Uniform" Width="24" Height="24"/>
                         </MenuItem.Icon>
-                        <MenuItem Command="{Binding KhachHangCommand}" Header="Khách hàng" Template="{StaticResource Menu_SubMenu_Template}">
+                        <MenuItem Command="{Binding KhachHangCommand}" Header="Khách hàng" Template="{StaticResource Menu_SubMenu_Template}" IsEnabled="{Binding IsDoiTac}">
                             <MenuItem.Icon>
                                 <Image Source="/Assets/Icon/rating.png" Width="18" Height="18"/>
                             </MenuItem.Icon>
                         </MenuItem>
-                        <MenuItem Command="{Binding NhaCungCapCommand}" Header="Nhà cung cấp" Template="{StaticResource Menu_SubMenu_Template}">
+                        <MenuItem Command="{Binding NhaCungCapCommand}" Header="Nhà cung cấp" Template="{StaticResource Menu_SubMenu_Template}" IsEnabled="{Binding IsDoiTac}">
                             <MenuItem.Icon>
                                 <Image Source="/Assets/Icon/manufacture.png" Width="18" Height="18"/>
                             </MenuItem.Icon>
                         </MenuItem>
                     </MenuItem>
                     <!-- Hệ thống -->
-                    <MenuItem Margin="0 15 0 0" Header="Hệ thống" Template="{StaticResource Menu_Template}">
+                    <MenuItem Margin="0 15 0 0" Header="Hệ thống" Template="{StaticResource Menu_Template}" Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVisConverter}}">
                         <MenuItem.Icon>
                             <Image Source="/Assets/Icon/system.png" Stretch="Uniform" Width="24" Height="24"/>
                         </MenuItem.Icon>
-                        <MenuItem Command="{Binding NhanVienCommand}" Header="Nhân viên" Template="{StaticResource Menu_SubMenu_Template}">
+                        <MenuItem Command="{Binding NhanVienCommand}" Header="Nhân viên" Template="{StaticResource Menu_SubMenu_Template}" >
                             <MenuItem.Icon>
                                 <Image Source="/Assets/Icon/engage-employee.png" Width="18" Height="18"/>
                             </MenuItem.Icon>

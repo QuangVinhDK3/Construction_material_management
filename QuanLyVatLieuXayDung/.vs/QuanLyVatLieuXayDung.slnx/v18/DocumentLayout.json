@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|d:\\qlvlxd\\quanlyvatlieuxaydung\\quanlyvatlieuxaydung\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\QLVLXD\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\QLVLXD\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|d:\\qlvlxd\\quanlyvatlieuxaydung\\quanlyvatlieuxaydung\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\QLVLXD\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\QLVLXD\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\views\\dangnhapview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -75,10 +79,6 @@
       "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\viewmodels\\booltovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\QLVLXD\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\QLVLXD\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\models\\quanlyvatlieuxaydung.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
       "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\models\\quanlyvatlieuxaydung.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     },
@@ -98,11 +98,27 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
+              "ToolTip": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-01T07:05:30.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "NhaCungCapViewModel.cs",
               "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\NhaCungCapViewModel.cs",
               "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\NhaCungCapViewModel.cs",
@@ -114,19 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PhieuNhapViewModel.cs",
-              "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\PhieuNhapViewModel.cs",
-              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\PhieuNhapViewModel.cs",
-              "ToolTip": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\PhieuNhapViewModel.cs",
-              "RelativeToolTip": "QuanLyVatLieuXayDung\\ViewModels\\PhieuNhapViewModel.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAywI8AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-06T04:46:57.673Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "VatLieuViewModel.cs",
               "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\VatLieuViewModel.cs",
               "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\VatLieuViewModel.cs",
@@ -138,31 +142,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
-              "ToolTip": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
-              "RelativeToolTip": "QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-06-01T07:05:30.197Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainWindowViewModel.cs",
               "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\MainWindowViewModel.cs",
               "ToolTip": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\MainWindowViewModel.cs",
               "RelativeToolTip": "QuanLyVatLieuXayDung\\ViewModels\\MainWindowViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAqwE8AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-06T04:52:33.71Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-06T04:52:33.71Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DangNhapView.xaml",
               "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\DangNhapView.xaml",
               "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\DangNhapView.xaml",
@@ -173,7 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "LoaiVatLieuViewModel.cs",
               "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\LoaiVatLieuViewModel.cs",
               "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\LoaiVatLieuViewModel.cs",
@@ -185,18 +177,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "App.xaml",
               "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\App.xaml",
               "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\App.xaml",
               "ToolTip": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\App.xaml",
               "RelativeToolTip": "QuanLyVatLieuXayDung\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-06-06T05:01:13.671Z"
+              "WhenOpened": "2026-06-06T05:01:13.671Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\BaseViewModel.cs",
+              "ToolTip": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\BaseViewModel.cs",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\ViewModels\\BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-06T04:41:40.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PhieuNhapViewModel.cs",
+              "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\PhieuNhapViewModel.cs",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\PhieuNhapViewModel.cs",
+              "ToolTip": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\PhieuNhapViewModel.cs",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\ViewModels\\PhieuNhapViewModel.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAywI8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-06T04:46:57.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "KhachHangViewModel.cs",
               "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\KhachHangViewModel.cs",
               "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\KhachHangViewModel.cs",
@@ -208,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "TrangChuViewModel.cs",
               "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\TrangChuViewModel.cs",
               "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\TrangChuViewModel.cs",
@@ -220,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "DangNhapViewModel.cs",
               "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\DangNhapViewModel.cs",
               "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\DangNhapViewModel.cs",
@@ -232,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "PhieuXuatViewModel.cs",
               "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\PhieuXuatViewModel.cs",
               "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\PhieuXuatViewModel.cs",
@@ -244,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\MainWindow.xaml.cs",
@@ -256,7 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "DangNhapView.xaml.cs",
               "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\DangNhapView.xaml.cs",
               "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\DangNhapView.xaml.cs",
@@ -268,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "App.config",
               "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\App.config",
               "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\App.config",
@@ -281,18 +299,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "BaseViewModel.cs",
-              "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\BaseViewModel.cs",
-              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\BaseViewModel.cs",
-              "ToolTip": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\BaseViewModel.cs",
-              "RelativeToolTip": "QuanLyVatLieuXayDung\\ViewModels\\BaseViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-06T04:41:40.072Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
               "Title": "BoolToVisibilityConverter.cs",
               "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\BoolToVisibilityConverter.cs",
               "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\BoolToVisibilityConverter.cs",
@@ -338,7 +344,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "TrangChuView.xaml",
               "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\TrangChuView.xaml",
               "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\TrangChuView.xaml",
@@ -349,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "QuanLyVatLieuXayDung.Context.cs",
               "DocumentMoniker": "D:\\QLVLXD\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Models\\QuanLyVatLieuXayDung.Context.cs",
               "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Models\\QuanLyVatLieuXayDung.Context.cs",
