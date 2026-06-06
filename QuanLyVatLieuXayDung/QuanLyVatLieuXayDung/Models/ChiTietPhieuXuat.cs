@@ -14,7 +14,6 @@ namespace QuanLyVatLieuXayDung.Models
     
     public partial class ChiTietPhieuXuat
     {
-        public int STT {  get; set; }
         public string ID { get; set; }
         public string IDObject { get; set; }
         public string IDOutput { get; set; }

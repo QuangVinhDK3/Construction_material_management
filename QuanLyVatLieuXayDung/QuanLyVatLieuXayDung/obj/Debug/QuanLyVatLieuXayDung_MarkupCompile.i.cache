@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\
+D:\QLVLXD\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\
 QuanLyVatLieuXayDung
 none
 false
 DEBUG;TRACE
-F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\App.xaml
-111289761736
+D:\QLVLXD\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\App.xaml
+121453619890
 2782777843
-431983530944
-199930919199
-Resources\MainResource.xaml;UserControlVLXD\ucControlBar.xaml;Views\CRUDDoiTuongView.xaml;Views\CRUDKhachHangView.xaml;Views\CRUDLoaiVatLieuView.xaml;Views\CRUDNhaCungCapView.xaml;Views\CRUDNhanVienView.xaml;Views\CRUDPhieuNhapView.xaml;Views\CRUDPhieuXuatView.xaml;Views\MainWindow.xaml;Views\TrangChuView.xaml;
+46-785705050
+199-827497171
+Resources\MainResource.xaml;UserControlVLXD\ucControlBar.xaml;Views\CRUDDoiTuongView.xaml;Views\CRUDKhachHangView.xaml;Views\CRUDLoaiVatLieuView.xaml;Views\CRUDNhaCungCapView.xaml;Views\CRUDNhanVienView.xaml;Views\CRUDPhieuNhapView.xaml;Views\CRUDPhieuXuatView.xaml;Views\DangNhapView.xaml;Views\MainWindow.xaml;Views\TrangChuView.xaml;
 
 False
 

@@ -389,7 +389,9 @@
       <DependentUpon>ucControlBar.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\BoolToVisibilityConverter.cs" />
     <Compile Include="ViewModels\ControlBarViewModel.cs" />
+    <Compile Include="ViewModels\DangNhapViewModel.cs" />
     <Compile Include="ViewModels\KhachHangViewModel.cs" />
     <Compile Include="ViewModels\LoaiVatLieuViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
@@ -420,6 +422,7 @@
     <Compile Include="Views\CRUDPhieuXuatView.xaml.cs">
       <DependentUpon>CRUDPhieuXuatView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DangNhapView.xaml.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -465,6 +468,10 @@
     <Page Include="Views\CRUDPhieuXuatView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DangNhapView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
