@@ -26,16 +26,8 @@ namespace QuanLyVatLieuXayDung.ViewModels
         public ICommand DangXuatCommand { get; set; }
         public MainWindowViewModel()
         {
-            LoaiVatLieuCommand = new RelayCommand<object>((p) => { return true; }, (p) => { CRUDLoaiVatLieuView wd = new CRUDLoaiVatLieuView(); wd.ShowDialog(); });
-            NhaCungCapCommand = new RelayCommand<object>((p) => { return true; }, (p) => { CRUDNhaCungCapView wd = new CRUDNhaCungCapView(); wd.ShowDialog(); });
-            KhachHangCommand = new RelayCommand<object>((p) => { return true; }, (p) => { CRUDKhachHangView wd = new CRUDKhachHangView(); wd.ShowDialog(); });
-            DoiTuongCommand = new RelayCommand<object>((p) => { return true; }, (p) => { CRUDDoiTuongView wd = new CRUDDoiTuongView(); wd.ShowDialog(); });
-            NhanVienCommand = new RelayCommand<object>((p) => { return true; }, (p) => { CRUDNhanVienView wd = new CRUDNhanVienView(); wd.ShowDialog(); });
-            NhapKhoCommand = new RelayCommand<object>((p) => { return true; }, (p) => { CRUDPhieuNhapView wd = new CRUDPhieuNhapView(); wd.ShowDialog(); });
-            XuatKhoCommand = new RelayCommand<object>((p) => { return true; }, (p) => { CRUDPhieuXuatView wd = new CRUDPhieuXuatView(); wd.ShowDialog(); });
-            DangXuatCommand = new RelayCommand<object>((p) => { return true; }, (p) => { DangXuat(p as Window); });
-            IsAdmin = IsBanHang = IsKho = IsDoiTac = true;
-
+            IsAdmin = IsBanHang = IsKho = IsDoiTac = false ;
+            InitCommands();
         }
         // Thuộc tính lưu trữ thông tin người dùng đang đăng nhập
         private NguoiDung _currentNguoiDung;
@@ -73,17 +65,27 @@ namespace QuanLyVatLieuXayDung.ViewModels
                 IsKho = (role == "TK" || role == "AM");
                 IsDoiTac = (role == "BH" || role == "AM");
             }
+            InitCommands();
 
-            LoaiVatLieuCommand = new RelayCommand<object>((p) => { return true; }, (p) => { CRUDLoaiVatLieuView wd = new CRUDLoaiVatLieuView(); wd.ShowDialog(); });
-            NhaCungCapCommand = new RelayCommand<object>((p) => { return true; }, (p) => { CRUDNhaCungCapView wd = new CRUDNhaCungCapView(); wd.ShowDialog(); });
-            KhachHangCommand = new RelayCommand<object>((p) => { return true; }, (p) => { CRUDKhachHangView wd = new CRUDKhachHangView(); wd.ShowDialog(); });
-            DoiTuongCommand = new RelayCommand<object>((p) => { return true; }, (p) => { CRUDDoiTuongView wd = new CRUDDoiTuongView(); wd.ShowDialog(); });
-            NhanVienCommand = new RelayCommand<object>((p) => { return true; }, (p) => { CRUDNhanVienView wd = new CRUDNhanVienView(); wd.ShowDialog(); });
-            NhapKhoCommand = new RelayCommand<object>((p) => { return true; }, (p) => { CRUDPhieuNhapView wd = new CRUDPhieuNhapView(); wd.ShowDialog(); });
-            XuatKhoCommand = new RelayCommand<object>((p) => { return true; }, (p) => { CRUDPhieuXuatView wd = new CRUDPhieuXuatView(); wd.ShowDialog(); });
-            DangXuatCommand = new RelayCommand<object>((p) => { return true; }, (p) => { DangXuat(p as Window); });
         }
 
+        private void InitCommands()
+        {
+            // Tận dụng các biến IsAdmin, IsKho... để kiểm tra điều kiện bấm nút (CanExecute)
+            LoaiVatLieuCommand = new RelayCommand<object>((p) => true, (p) => { var wd = new CRUDLoaiVatLieuView(); wd.ShowDialog(); });
+            NhaCungCapCommand = new RelayCommand<object>((p) => IsDoiTac, (p) => { var wd = new CRUDNhaCungCapView(); wd.ShowDialog(); });
+            KhachHangCommand = new RelayCommand<object>((p) => IsDoiTac, (p) => { var wd = new CRUDKhachHangView(); wd.ShowDialog(); });
+            DoiTuongCommand = new RelayCommand<object>((p) => IsAdmin, (p) => { var wd = new CRUDDoiTuongView(); wd.ShowDialog(); });
+
+            // Chỉ Admin mới được quản lý nhân viên
+            NhanVienCommand = new RelayCommand<object>((p) => IsAdmin, (p) => { var wd = new CRUDNhanVienView(); wd.ShowDialog(); });
+
+            // Chỉ kho hoặc Admin mới được nhập/xuất
+            NhapKhoCommand = new RelayCommand<object>((p) => IsKho, (p) => { var wd = new CRUDPhieuNhapView(); wd.ShowDialog(); });
+            XuatKhoCommand = new RelayCommand<object>((p) => IsKho, (p) => { var wd = new CRUDPhieuXuatView(); wd.ShowDialog(); });
+
+            DangXuatCommand = new RelayCommand<object>((p) => true, (p) => DangXuat(p as Window));
+        }
         private void DangXuat(Window mainWindow)
         {
             // 1. Khởi chạy và hiển thị màn hình đăng nhập mới
