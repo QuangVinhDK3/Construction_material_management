@@ -153,10 +153,10 @@ namespace QuanLyVatLieuXayDung.ViewModels
         private void RefreshData()
         {
             var list = DataProvider.Ins.DB.VatLieux.ToList();
-            for (int i = 0; i < list.Count; i++)
-            {
-                list[i].STT = i + 1;
-            }
+            //for (int i = 0; i < list.Count; i++)
+            //{
+            //    list[i].STT = i + 1;
+            //}
             DSVatLieu = new ObservableCollection<VatLieu>(list);
         }
 

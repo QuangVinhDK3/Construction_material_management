@@ -53,6 +53,37 @@
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"/>
                 </Grid>
+                <Button x:Name="btnUserAccount" 
+        
+        Height="60" Margin="10,10,10,0" Padding="5"
+        HorizontalContentAlignment="Left" Foreground="White" Background="#1B3A4B"
+        BorderThickness="0">
+
+                    <Button.ContextMenu>
+                        <ContextMenu Background="#FF3E4046" Foreground="White" FontSize="14">
+                            <MenuItem Header="Thông tin cá nhân" Command="{Binding ThongTinCaNhanCommand}">
+                                <MenuItem.Icon>
+                                    <materialDesign:PackIcon Foreground="White"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <Separator Background="#525965"/>
+                            <MenuItem Header="Đăng xuất" Command="{Binding DangXuatCommand}" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}">
+                                <MenuItem.Icon>
+                                    <materialDesign:PackIcon Kind="Logout" Foreground="#FFD61734"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </ContextMenu>
+                    </Button.ContextMenu>
+
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="AccountCircle" Width="35" Height="35" VerticalAlignment="Center" Foreground="#E7EBF1"/>
+                        <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
+                            <TextBlock Text="{Binding CurrentNguoiDung.DisplayName}" 
+                       FontWeight="Bold" FontSize="14" MaxWidth="140" TextTrimming="CharacterEllipsis"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Button>
                 <!-- Thêm FontSize="15" để phóng to toàn bộ chữ của Menu -->
                 <Menu Background="Transparent" Margin="0,15,0,0" FontSize="15">
                     <Menu.ItemsPanel>

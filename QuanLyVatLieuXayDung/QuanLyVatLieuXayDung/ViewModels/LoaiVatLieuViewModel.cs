@@ -73,10 +73,10 @@ namespace QuanLyVatLieuXayDung.ViewModels
         private void RefreshData()
         {
             var list = DataProvider.Ins.DB.LoaiVatLieux.ToList();
-            for (int i = 0; i < list.Count; i++)
-            {
-                list[i].STT = i + 1;
-            }
+            //for (int i = 0; i < list.Count; i++)
+            //{
+            //    list[i].STT = i + 1;
+            //}
             DSLoai = new ObservableCollection<LoaiVatLieu>(list);
         }
         private string AutoCreateID()
