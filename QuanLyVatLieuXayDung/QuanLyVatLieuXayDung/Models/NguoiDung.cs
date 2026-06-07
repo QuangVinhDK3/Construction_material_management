@@ -19,7 +19,7 @@ namespace QuanLyVatLieuXayDung.Models
         {
             this.HoaDons = new HashSet<HoaDon>();
         }
-    
+        public bool IsLocked { get; set; }
         public string ID { get; set; }
         public string DisplayName { get; set; }
         public string UserName { get; set; }

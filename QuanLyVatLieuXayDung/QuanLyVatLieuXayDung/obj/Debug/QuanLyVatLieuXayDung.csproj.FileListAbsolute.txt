@@ -380,3 +380,5 @@ D:\QLVLXD\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDu
 D:\QLVLXD\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVa.76280529.Up2Date
 D:\QLVLXD\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.exe
 D:\QLVLXD\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.pdb
+D:\QLVLXD\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\ThongTinNguoiDungView.g.cs
+D:\QLVLXD\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\ThongTinNguoiDungView.baml

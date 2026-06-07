@@ -396,9 +396,11 @@
     <Compile Include="ViewModels\LoaiVatLieuViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\NhaCungCapViewModel.cs" />
+    <Compile Include="ViewModels\NhanVienViewModel.cs" />
     <Compile Include="ViewModels\PhieuNhapViewModel.cs" />
     <Compile Include="ViewModels\PhieuXuatViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
+    <Compile Include="ViewModels\ThongTinNguoiDungViewModel.cs" />
     <Compile Include="ViewModels\TrangChuViewModel.cs" />
     <Compile Include="ViewModels\VatLieuViewModel.cs" />
     <Compile Include="Views\CRUDDoiTuongView.xaml.cs">
@@ -429,6 +431,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\ThongTinNguoiDungView.xaml.cs">
+      <DependentUpon>ThongTinNguoiDungView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\TrangChuView.xaml.cs">
       <DependentUpon>TrangChuView.xaml</DependentUpon>
@@ -474,6 +479,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ThongTinNguoiDungView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

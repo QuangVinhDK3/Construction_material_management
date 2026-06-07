@@ -21,7 +21,7 @@ namespace QuanLyVatLieuXayDung.Models
             this.ChiTietPhieuNhaps = new HashSet<ChiTietPhieuNhap>();
             this.ChiTietPhieuXuats = new HashSet<ChiTietPhieuXuat>();
         }
-    
+        public int STT {  get; set; }
         public string ID { get; set; }
         public string DisplayName { get; set; }
         public string IDLoaiVatLieu { get; set; }

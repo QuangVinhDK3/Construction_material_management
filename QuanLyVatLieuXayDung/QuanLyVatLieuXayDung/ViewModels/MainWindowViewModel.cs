@@ -24,6 +24,7 @@ namespace QuanLyVatLieuXayDung.ViewModels
         public ICommand NhapKhoCommand { get; set; }
         public ICommand XuatKhoCommand { get; set; }
         public ICommand DangXuatCommand { get; set; }
+        public ICommand ThongTinCaNhanCommand { get; set; }
         public MainWindowViewModel()
         {
             IsAdmin = IsBanHang = IsKho = IsDoiTac = false ;
@@ -85,7 +86,9 @@ namespace QuanLyVatLieuXayDung.ViewModels
             XuatKhoCommand = new RelayCommand<object>((p) => IsKho, (p) => { var wd = new CRUDPhieuXuatView(); wd.ShowDialog(); });
 
             DangXuatCommand = new RelayCommand<object>((p) => true, (p) => DangXuat(p as Window));
-        }
+            // Kích hoạt cập nhật lại giao diện tên người dùng trên Main khi tắt Form hồ sơ
+            ThongTinCaNhanCommand = new RelayCommand<object>((p) => true, (p) => { var wd = new ThongTinNguoiDungView(CurrentNguoiDung); wd.ShowDialog(); OnPropertyChanged(nameof(CurrentNguoiDung)); });
+         }
         private void DangXuat(Window mainWindow)
         {
             // 1. Khởi chạy và hiển thị màn hình đăng nhập mới
