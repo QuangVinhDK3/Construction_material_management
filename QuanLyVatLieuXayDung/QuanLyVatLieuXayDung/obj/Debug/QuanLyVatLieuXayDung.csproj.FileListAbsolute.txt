@@ -382,3 +382,7 @@ D:\QLVLXD\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDu
 D:\QLVLXD\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\QuanLyVatLieuXayDung.pdb
 D:\QLVLXD\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\ThongTinNguoiDungView.g.cs
 D:\QLVLXD\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\ThongTinNguoiDungView.baml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\DangNhapView.g.cs
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\ThongTinNguoiDungView.g.cs
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\DangNhapView.baml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\ThongTinNguoiDungView.baml

@@ -19,7 +19,7 @@ namespace QuanLyVatLieuXayDung.Models
         {
             this.VatLieux = new HashSet<VatLieu>();
         }
-        public int STT { get; set;  }
+        public int STT { get; set; }
         public string ID { get; set; }
         public string DisplayName { get; set; }
         public string Address { get; set; }

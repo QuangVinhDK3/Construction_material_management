@@ -118,6 +118,16 @@
                                 <Image Source="/Assets/Icon/classification.png" Width="18" Height="18"/>
                             </MenuItem.Icon>
                         </MenuItem>
+                        <MenuItem Command="{Binding NhapKhoCommand}" Header="Nhập kho vật liệu" Template="{StaticResource Menu_SubMenu_Template}">
+                            <MenuItem.Icon>
+                                <Image Source="/Assets/Icon/in.png" Width="18" Height="18"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Command="{Binding XuatKhoCommand}" Header="Xuất kho vật liệu" Template="{StaticResource Menu_SubMenu_Template}">
+                            <MenuItem.Icon>
+                                <Image Source="/Assets/Icon/out.png" Width="18" Height="18"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
                     </MenuItem>
                     <!-- Bán hàng -->
                     <MenuItem Margin="0 15 0 0" Header="Bán hàng" Template="{StaticResource Menu_Template}" Visibility="{Binding IsBanHang, Converter={StaticResource BoolToVisConverter}}">
@@ -161,16 +171,7 @@
                                 <Image Source="/Assets/Icon/engage-employee.png" Width="18" Height="18"/>
                             </MenuItem.Icon>
                         </MenuItem>
-                        <MenuItem Command="{Binding NhapKhoCommand}" Header="Nhập kho vật liệu" Template="{StaticResource Menu_SubMenu_Template}">
-                            <MenuItem.Icon>
-                                <Image Source="/Assets/Icon/in.png" Width="18" Height="18"/>
-                            </MenuItem.Icon>
-                        </MenuItem>
-                        <MenuItem Command="{Binding XuatKhoCommand}" Header="Xuất kho vật liệu" Template="{StaticResource Menu_SubMenu_Template}">
-                            <MenuItem.Icon>
-                                <Image Source="/Assets/Icon/out.png" Width="18" Height="18"/>
-                            </MenuItem.Icon>
-                        </MenuItem>
+                        
                     </MenuItem>
                 </Menu>
             </StackPanel>

@@ -25,10 +25,8 @@ namespace QuanLyVatLieuXayDung.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<ChiTietHoaDon> ChiTietHoaDons { get; set; }
         public virtual DbSet<ChiTietPhieuNhap> ChiTietPhieuNhaps { get; set; }
         public virtual DbSet<ChiTietPhieuXuat> ChiTietPhieuXuats { get; set; }
-        public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
         public virtual DbSet<LoaiVatLieu> LoaiVatLieux { get; set; }
         public virtual DbSet<NguoiDung> NguoiDungs { get; set; }

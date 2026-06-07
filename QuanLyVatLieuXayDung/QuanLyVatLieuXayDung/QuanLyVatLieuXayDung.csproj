@@ -332,9 +332,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Models\ChiTietHoaDon.cs">
-      <DependentUpon>QuanLyVatLieuXayDung.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\ChiTietPhieuNhap.cs">
       <DependentUpon>QuanLyVatLieuXayDung.tt</DependentUpon>
     </Compile>
@@ -342,9 +339,6 @@
       <DependentUpon>QuanLyVatLieuXayDung.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DataProvider.cs" />
-    <Compile Include="Models\HoaDon.cs">
-      <DependentUpon>QuanLyVatLieuXayDung.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\KhachHang.cs">
       <DependentUpon>QuanLyVatLieuXayDung.tt</DependentUpon>
     </Compile>

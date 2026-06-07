@@ -14,12 +14,13 @@ namespace QuanLyVatLieuXayDung.Models
     
     public partial class ChiTietPhieuXuat
     {
-        public int STT {  get; set; }
+        public int STT { get; set; }
         public string ID { get; set; }
         public string IDObject { get; set; }
         public string IDOutput { get; set; }
         public string IDCustomer { get; set; }
         public Nullable<int> Counts { get; set; }
+        public Nullable<double> Price { get; set; }
         public string Status { get; set; }
     
         public virtual KhachHang KhachHang { get; set; }

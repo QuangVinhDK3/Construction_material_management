@@ -1,15 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="QuanLyVatLieuXayDungModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="ChiTietHoaDon">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="IDHoaDon" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="IDObject" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="Counts" Type="int" Nullable="false" />
-    <Property Name="Price" Type="float" Nullable="false" />
-  </EntityType>
   <EntityType Name="ChiTietPhieuNhap">
     <Key>
       <PropertyRef Name="ID" />
@@ -31,17 +21,8 @@
     <Property Name="IDOutput" Type="char" MaxLength="10" Nullable="false" />
     <Property Name="IDCustomer" Type="char" MaxLength="10" Nullable="false" />
     <Property Name="Counts" Type="int" />
+    <Property Name="Price" Type="float" />
     <Property Name="Status" Type="nvarchar(max)" />
-  </EntityType>
-  <EntityType Name="HoaDon">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="IDCustomer" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="IDUser" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="DateBill" Type="datetime" />
-    <Property Name="Total" Type="float" />
   </EntityType>
   <EntityType Name="KhachHang">
     <Key>
@@ -104,6 +85,8 @@
     </Key>
     <Property Name="ID" Type="char" MaxLength="10" Nullable="false" />
     <Property Name="DateOutput" Type="datetime" />
+    <Property Name="IDUser" Type="char" MaxLength="10" />
+    <Property Name="Total" Type="float" />
   </EntityType>
   <EntityType Name="VatLieu">
     <Key>
@@ -116,31 +99,7 @@
     <Property Name="QRCode" Type="nvarchar(max)" />
     <Property Name="Barcode" Type="nvarchar(max)" />
   </EntityType>
-  <Association Name="FK__ChiTietHo__IDHoa__04E4BC85">
-    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
-    <End Role="ChiTietHoaDon" Type="Self.ChiTietHoaDon" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="HoaDon">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="ChiTietHoaDon">
-        <PropertyRef Name="IDHoaDon" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ChiTietHo__IDObj__05D8E0BE">
-    <End Role="VatLieu" Type="Self.VatLieu" Multiplicity="1" />
-    <End Role="ChiTietHoaDon" Type="Self.ChiTietHoaDon" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="VatLieu">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="ChiTietHoaDon">
-        <PropertyRef Name="IDObject" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ChiTietPh__IDCus__02084FDA">
+  <Association Name="FK__ChiTietPh__IDCus__7D439ABD">
     <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
     <End Role="ChiTietPhieuXuat" Type="Self.ChiTietPhieuXuat" Multiplicity="*" />
     <ReferentialConstraint>
@@ -152,7 +111,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietPh__IDINp__7F2BE32F">
+  <Association Name="FK__ChiTietPh__IDINp__7A672E12">
     <End Role="PhieuNhap" Type="Self.PhieuNhap" Multiplicity="1" />
     <End Role="ChiTietPhieuNhap" Type="Self.ChiTietPhieuNhap" Multiplicity="*" />
     <ReferentialConstraint>
@@ -164,19 +123,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietPh__IDObj__00200768">
-    <End Role="VatLieu" Type="Self.VatLieu" Multiplicity="1" />
-    <End Role="ChiTietPhieuXuat" Type="Self.ChiTietPhieuXuat" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="VatLieu">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="ChiTietPhieuXuat">
-        <PropertyRef Name="IDObject" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ChiTietPh__IDObj__7E37BEF6">
+  <Association Name="FK__ChiTietPh__IDObj__797309D9">
     <End Role="VatLieu" Type="Self.VatLieu" Multiplicity="1" />
     <End Role="ChiTietPhieuNhap" Type="Self.ChiTietPhieuNhap" Multiplicity="*" />
     <ReferentialConstraint>
@@ -188,7 +135,19 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietPh__IDOut__01142BA1">
+  <Association Name="FK__ChiTietPh__IDObj__7B5B524B">
+    <End Role="VatLieu" Type="Self.VatLieu" Multiplicity="1" />
+    <End Role="ChiTietPhieuXuat" Type="Self.ChiTietPhieuXuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VatLieu">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ChiTietPhieuXuat">
+        <PropertyRef Name="IDObject" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietPh__IDOut__7C4F7684">
     <End Role="PhieuXuat" Type="Self.PhieuXuat" Multiplicity="1" />
     <End Role="ChiTietPhieuXuat" Type="Self.ChiTietPhieuXuat" Multiplicity="*" />
     <ReferentialConstraint>
@@ -200,31 +159,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HoaDon__IDCustom__02FC7413">
-    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
-    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="KhachHang">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="HoaDon">
-        <PropertyRef Name="IDCustomer" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__HoaDon__IDUser__03F0984C">
-    <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="1" />
-    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NguoiDung">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="HoaDon">
-        <PropertyRef Name="IDUser" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__NguoiDung__IDRol__7D439ABD">
+  <Association Name="FK__NguoiDung__IDRol__787EE5A0">
     <End Role="NguoiDungRole" Type="Self.NguoiDungRole" Multiplicity="1" />
     <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="*" />
     <ReferentialConstraint>
@@ -236,7 +171,19 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__VatLieu__IDLoaiV__7B5B524B">
+  <Association Name="FK__PhieuXuat__IDUse__7E37BEF6">
+    <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="0..1" />
+    <End Role="PhieuXuat" Type="Self.PhieuXuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NguoiDung">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PhieuXuat">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__VatLieu__IDLoaiV__76969D2E">
     <End Role="LoaiVatLieu" Type="Self.LoaiVatLieu" Multiplicity="1" />
     <End Role="VatLieu" Type="Self.VatLieu" Multiplicity="*" />
     <ReferentialConstraint>
@@ -248,7 +195,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__VatLieu__IDNhaCu__7C4F7684">
+  <Association Name="FK__VatLieu__IDNhaCu__778AC167">
     <End Role="NhaCungCap" Type="Self.NhaCungCap" Multiplicity="1" />
     <End Role="VatLieu" Type="Self.VatLieu" Multiplicity="*" />
     <ReferentialConstraint>
@@ -261,10 +208,8 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="QuanLyVatLieuXayDungModelStoreContainer">
-    <EntitySet Name="ChiTietHoaDon" EntityType="Self.ChiTietHoaDon" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ChiTietPhieuNhap" EntityType="Self.ChiTietPhieuNhap" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ChiTietPhieuXuat" EntityType="Self.ChiTietPhieuXuat" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LoaiVatLieu" EntityType="Self.LoaiVatLieu" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NguoiDung" EntityType="Self.NguoiDung" Schema="dbo" store:Type="Tables" />
@@ -273,51 +218,39 @@
     <EntitySet Name="PhieuNhap" EntityType="Self.PhieuNhap" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PhieuXuat" EntityType="Self.PhieuXuat" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VatLieu" EntityType="Self.VatLieu" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__ChiTietHo__IDHoa__04E4BC85" Association="Self.FK__ChiTietHo__IDHoa__04E4BC85">
-      <End Role="HoaDon" EntitySet="HoaDon" />
-      <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDon" />
-    </AssociationSet>
-    <AssociationSet Name="FK__ChiTietHo__IDObj__05D8E0BE" Association="Self.FK__ChiTietHo__IDObj__05D8E0BE">
-      <End Role="VatLieu" EntitySet="VatLieu" />
-      <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDon" />
-    </AssociationSet>
-    <AssociationSet Name="FK__ChiTietPh__IDCus__02084FDA" Association="Self.FK__ChiTietPh__IDCus__02084FDA">
+    <AssociationSet Name="FK__ChiTietPh__IDCus__7D439ABD" Association="Self.FK__ChiTietPh__IDCus__7D439ABD">
       <End Role="KhachHang" EntitySet="KhachHang" />
       <End Role="ChiTietPhieuXuat" EntitySet="ChiTietPhieuXuat" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietPh__IDINp__7F2BE32F" Association="Self.FK__ChiTietPh__IDINp__7F2BE32F">
+    <AssociationSet Name="FK__ChiTietPh__IDINp__7A672E12" Association="Self.FK__ChiTietPh__IDINp__7A672E12">
       <End Role="PhieuNhap" EntitySet="PhieuNhap" />
       <End Role="ChiTietPhieuNhap" EntitySet="ChiTietPhieuNhap" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietPh__IDObj__00200768" Association="Self.FK__ChiTietPh__IDObj__00200768">
-      <End Role="VatLieu" EntitySet="VatLieu" />
-      <End Role="ChiTietPhieuXuat" EntitySet="ChiTietPhieuXuat" />
-    </AssociationSet>
-    <AssociationSet Name="FK__ChiTietPh__IDObj__7E37BEF6" Association="Self.FK__ChiTietPh__IDObj__7E37BEF6">
+    <AssociationSet Name="FK__ChiTietPh__IDObj__797309D9" Association="Self.FK__ChiTietPh__IDObj__797309D9">
       <End Role="VatLieu" EntitySet="VatLieu" />
       <End Role="ChiTietPhieuNhap" EntitySet="ChiTietPhieuNhap" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietPh__IDOut__01142BA1" Association="Self.FK__ChiTietPh__IDOut__01142BA1">
+    <AssociationSet Name="FK__ChiTietPh__IDObj__7B5B524B" Association="Self.FK__ChiTietPh__IDObj__7B5B524B">
+      <End Role="VatLieu" EntitySet="VatLieu" />
+      <End Role="ChiTietPhieuXuat" EntitySet="ChiTietPhieuXuat" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ChiTietPh__IDOut__7C4F7684" Association="Self.FK__ChiTietPh__IDOut__7C4F7684">
       <End Role="PhieuXuat" EntitySet="PhieuXuat" />
       <End Role="ChiTietPhieuXuat" EntitySet="ChiTietPhieuXuat" />
     </AssociationSet>
-    <AssociationSet Name="FK__HoaDon__IDCustom__02FC7413" Association="Self.FK__HoaDon__IDCustom__02FC7413">
-      <End Role="KhachHang" EntitySet="KhachHang" />
-      <End Role="HoaDon" EntitySet="HoaDon" />
-    </AssociationSet>
-    <AssociationSet Name="FK__HoaDon__IDUser__03F0984C" Association="Self.FK__HoaDon__IDUser__03F0984C">
-      <End Role="NguoiDung" EntitySet="NguoiDung" />
-      <End Role="HoaDon" EntitySet="HoaDon" />
-    </AssociationSet>
-    <AssociationSet Name="FK__NguoiDung__IDRol__7D439ABD" Association="Self.FK__NguoiDung__IDRol__7D439ABD">
+    <AssociationSet Name="FK__NguoiDung__IDRol__787EE5A0" Association="Self.FK__NguoiDung__IDRol__787EE5A0">
       <End Role="NguoiDungRole" EntitySet="NguoiDungRole" />
       <End Role="NguoiDung" EntitySet="NguoiDung" />
     </AssociationSet>
-    <AssociationSet Name="FK__VatLieu__IDLoaiV__7B5B524B" Association="Self.FK__VatLieu__IDLoaiV__7B5B524B">
+    <AssociationSet Name="FK__PhieuXuat__IDUse__7E37BEF6" Association="Self.FK__PhieuXuat__IDUse__7E37BEF6">
+      <End Role="NguoiDung" EntitySet="NguoiDung" />
+      <End Role="PhieuXuat" EntitySet="PhieuXuat" />
+    </AssociationSet>
+    <AssociationSet Name="FK__VatLieu__IDLoaiV__76969D2E" Association="Self.FK__VatLieu__IDLoaiV__76969D2E">
       <End Role="LoaiVatLieu" EntitySet="LoaiVatLieu" />
       <End Role="VatLieu" EntitySet="VatLieu" />
     </AssociationSet>
-    <AssociationSet Name="FK__VatLieu__IDNhaCu__7C4F7684" Association="Self.FK__VatLieu__IDNhaCu__7C4F7684">
+    <AssociationSet Name="FK__VatLieu__IDNhaCu__778AC167" Association="Self.FK__VatLieu__IDNhaCu__778AC167">
       <End Role="NhaCungCap" EntitySet="NhaCungCap" />
       <End Role="VatLieu" EntitySet="VatLieu" />
     </AssociationSet>

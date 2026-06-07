@@ -1,17 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="QuanLyVatLieuXayDungModelStoreContainer" CdmEntityContainer="QuanLyVatLieuXayDungEntities">
-    <EntitySetMapping Name="ChiTietHoaDons">
-      <EntityTypeMapping TypeName="QuanLyVatLieuXayDungModel.ChiTietHoaDon">
-        <MappingFragment StoreEntitySet="ChiTietHoaDon">
-          <ScalarProperty Name="Price" ColumnName="Price" />
-          <ScalarProperty Name="Counts" ColumnName="Counts" />
-          <ScalarProperty Name="IDObject" ColumnName="IDObject" />
-          <ScalarProperty Name="IDHoaDon" ColumnName="IDHoaDon" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="ChiTietPhieuNhaps">
       <EntityTypeMapping TypeName="QuanLyVatLieuXayDungModel.ChiTietPhieuNhap">
         <MappingFragment StoreEntitySet="ChiTietPhieuNhap">
@@ -29,21 +18,11 @@
       <EntityTypeMapping TypeName="QuanLyVatLieuXayDungModel.ChiTietPhieuXuat">
         <MappingFragment StoreEntitySet="ChiTietPhieuXuat">
           <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="Counts" ColumnName="Counts" />
           <ScalarProperty Name="IDCustomer" ColumnName="IDCustomer" />
           <ScalarProperty Name="IDOutput" ColumnName="IDOutput" />
           <ScalarProperty Name="IDObject" ColumnName="IDObject" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="HoaDons">
-      <EntityTypeMapping TypeName="QuanLyVatLieuXayDungModel.HoaDon">
-        <MappingFragment StoreEntitySet="HoaDon">
-          <ScalarProperty Name="Total" ColumnName="Total" />
-          <ScalarProperty Name="DateBill" ColumnName="DateBill" />
-          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
-          <ScalarProperty Name="IDCustomer" ColumnName="IDCustomer" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -112,6 +91,8 @@
     <EntitySetMapping Name="PhieuXuats">
       <EntityTypeMapping TypeName="QuanLyVatLieuXayDungModel.PhieuXuat">
         <MappingFragment StoreEntitySet="PhieuXuat">
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
           <ScalarProperty Name="DateOutput" ColumnName="DateOutput" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
