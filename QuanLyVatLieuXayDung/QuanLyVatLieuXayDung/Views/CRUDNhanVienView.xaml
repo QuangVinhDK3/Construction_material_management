@@ -3,9 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:QuanLyVatLieuXayDung.Views"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:uc="clr-namespace:QuanLyVatLieuXayDung.UserControlVLXD"
+        xmlns:local="clr-namespace:QuanLyVatLieuXayDung.ViewModels"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
@@ -18,8 +18,42 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Name="window"
-        Title="Nhân viên" Height="500" Width="750">
+        Title="Quản lý tài khoản hệ thống (Admin)" Height="650" Width="800">
 
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Width" Value="110"/>
+            <Setter Property="Margin" Value="8,5"/>
+            <Setter Property="Background" Value="#E67E22"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="6">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#D2691E"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="Padding" Value="10,8" />
+            <Setter Property="Background" Value="#F2F4F4" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    <Window.DataContext>
+        <local:NhanVienViewModel/>
+    </Window.DataContext>
     <Grid Background="#ECF0F1">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -30,123 +64,153 @@
             <uc:ucControlBar Tag="{Binding Title,ElementName=window}"></uc:ucControlBar>
         </Grid>
 
-        <Grid Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="auto"/>
-            </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Margin="10">
+            <TabControl Background="Transparent" BorderThickness="0" materialDesign:ColorZoneAssist.Mode="PrimaryMid">
 
-            <!-- THÔNG TIN NHÂN VIÊN -->
-            <materialDesign:Card Grid.Row="0" Margin="5">
-                <GroupBox Height="auto" Header=" Thông tin nhân viên " Margin="5">
-                    <StackPanel Height="auto">
-                        <TextBlock Height="5"></TextBlock>
+                <TabItem Header="Thông tin &amp; Tài khoản" Width="200" Height="40" FontSize="14" FontWeight="SemiBold">
+                    <Grid Margin="0,10,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
 
-                        <!-- Dòng 1 -->
-                        <StackPanel Orientation="Horizontal" Height="35" >
-                            <Label Content="Tên đăng nhập: " Margin="15 0 0 0" Width="110" VerticalAlignment="Center"/>
-                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="250" Height="30" Margin="0 0 5 0" Background="White">
-                                <TextBox Text="{Binding UserName,UpdateSourceTrigger=PropertyChanged}" 
-                                         Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
-                            </Border>
-
-                            <Label Content="Quyền: " Width="60" VerticalAlignment="Center" Margin="5 0 0 0"/>
-                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="250" Height="30" Background="White">
-                                <ComboBox ItemsSource="{Binding Role}" 
-                                          SelectedItem="{Binding SelectedRole,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
-                                          Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
-                            </Border>
-                        </StackPanel>
-
-                        <TextBlock Height="10"></TextBlock>
-
-                        <!-- Dòng 2 -->
-                        <StackPanel Orientation="Horizontal" Height="35" >
-                            <Label Content="Tên hiển thị: " Margin="15 0 0 0" Width="110" VerticalAlignment="Center"/>
-                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="250" Height="30" Background="White">
-                                <TextBox Text="{Binding DisplayName}" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
-                            </Border>
-                        </StackPanel>
-
-                        <TextBlock Height="5"></TextBlock>
-                    </StackPanel>
-                </GroupBox>
-            </materialDesign:Card>
-
-            <!-- DANH SÁCH LISTVIEW -->
-            <materialDesign:Card Grid.Row="1" Margin="5" VerticalAlignment="Stretch">
-                <ScrollViewer VerticalScrollBarVisibility="Auto">
-                    <ListView ItemsSource="{Binding ListType}" SelectedItem="{Binding SelectedType,Mode=OneWayToSource}">
-                        <ListView.Resources>
-                            <Style TargetType="{x:Type GridViewColumnHeader}">
-                                <Setter Property="Padding" Value="10,8" />
-                                <Setter Property="BorderBrush" Value="#BDC3C7" />
-                                <Setter Property="Background" Value="#FAFAFA" />
-                                <Setter Property="FontWeight" Value="SemiBold" />
-                                <Setter Property="Template">
-                                    <Setter.Value>
-                                        <ControlTemplate TargetType="{x:Type GridViewColumnHeader}">
-                                            <Border BorderThickness="0,0,1,1" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}">
-                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}"/>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Setter.Value>
-                                </Setter>
-                            </Style>
-
-                            <Style TargetType="{x:Type ListViewItem}">
-                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
-                                <Setter Property="Margin" Value="0,2"/>
-                            </Style>
-                        </ListView.Resources>
-                        <ListView.View>
-                            <GridView>
-                                <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}"></GridViewColumn>
-                                <GridViewColumn Header="Tên đăng nhập" DisplayMemberBinding="{Binding UserName}"></GridViewColumn>
-                                <GridViewColumn Header="Chức vụ" DisplayMemberBinding="{Binding Role.DisplayName}"></GridViewColumn>
-                                <GridViewColumn Header="Tên hiển thị" DisplayMemberBinding="{Binding DisplayName}"></GridViewColumn>
-                            </GridView>
-                        </ListView.View>
-                    </ListView>
-                </ScrollViewer>
-            </materialDesign:Card>
-
-            <!-- THANH NÚT BẤM -->
-            <materialDesign:Card Grid.Row="2" Margin="5">
-                <WrapPanel HorizontalAlignment="Center" Margin="0,5,0,5" >
-                    <WrapPanel.Resources>
-                        <!-- Style Button tự định nghĩa để bo góc không dùng StaticResource -->
-                        <Style TargetType="Button">
-                            <Setter Property="Height" Value="35"/>
-                            <Setter Property="Width" Value="100"/>
-                            <Setter Property="Margin" Value="10,5,10,5"/>
-                            <Setter Property="Background" Value="#E67E22"/>
-                            <Setter Property="Foreground" Value="White"/>
-                            <Setter Property="Cursor" Value="Hand"/>
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border Background="{TemplateBinding Background}" CornerRadius="8">
-                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <materialDesign:Card Grid.Row="0" Margin="0,0,0,10" Padding="5">
+                            <GroupBox Header=" Đăng ký tài khoản nhân viên mới ">
+                                <StackPanel Margin="0,10,0,5">
+                                    <StackPanel Orientation="Horizontal" Height="35">
+                                        <Label Content="Tên đăng nhập:" Width="110" VerticalAlignment="Center" Margin="10 0 0 0"/>
+                                        <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="230" Height="30" Background="White">
+                                            <TextBox Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged}" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
                                         </Border>
-                                        <ControlTemplate.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#D2691E"/>
-                                            </Trigger>
-                                        </ControlTemplate.Triggers>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </WrapPanel.Resources>
 
-                    <Button Command="{Binding AddCommand}" Content="Thêm" />
-                    <Button Command="{Binding UpdateCommand}" Content="Sửa" />
-                    <Button Command="{Binding RemoveCommand}" Content="Xóa" />
-                    <Button Command="{Binding ChangePasswordCommand}" Content="Đổi pass" />
-                </WrapPanel>
-            </materialDesign:Card>
+                                        <Label Content="Chức vụ quyền:" Width="100" VerticalAlignment="Center" Margin="15 0 0 0"/>
+                                        <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="230" Height="30" Background="White">
+                                            <ComboBox ItemsSource="{Binding Role}" 
+                                                      SelectedValue="{Binding SelectedRoleID, Mode=TwoWay}"
+                                                      SelectedValuePath="ID"
+                                                      DisplayMemberPath="DisplayName" 
+                                                      Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
+                                        </Border>
+                                    </StackPanel>
+
+                                    <TextBlock Height="10"></TextBlock>
+
+                                    <StackPanel Orientation="Horizontal" Height="35">
+                                        <Label Content="Tên hiển thị:" Width="110" VerticalAlignment="Center" Margin="10 0 0 0"/>
+                                        <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="230" Height="30" Background="White">
+                                            <TextBox Text="{Binding DisplayName, UpdateSourceTrigger=PropertyChanged}" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
+                                        </Border>
+
+                                        <TextBlock Text="* Mật khẩu mặc định khi tạo mới: 123" Foreground="#7F8C8D" VerticalAlignment="Center" Margin="20,0,0,0" FontStyle="Italic"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </GroupBox>
+                        </materialDesign:Card>
+
+                        <materialDesign:Card Grid.Row="1" Margin="0,0,0,10">
+                            <ListView ItemsSource="{Binding ListNguoiDung}" SelectedItem="{Binding SelectedNguoiDung, Mode=TwoWay}">
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                        <Setter Property="Height" Value="35"/>
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Header="Mã NV" Width="80" DisplayMemberBinding="{Binding ID}"></GridViewColumn>
+                                        <GridViewColumn Header="Tên đăng nhập" Width="150" DisplayMemberBinding="{Binding UserName}"></GridViewColumn>
+                                        <GridViewColumn Header="Tên hiển thị" Width="220" DisplayMemberBinding="{Binding DisplayName}"></GridViewColumn>
+                                        <GridViewColumn Header="Quyền hệ thống" Width="150" DisplayMemberBinding="{Binding NguoiDungRole.DisplayName}"></GridViewColumn>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                        </materialDesign:Card>
+
+                        <materialDesign:Card Grid.Row="2" Padding="5">
+                            <WrapPanel HorizontalAlignment="Center">
+                                <Button Command="{Binding AddCommand}" Content="Thêm mới" Background="#2ECC71"/>
+                                <Button Command="{Binding UpdateCommand}" Content="Cập nhật" Background="#3498DB"/>
+                                <Button Command="{Binding RemoveCommand}" Content="Xóa bỏ" Background="#E74C3C"/>
+                                <Button Command="{Binding ResetPasswordCommand}" Content="Đặt lại Pass" Background="#9B59B6" Width="120"/>
+                            </WrapPanel>
+                        </materialDesign:Card>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Trạng thái hoạt động" Width="200" Height="40" FontSize="14" FontWeight="SemiBold">
+                    <Grid Margin="0,10,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+
+                        <materialDesign:Card Grid.Row="0" Margin="0,0,0,10">
+                            <ListView ItemsSource="{Binding ListNguoiDung}" SelectedItem="{Binding SelectedNguoiDung, Mode=TwoWay}">
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                        <Setter Property="Height" Value="38"/>
+                                    </Style>
+                                </ListView.ItemContainerStyle>
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Header="Mã NV" Width="80" DisplayMemberBinding="{Binding ID}"></GridViewColumn>
+                                        <GridViewColumn Header="Tên đăng nhập" Width="160" DisplayMemberBinding="{Binding UserName}"></GridViewColumn>
+                                        <GridViewColumn Header="Tên hiển thị" Width="250" DisplayMemberBinding="{Binding DisplayName}"></GridViewColumn>
+                                        <GridViewColumn Header="Trạng thái đăng nhập" Width="180">
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Border Width="10" Height="10" CornerRadius="5" Margin="0,0,8,0">
+                                                            <Border.Style>
+                                                                <Style TargetType="Border">
+                                                                    <Style.Triggers>
+                                                                        <DataTrigger Binding="{Binding IsLocked}" Value="True">
+                                                                            <Setter Property="Background" Value="#E74C3C"/>
+                                                                        </DataTrigger>
+                                                                        <DataTrigger Binding="{Binding IsLocked}" Value="False">
+                                                                            <Setter Property="Background" Value="#2ECC71"/>
+                                                                        </DataTrigger>
+                                                                    </Style.Triggers>
+                                                                </Style>
+                                                            </Border.Style>
+                                                        </Border>
+                                                        <TextBlock VerticalAlignment="Center">
+                                                            <TextBlock.Style>
+                                                                <Style TargetType="TextBlock">
+                                                                    <Style.Triggers>
+                                                                        <DataTrigger Binding="{Binding IsLocked}" Value="True">
+                                                                            <Setter Property="Text" Value="Đang bị Khóa"/>
+                                                                            <Setter Property="Foreground" Value="#E74C3C"/>
+                                                                        </DataTrigger>
+                                                                        <DataTrigger Binding="{Binding IsLocked}" Value="False">
+                                                                            <Setter Property="Text" Value="Đang hoạt động"/>
+                                                                            <Setter Property="Foreground" Value="#2ECC71"/>
+                                                                        </DataTrigger>
+                                                                    </Style.Triggers>
+                                                                </Style>
+                                                            </TextBlock.Style>
+                                                        </TextBlock>
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                        </materialDesign:Card>
+
+                        <materialDesign:Card Grid.Row="1" Padding="5">
+                            <WrapPanel HorizontalAlignment="Center">
+                                <Button Command="{Binding LockAccountCommand}" Content="Khóa tài khoản" Background="#E74C3C" Width="140"/>
+                                <Button Command="{Binding UnlockAccountCommand}" Content="Mở khóa" Background="#2ECC71" Width="140"/>
+                            </WrapPanel>
+                        </materialDesign:Card>
+                    </Grid>
+                </TabItem>
+
+            </TabControl>
         </Grid>
     </Grid>
 </Window>

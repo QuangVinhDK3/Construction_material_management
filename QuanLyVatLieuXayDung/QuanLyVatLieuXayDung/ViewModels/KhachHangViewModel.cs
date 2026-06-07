@@ -101,10 +101,10 @@ namespace QuanLyVatLieuXayDung.ViewModels
         private void RefreshData()
         {
             var list = DataProvider.Ins.DB.KhachHangs.ToList();
-            //for (int i = 0; i < list.Count; i++)
-            //{
-            //    list[i].STT = i + 1;
-            //}
+            for (int i = 0; i < list.Count; i++)
+            {
+                list[i].STT = i + 1;
+            }
             DSKhach = new ObservableCollection<KhachHang>(list);
         }
 

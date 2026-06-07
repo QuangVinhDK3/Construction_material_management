@@ -20,7 +20,7 @@ namespace QuanLyVatLieuXayDung.Models
             this.ChiTietPhieuXuats = new HashSet<ChiTietPhieuXuat>();
             this.HoaDons = new HashSet<HoaDon>();
         }
-    
+        public int STT { get; set;  }
         public string ID { get; set; }
         public string DisplayName { get; set; }
         public string Address { get; set; }

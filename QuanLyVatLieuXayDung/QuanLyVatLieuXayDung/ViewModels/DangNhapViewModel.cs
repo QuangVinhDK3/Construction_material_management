@@ -69,6 +69,13 @@ namespace QuanLyVatLieuXayDung.ViewModels
 
                 if (taiKhoan != null)
                 {
+                    // Kiểm tra tài khoản có bị khóa hay không
+                    if (taiKhoan.IsLocked == true)
+                    {
+                        MessageBox.Show("Tài khoản của bạn đã bị Admin KHÓA! Vui lòng liên hệ quản lý để được mở lại.",
+                                        "Thông báo", MessageBoxButton.OK, MessageBoxImage.Stop);
+                        return; // Dừng hàm, không cho đăng nhập vào MainWindow nữa
+                    }
                     // Tải danh sách quyền từ DB về để gán cho người dùng
                     var danhSachQuyen = DataProvider.Ins.DB.NguoiDungRoles.ToList();
 

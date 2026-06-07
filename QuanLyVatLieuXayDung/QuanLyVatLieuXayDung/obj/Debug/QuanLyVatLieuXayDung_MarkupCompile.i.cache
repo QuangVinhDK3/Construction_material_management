@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\QLVLXD\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\App.xaml
-121453619890
+1388283834
 2782777843
-46-785705050
+491371314006
 199-827497171
-Resources\MainResource.xaml;UserControlVLXD\ucControlBar.xaml;Views\CRUDDoiTuongView.xaml;Views\CRUDKhachHangView.xaml;Views\CRUDLoaiVatLieuView.xaml;Views\CRUDNhaCungCapView.xaml;Views\CRUDNhanVienView.xaml;Views\CRUDPhieuNhapView.xaml;Views\CRUDPhieuXuatView.xaml;Views\DangNhapView.xaml;Views\MainWindow.xaml;Views\TrangChuView.xaml;
+Resources\MainResource.xaml;UserControlVLXD\ucControlBar.xaml;Views\CRUDDoiTuongView.xaml;Views\CRUDKhachHangView.xaml;Views\CRUDLoaiVatLieuView.xaml;Views\CRUDNhaCungCapView.xaml;Views\CRUDNhanVienView.xaml;Views\CRUDPhieuNhapView.xaml;Views\CRUDPhieuXuatView.xaml;Views\DangNhapView.xaml;Views\MainWindow.xaml;Views\ThongTinNguoiDungView.xaml;Views\TrangChuView.xaml;
 
-False
+True
 
