@@ -17,7 +17,6 @@ namespace QuanLyVatLieuXayDung.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public VatLieu()
         {
-            this.ChiTietHoaDons = new HashSet<ChiTietHoaDon>();
             this.ChiTietPhieuNhaps = new HashSet<ChiTietPhieuNhap>();
             this.ChiTietPhieuXuats = new HashSet<ChiTietPhieuXuat>();
         }
@@ -29,8 +28,6 @@ namespace QuanLyVatLieuXayDung.Models
         public string QRCode { get; set; }
         public string Barcode { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietPhieuNhap> ChiTietPhieuNhaps { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -18,9 +18,8 @@ namespace QuanLyVatLieuXayDung.Models
         public KhachHang()
         {
             this.ChiTietPhieuXuats = new HashSet<ChiTietPhieuXuat>();
-            this.HoaDons = new HashSet<HoaDon>();
         }
-        public int STT { get; set;  }
+        public int STT {  get; set; }
         public string ID { get; set; }
         public string DisplayName { get; set; }
         public string Address { get; set; }
@@ -31,7 +30,5 @@ namespace QuanLyVatLieuXayDung.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietPhieuXuat> ChiTietPhieuXuats { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HoaDon> HoaDons { get; set; }
     }
 }

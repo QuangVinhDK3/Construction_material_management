@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\QLVLXD\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\
 QuanLyVatLieuXayDung
 none
 false
 DEBUG;TRACE
-D:\QLVLXD\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\App.xaml
+F:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\App.xaml
 1388283834
 2782777843
-491371314006
-199-827497171
+471035240442
+199930919199
 Resources\MainResource.xaml;UserControlVLXD\ucControlBar.xaml;Views\CRUDDoiTuongView.xaml;Views\CRUDKhachHangView.xaml;Views\CRUDLoaiVatLieuView.xaml;Views\CRUDNhaCungCapView.xaml;Views\CRUDNhanVienView.xaml;Views\CRUDPhieuNhapView.xaml;Views\CRUDPhieuXuatView.xaml;Views\DangNhapView.xaml;Views\MainWindow.xaml;Views\ThongTinNguoiDungView.xaml;Views\TrangChuView.xaml;
 
 True
