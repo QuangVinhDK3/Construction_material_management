@@ -1,4 +1,4 @@
-﻿using QuanLyVatLieuXayDung.Views;
+using QuanLyVatLieuXayDung.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,8 +21,12 @@ namespace QuanLyVatLieuXayDung.ViewModels
         public ICommand KhachHangCommand { get; set; }
         public ICommand DoiTuongCommand { get; set; }
         public ICommand NhanVienCommand { get; set; }
+        public ICommand QuanLyPhieuNhapCommand { get; set; }
         public ICommand NhapKhoCommand { get; set; }
         public ICommand XuatKhoCommand { get; set; }
+        public ICommand QuanLyPhieuXuatCommand { get; set; }
+        public ICommand QuanLyPhieuThuCommand { get; set; }
+        public ICommand QuanLyPhieuChiCommand { get; set; }
         public ICommand DangXuatCommand { get; set; }
         public ICommand ThongTinCaNhanCommand { get; set; }
         public MainWindowViewModel()
@@ -81,9 +85,17 @@ namespace QuanLyVatLieuXayDung.ViewModels
             // Chỉ Admin mới được quản lý nhân viên
             NhanVienCommand = new RelayCommand<object>((p) => IsAdmin, (p) => { var wd = new CRUDNhanVienView(); wd.ShowDialog(); });
 
-            // Chỉ kho hoặc Admin mới được nhập/xuất
+            // Chỉ kho hoặc Admin mới được nhập
+            QuanLyPhieuNhapCommand = new RelayCommand<object>((p) => IsKho, (p) => { var wd = new QuanLyPhieuNhapView(); wd.ShowDialog(); });
             NhapKhoCommand = new RelayCommand<object>((p) => IsKho, (p) => { var wd = new CRUDPhieuNhapView(); wd.ShowDialog(); });
-            XuatKhoCommand = new RelayCommand<object>((p) => IsKho, (p) => { var wd = new CRUDPhieuXuatView(); wd.ShowDialog(); });
+
+            // Bán hàng (hoặc Admin) mới được quản lý phiếu xuất và phiếu thu
+            QuanLyPhieuXuatCommand = new RelayCommand<object>((p) => IsBanHang, (p) => { var wd = new QuanLyPhieuXuatView(); wd.ShowDialog(); });
+            XuatKhoCommand = new RelayCommand<object>((p) => IsBanHang, (p) => { var wd = new CRUDPhieuXuatView(); wd.ShowDialog(); });
+            QuanLyPhieuThuCommand = new RelayCommand<object>((p) => IsBanHang, (p) => { var wd = new QuanLyPhieuThuView(); wd.ShowDialog(); });
+            
+            // Kế toán chi trả hoặc Admin
+            QuanLyPhieuChiCommand = new RelayCommand<object>((p) => IsKho || IsBanHang, (p) => { var wd = new QuanLyPhieuChiView(); wd.ShowDialog(); });
 
             DangXuatCommand = new RelayCommand<object>((p) => true, (p) => DangXuat(p as Window));
             // Kích hoạt cập nhật lại giao diện tên người dùng trên Main khi tắt Form hồ sơ

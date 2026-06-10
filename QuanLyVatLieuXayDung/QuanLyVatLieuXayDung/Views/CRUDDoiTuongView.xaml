@@ -1,4 +1,4 @@
-﻿<Window x:Class="QuanLyVatLieuXayDung.Views.CRUDDoiTuongView"
+<Window x:Class="QuanLyVatLieuXayDung.Views.CRUDDoiTuongView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -18,11 +18,14 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Name="window"
-        Title="Vật liệu" Height="530" Width="800">
+        Title="Vật liệu" Height="530" Width="980">
     <Window.DataContext>
         <local:VatLieuViewModel/>
     </Window.DataContext>
-    <Grid Background="#ECF0F1">
+    <Window.Resources>
+        <local:TrangThaiColorConverter x:Key="TrangThaiColorConverter"/>
+    </Window.Resources>
+    <Grid Background="#ECEFF1">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -60,7 +63,7 @@
                         <TextBlock Height="10"></TextBlock>
 
                         <StackPanel Orientation="Horizontal" Height="35" >
-                            <Label Content="Đơn vị tính: " Margin="15 0 0 0" Width="110" VerticalAlignment="Center"/>
+                            <Label Content="Loại vật liệu: " Margin="15 0 0 0" Width="110" VerticalAlignment="Center"/>
                             <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="250" Height="30" Margin="0 0 5 0" Background="White">
                                 <ComboBox ItemsSource="{Binding DSLoaiVL}" 
                                           SelectedItem="{Binding SelectedLoaiVL}"
@@ -70,30 +73,22 @@
                                           Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
                             </Border>
 
-                            <Label Content="Nhà CC: " Width="85" VerticalAlignment="Center"/>
-                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="250" Height="30" Background="White">
-                                <ComboBox ItemsSource="{Binding DSNhaCC}" 
-                                          SelectedItem="{Binding SelectedNCC}"
-                                          SelectedValue="{Binding IDNhaCC, Mode=TwoWay}"
-                                          SelectedValuePath="ID"
-                                          DisplayMemberPath="DisplayName"
-                                          Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
-                            </Border>
                         </StackPanel>
 
                         <TextBlock Height="10"></TextBlock>
 
                         <StackPanel Orientation="Horizontal" Height="35">
-                            <Label Content="BarCode: " Margin="15 0 0 0" Width="110" VerticalAlignment="Center"/>
+                            <Label Content="Đơn vị tính: " Margin="15 0 0 0" Width="110" VerticalAlignment="Center"/>
                             <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="250" Height="30" Margin="0 0 5 0" Background="White">
-                                <TextBox Text="{Binding Barcode, UpdateSourceTrigger=LostFocus}" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
+                                <TextBox Text="{Binding DonViTinh, UpdateSourceTrigger=LostFocus}" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0" materialDesign:HintAssist.Hint="VD: Kg, Bao, Tấn..."/>
                             </Border>
-
-                            <Label Content="QRCode: " Width="85" VerticalAlignment="Center"/>
-                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="250" Height="30" Background="White">
-                                <TextBox Text="{Binding QRCode, UpdateSourceTrigger=LostFocus}" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
+                            
+                            <Label Content="Giá xuất (VNĐ): " Width="85" VerticalAlignment="Center" Foreground="#E53935" FontWeight="Bold"/>
+                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="250" Height="30" Background="#F5F5F5" ToolTip="Giá xuất được tự động cập nhật từ giá xuất trong chi tiết phiếu nhập mới nhất">
+                                <TextBox Text="{Binding GiaXuat, Mode=OneWay, StringFormat='{}{0:N0}'}" IsReadOnly="True" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0" Foreground="#E53935" FontWeight="Bold"/>
                             </Border>
                         </StackPanel>
+
                         <TextBlock Height="5"></TextBlock>
                     </StackPanel>
                 </GroupBox>
@@ -111,11 +106,22 @@
                         <GridView>
                             <GridViewColumn Header="STT" Width="45" DisplayMemberBinding="{Binding STT}"></GridViewColumn>
                             <GridViewColumn Header="Mã vật liệu" Width="85" DisplayMemberBinding="{Binding ID}"></GridViewColumn>
-                            <GridViewColumn Header="Tên vật liệu" Width="180" DisplayMemberBinding="{Binding DisplayName}"></GridViewColumn>
-                            <GridViewColumn Header="Đơn vị tính" Width="100" DisplayMemberBinding="{Binding LoaiVatLieu.DisplayName}"></GridViewColumn>
-                            <GridViewColumn Header="Nhà cung cấp" Width="150" DisplayMemberBinding="{Binding NhaCungCap.DisplayName}"></GridViewColumn>
-                            <GridViewColumn Header="QRCode" Width="100" DisplayMemberBinding="{Binding QRCode}"></GridViewColumn>
-                            <GridViewColumn Header="BarCode" Width="100" DisplayMemberBinding="{Binding Barcode}"></GridViewColumn>
+                            <GridViewColumn Header="Tên vật liệu" Width="160" DisplayMemberBinding="{Binding DisplayName}"></GridViewColumn>
+                            <GridViewColumn Header="Loại vật liệu" Width="110" DisplayMemberBinding="{Binding LoaiVatLieu.DisplayName}"></GridViewColumn>
+                            <GridViewColumn Header="Đơn vị tính" Width="85" DisplayMemberBinding="{Binding DonViTinh}"></GridViewColumn>
+                            <GridViewColumn Header="Giá xuất" Width="100" DisplayMemberBinding="{Binding GiaXuat, StringFormat='{}{0:N0} VND'}"></GridViewColumn>
+                            <GridViewColumn Header="Tồn kho" Width="80" DisplayMemberBinding="{Binding SoLuongTon}"></GridViewColumn>
+                            <GridViewColumn Header="Trạng thái" Width="90">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Border CornerRadius="5" Padding="6,2"
+                                                Background="{Binding TrangThai, Converter={StaticResource TrangThaiColorConverter}}">
+                                            <TextBlock Text="{Binding TrangThai}" Foreground="White" FontWeight="SemiBold" FontSize="11" HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
                         </GridView>
                     </ListView.View>
                 </ListView>
@@ -128,7 +134,7 @@
                             <Setter Property="Height" Value="35"/>
                             <Setter Property="Width" Value="100"/>
                             <Setter Property="Margin" Value="10,5,10,5"/>
-                            <Setter Property="Background" Value="#E67E22"/>
+                            <Setter Property="Background" Value="#4CAF50"/>
                             <Setter Property="Foreground" Value="White"/>
                             <Setter Property="Cursor" Value="Hand"/>
                             <Setter Property="Template">
@@ -139,7 +145,7 @@
                                         </Border>
                                         <ControlTemplate.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#D2691E"/>
+                                                <Setter Property="Background" Value="#388E3C"/>
                                             </Trigger>
                                         </ControlTemplate.Triggers>
                                     </ControlTemplate>
@@ -148,8 +154,9 @@
                         </Style>
                     </WrapPanel.Resources>
                     <Button Command="{Binding AddCommand}" Content="Thêm" />
-                    <Button Command="{Binding UpdateCommand}" Content="Sửa" />
-                    <Button Command="{Binding RemoveCommand}" Content="Xóa" />
+                    <Button Command="{Binding UpdateCommand}" Content="Sửa" Background="#FF9800"/>
+                    <Button Command="{Binding RemoveCommand}" Content="Xóa" Background="#F44336"/>
+                    <Button Command="{Binding ViewPriceHistoryCommand}" Content="Lịch sử giá" Background="#2196F3" Width="120" ToolTip="Xem lịch sử thay đổi giá"/>
                 </WrapPanel>
             </materialDesign:Card>
         </Grid>

@@ -1,17 +1,105 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\DoAnTatCa\\DoAnVLXD_DotNet\\Construction_material_management\\QuanLyVatLieuXayDung\\",
+  "WorkspaceRootPath": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|f:\\doantatca\\doanvlxd_dotnet\\construction_material_management\\quanlyvatlieuxaydung\\quanlyvatlieuxaydung\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|d:\\c\u00F4ng ngh\u1EC7.net (l\u1EDBp)\\\u0111\u1ED3_\u00E1n_net\\construction_material_management\\quanlyvatlieuxaydung\\quanlyvatlieuxaydung\\views\\lichsugiavatlieuview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\views\\lichsugiavatlieuview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|d:\\c\u00F4ng ngh\u1EC7.net (l\u1EDBp)\\\u0111\u1ED3_\u00E1n_net\\construction_material_management\\quanlyvatlieuxaydung\\quanlyvatlieuxaydung\\models\\quanlyvatlieuxaydung.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\models\\quanlyvatlieuxaydung.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\models\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\models\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\views\\crudphieuxuatview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\views\\crudphieuxuatview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\views\\quanlyphieuchiview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\views\\quanlyphieuchiview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\views\\quanlyphieuthuview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\views\\quanlyphieuthuview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\viewmodels\\phieuchiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\viewmodels\\phieuchiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\viewmodels\\phieuthuviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\viewmodels\\phieuthuviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\viewmodels\\loaivatlieuviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\viewmodels\\loaivatlieuviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\viewmodels\\quanlyphieuxuatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\viewmodels\\quanlyphieuxuatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\views\\quanlyphieuxuatview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\views\\quanlyphieuxuatview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\views\\quanlyphieunhapview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\views\\quanlyphieunhapview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\viewmodels\\phieuxuatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\viewmodels\\phieuxuatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\models\\partialclasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\models\\partialclasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\viewmodels\\quanlyphieunhapviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\viewmodels\\quanlyphieunhapviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|F:\\DoAnTatCa\\DoAnVLXD_DotNet\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\viewmodels\\trangchuviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\views\\trangchuview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\views\\trangchuview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\viewmodels\\vatlieuviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\viewmodels\\vatlieuviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\views\\cruddoituongview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\views\\cruddoituongview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\viewmodels\\phieunhapviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\viewmodels\\phieunhapviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\viewmodels\\khachhangviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\viewmodels\\khachhangviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\viewmodels\\trangchuviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\viewmodels\\trangchuviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|F:\\DoAnTatCa\\DoAnVLXD_DotNet\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\views\\dangnhapview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\quanlyvatlieuxaydung\\views\\dangnhapview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{C17C17D3-8D9E-4A29-BF3E-B6D0F8AD419F}|QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung.csproj|solutionrelative:quanlyvatlieuxaydung\\views\\dangnhapview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -22,48 +110,299 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "F:\\DoAnTatCa\\DoAnVLXD_DotNet\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
-              "ToolTip": "F:\\DoAnTatCa\\DoAnVLXD_DotNet\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
-              "RelativeToolTip": "QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
+              "Title": "LichSuGiaVatLieuView.xaml",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\LichSuGiaVatLieuView.xaml",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\LichSuGiaVatLieuView.xaml",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\LichSuGiaVatLieuView.xaml",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\Views\\LichSuGiaVatLieuView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-06-07T15:21:50.263Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DangNhapView.xaml",
-              "DocumentMoniker": "F:\\DoAnTatCa\\DoAnVLXD_DotNet\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\DangNhapView.xaml",
-              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\DangNhapView.xaml",
-              "ToolTip": "F:\\DoAnTatCa\\DoAnVLXD_DotNet\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\DangNhapView.xaml",
-              "RelativeToolTip": "QuanLyVatLieuXayDung\\Views\\DangNhapView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-06-06T04:56:04.931Z",
+              "WhenOpened": "2026-06-10T08:28:44.717Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "QuanLyVatLieuXayDung.edmx [Diagram1]",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Models\\QuanLyVatLieuXayDung.edmx",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Models\\QuanLyVatLieuXayDung.edmx",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Models\\QuanLyVatLieuXayDung.edmx [Diagram1]",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\Models\\QuanLyVatLieuXayDung.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2026-06-10T08:15:29.909Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "QuanLyPhieuThuView.xaml",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\QuanLyPhieuThuView.xaml",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\QuanLyPhieuThuView.xaml",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\QuanLyPhieuThuView.xaml",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\Views\\QuanLyPhieuThuView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-10T07:06:26.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PhieuChiViewModel.cs",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\PhieuChiViewModel.cs",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\PhieuChiViewModel.cs",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\PhieuChiViewModel.cs",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\ViewModels\\PhieuChiViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKmSURBVDhP7dFPSJNxHAbw5/vunQ3xbU4naqaSMxObhTkqA\u002B3PQUrwEISU9AfyX6dyEd0ko1NQblYQKdLB1ENKsDoEUSEWNrc0LaxMDwnmdJbOmZtu7/vtkBvvpZMdfW7fHx94HvgBG1lvCAC\u002BL3w39Hzr0T358gifvZPISMqAtdCK0sQCf3KyeSmCO0Y6DFpBG6owVywxXxPah01GY6zRV5ZTthIxAgAEggGboJA7xBo3iWG3qJA7Rhbdv2RNXQQCQDAUtPlX/XUA0D5sMobl0HPP0lSJ2ogAcGfIliAK4pbdibtcC8GFe4VJFpvT40wY8AxIavxwtCWBAQkAWj/aNQpiksHQqQ0BQE5LliNzc6ZUnFLSKjMcRFTX73lTuxTyd53Lr\u002Br8HfBX2j80wbfiO0VEPwD0MjgOQC0Yz0x609g2aftY94nuThEAvMuz8Aa8vS9Ovu5cK7ptbsuNJYUnREXUg4TCv/WkZ2YQoRBMOhC0IM4GSNIIUKIzDfY4h6FZaow\u002B/CNqZ2yKTY23S1PxzVK52gjq43\u002BEsNYMosH5S/7oSnNbbgMB49aCq\u002BOLq74G29At\u002BFYX94LZR8BXJugAKgZ4xKTPnsnSm1yPj/fcEAEgTUpHupR\u002BsKivqFI2wEHzVNc7\u002Ber04qqvKyyE3zMrgwAA5h1rnzIIcBzA\u002B8GYAPMYyzQRXXjl5WVHWJHLF1cWXE5P/90jGaV2ZiVBVuTr9489iK4\u002B0L7PwcBg/xlnY3H7nlQFWjeYLrw9\u002B\u002B5pxAgAUJVXM58amzLtmnFt9Qbmbo7OfVo5lHZ4\u002BmJBvT8CAaA6r2a\u002BemetHwBq8uvl83k1s1Xm2qDaCAAgh2QrWLCILFtkkIUgWkRNyAINWtRY3sRWXuYWANCN6X4qWj5KPupTm42sP38A\u002BPobLn6iw4AAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-06-10T07:05:26.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PhieuThuViewModel.cs",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\PhieuThuViewModel.cs",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\PhieuThuViewModel.cs",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\PhieuThuViewModel.cs",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\ViewModels\\PhieuThuViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKmSURBVDhP7dFPSJNxHAbw5/vunQ3xbU4naqaSMxObhTkqA\u002B3PQUrwEISU9AfyX6dyEd0ko1NQblYQKdLB1ENKsDoEUSEWNrc0LaxMDwnmdJbOmZtu7/vtkBvvpZMdfW7fHx94HvgBG1lvCAC\u002BL3w39Hzr0T358gifvZPISMqAtdCK0sQCf3KyeSmCO0Y6DFpBG6owVywxXxPah01GY6zRV5ZTthIxAgAEggGboJA7xBo3iWG3qJA7Rhbdv2RNXQQCQDAUtPlX/XUA0D5sMobl0HPP0lSJ2ogAcGfIliAK4pbdibtcC8GFe4VJFpvT40wY8AxIavxwtCWBAQkAWj/aNQpiksHQqQ0BQE5LliNzc6ZUnFLSKjMcRFTX73lTuxTyd53Lr\u002Br8HfBX2j80wbfiO0VEPwD0MjgOQC0Yz0x609g2aftY94nuThEAvMuz8Aa8vS9Ovu5cK7ptbsuNJYUnREXUg4TCv/WkZ2YQoRBMOhC0IM4GSNIIUKIzDfY4h6FZaow\u002B/CNqZ2yKTY23S1PxzVK52gjq43\u002BEsNYMosH5S/7oSnNbbgMB49aCq\u002BOLq74G29At\u002BFYX94LZR8BXJugAKgZ4xKTPnsnSm1yPj/fcEAEgTUpHupR\u002BsKivqFI2wEHzVNc7\u002Ber04qqvKyyE3zMrgwAA5h1rnzIIcBzA\u002B8GYAPMYyzQRXXjl5WVHWJHLF1cWXE5P/90jGaV2ZiVBVuTr9489iK4\u002B0L7PwcBg/xlnY3H7nlQFWjeYLrw9\u002B\u002B5pxAgAUJVXM58amzLtmnFt9Qbmbo7OfVo5lHZ4\u002BmJBvT8CAaA6r2a\u002BemetHwBq8uvl83k1s1Xm2qDaCAAgh2QrWLCILFtkkIUgWkRNyAINWtRY3sRWXuYWANCN6X4qWj5KPupTm42sP38A\u002BPobLn6iw4AAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-06-10T07:04:58.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DataProvider.cs",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Models\\DataProvider.cs",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Models\\DataProvider.cs",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Models\\DataProvider.cs",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\Models\\DataProvider.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKmSURBVDhP7dFPSJNxHAbw5/vunQ3xbU4naqaSMxObhTkqA\u002B3PQUrwEISU9AfyX6dyEd0ko1NQblYQKdLB1ENKsDoEUSEWNrc0LaxMDwnmdJbOmZtu7/vtkBvvpZMdfW7fHx94HvgBG1lvCAC\u002BL3w39Hzr0T358gifvZPISMqAtdCK0sQCf3KyeSmCO0Y6DFpBG6owVywxXxPah01GY6zRV5ZTthIxAgAEggGboJA7xBo3iWG3qJA7Rhbdv2RNXQQCQDAUtPlX/XUA0D5sMobl0HPP0lSJ2ogAcGfIliAK4pbdibtcC8GFe4VJFpvT40wY8AxIavxwtCWBAQkAWj/aNQpiksHQqQ0BQE5LliNzc6ZUnFLSKjMcRFTX73lTuxTyd53Lr\u002Br8HfBX2j80wbfiO0VEPwD0MjgOQC0Yz0x609g2aftY94nuThEAvMuz8Aa8vS9Ovu5cK7ptbsuNJYUnREXUg4TCv/WkZ2YQoRBMOhC0IM4GSNIIUKIzDfY4h6FZaow\u002B/CNqZ2yKTY23S1PxzVK52gjq43\u002BEsNYMosH5S/7oSnNbbgMB49aCq\u002BOLq74G29At\u002BFYX94LZR8BXJugAKgZ4xKTPnsnSm1yPj/fcEAEgTUpHupR\u002BsKivqFI2wEHzVNc7\u002Ber04qqvKyyE3zMrgwAA5h1rnzIIcBzA\u002B8GYAPMYyzQRXXjl5WVHWJHLF1cWXE5P/90jGaV2ZiVBVuTr9489iK4\u002B0L7PwcBg/xlnY3H7nlQFWjeYLrw9\u002B\u002B5pxAgAUJVXM58amzLtmnFt9Qbmbo7OfVo5lHZ4\u002BmJBvT8CAaA6r2a\u002BemetHwBq8uvl83k1s1Xm2qDaCAAgh2QrWLCILFtkkIUgWkRNyAINWtRY3sRWXuYWANCN6X4qWj5KPupTm42sP38A\u002BPobLn6iw4AAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-06-08T08:35:32.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "QuanLyPhieuChiView.xaml",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\QuanLyPhieuChiView.xaml",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\QuanLyPhieuChiView.xaml",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\QuanLyPhieuChiView.xaml",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\Views\\QuanLyPhieuChiView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-10T07:08:14.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\App.config",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\App.config",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\App.config",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-06-10T03:23:52.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CRUDPhieuXuatView.xaml",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\CRUDPhieuXuatView.xaml",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\CRUDPhieuXuatView.xaml",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\CRUDPhieuXuatView.xaml",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\Views\\CRUDPhieuXuatView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-10T07:09:59.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "QuanLyPhieuXuatView.xaml",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\QuanLyPhieuXuatView.xaml",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\QuanLyPhieuXuatView.xaml",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\QuanLyPhieuXuatView.xaml",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\Views\\QuanLyPhieuXuatView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-10T04:39:10.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "QuanLyPhieuNhapView.xaml",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\QuanLyPhieuNhapView.xaml",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\QuanLyPhieuNhapView.xaml",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\QuanLyPhieuNhapView.xaml",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\Views\\QuanLyPhieuNhapView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-09T16:16:25.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoaiVatLieuViewModel.cs",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\LoaiVatLieuViewModel.cs",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\LoaiVatLieuViewModel.cs",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\LoaiVatLieuViewModel.cs",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\ViewModels\\LoaiVatLieuViewModel.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAwwE0AAAAYAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKmSURBVDhP7dFPSJNxHAbw5/vunQ3xbU4naqaSMxObhTkqA\u002B3PQUrwEISU9AfyX6dyEd0ko1NQblYQKdLB1ENKsDoEUSEWNrc0LaxMDwnmdJbOmZtu7/vtkBvvpZMdfW7fHx94HvgBG1lvCAC\u002BL3w39Hzr0T358gifvZPISMqAtdCK0sQCf3KyeSmCO0Y6DFpBG6owVywxXxPah01GY6zRV5ZTthIxAgAEggGboJA7xBo3iWG3qJA7Rhbdv2RNXQQCQDAUtPlX/XUA0D5sMobl0HPP0lSJ2ogAcGfIliAK4pbdibtcC8GFe4VJFpvT40wY8AxIavxwtCWBAQkAWj/aNQpiksHQqQ0BQE5LliNzc6ZUnFLSKjMcRFTX73lTuxTyd53Lr\u002Br8HfBX2j80wbfiO0VEPwD0MjgOQC0Yz0x609g2aftY94nuThEAvMuz8Aa8vS9Ovu5cK7ptbsuNJYUnREXUg4TCv/WkZ2YQoRBMOhC0IM4GSNIIUKIzDfY4h6FZaow\u002B/CNqZ2yKTY23S1PxzVK52gjq43\u002BEsNYMosH5S/7oSnNbbgMB49aCq\u002BOLq74G29At\u002BFYX94LZR8BXJugAKgZ4xKTPnsnSm1yPj/fcEAEgTUpHupR\u002BsKivqFI2wEHzVNc7\u002Ber04qqvKyyE3zMrgwAA5h1rnzIIcBzA\u002B8GYAPMYyzQRXXjl5WVHWJHLF1cWXE5P/90jGaV2ZiVBVuTr9489iK4\u002B0L7PwcBg/xlnY3H7nlQFWjeYLrw9\u002B\u002B5pxAgAUJVXM58amzLtmnFt9Qbmbo7OfVo5lHZ4\u002BmJBvT8CAaA6r2a\u002BemetHwBq8uvl83k1s1Xm2qDaCAAgh2QrWLCILFtkkIUgWkRNyAINWtRY3sRWXuYWANCN6X4qWj5KPupTm42sP38A\u002BPobLn6iw4AAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-06-08T08:48:35.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "QuanLyPhieuXuatViewModel.cs",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\QuanLyPhieuXuatViewModel.cs",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\QuanLyPhieuXuatViewModel.cs",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\QuanLyPhieuXuatViewModel.cs",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\ViewModels\\QuanLyPhieuXuatViewModel.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCEBAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKmSURBVDhP7dFPSJNxHAbw5/vunQ3xbU4naqaSMxObhTkqA\u002B3PQUrwEISU9AfyX6dyEd0ko1NQblYQKdLB1ENKsDoEUSEWNrc0LaxMDwnmdJbOmZtu7/vtkBvvpZMdfW7fHx94HvgBG1lvCAC\u002BL3w39Hzr0T358gifvZPISMqAtdCK0sQCf3KyeSmCO0Y6DFpBG6owVywxXxPah01GY6zRV5ZTthIxAgAEggGboJA7xBo3iWG3qJA7Rhbdv2RNXQQCQDAUtPlX/XUA0D5sMobl0HPP0lSJ2ogAcGfIliAK4pbdibtcC8GFe4VJFpvT40wY8AxIavxwtCWBAQkAWj/aNQpiksHQqQ0BQE5LliNzc6ZUnFLSKjMcRFTX73lTuxTyd53Lr\u002Br8HfBX2j80wbfiO0VEPwD0MjgOQC0Yz0x609g2aftY94nuThEAvMuz8Aa8vS9Ovu5cK7ptbsuNJYUnREXUg4TCv/WkZ2YQoRBMOhC0IM4GSNIIUKIzDfY4h6FZaow\u002B/CNqZ2yKTY23S1PxzVK52gjq43\u002BEsNYMosH5S/7oSnNbbgMB49aCq\u002BOLq74G29At\u002BFYX94LZR8BXJugAKgZ4xKTPnsnSm1yPj/fcEAEgTUpHupR\u002BsKivqFI2wEHzVNc7\u002Ber04qqvKyyE3zMrgwAA5h1rnzIIcBzA\u002B8GYAPMYyzQRXXjl5WVHWJHLF1cWXE5P/90jGaV2ZiVBVuTr9489iK4\u002B0L7PwcBg/xlnY3H7nlQFWjeYLrw9\u002B\u002B5pxAgAUJVXM58amzLtmnFt9Qbmbo7OfVo5lHZ4\u002BmJBvT8CAaA6r2a\u002BemetHwBq8uvl83k1s1Xm2qDaCAAgh2QrWLCILFtkkIUgWkRNyAINWtRY3sRWXuYWANCN6X4qWj5KPupTm42sP38A\u002BPobLn6iw4AAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-06-10T04:40:45.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "VatLieuViewModel.cs",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\VatLieuViewModel.cs",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\VatLieuViewModel.cs",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\VatLieuViewModel.cs",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\ViewModels\\VatLieuViewModel.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAiwFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T15:08:04.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TrangChuView.xaml",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\TrangChuView.xaml",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\TrangChuView.xaml",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\TrangChuView.xaml",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\Views\\TrangChuView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-08T11:51:35.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PhieuXuatViewModel.cs",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\PhieuXuatViewModel.cs",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\PhieuXuatViewModel.cs",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\PhieuXuatViewModel.cs",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\ViewModels\\PhieuXuatViewModel.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAiwDkAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKmSURBVDhP7dFPSJNxHAbw5/vunQ3xbU4naqaSMxObhTkqA\u002B3PQUrwEISU9AfyX6dyEd0ko1NQblYQKdLB1ENKsDoEUSEWNrc0LaxMDwnmdJbOmZtu7/vtkBvvpZMdfW7fHx94HvgBG1lvCAC\u002BL3w39Hzr0T358gifvZPISMqAtdCK0sQCf3KyeSmCO0Y6DFpBG6owVywxXxPah01GY6zRV5ZTthIxAgAEggGboJA7xBo3iWG3qJA7Rhbdv2RNXQQCQDAUtPlX/XUA0D5sMobl0HPP0lSJ2ogAcGfIliAK4pbdibtcC8GFe4VJFpvT40wY8AxIavxwtCWBAQkAWj/aNQpiksHQqQ0BQE5LliNzc6ZUnFLSKjMcRFTX73lTuxTyd53Lr\u002Br8HfBX2j80wbfiO0VEPwD0MjgOQC0Yz0x609g2aftY94nuThEAvMuz8Aa8vS9Ovu5cK7ptbsuNJYUnREXUg4TCv/WkZ2YQoRBMOhC0IM4GSNIIUKIzDfY4h6FZaow\u002B/CNqZ2yKTY23S1PxzVK52gjq43\u002BEsNYMosH5S/7oSnNbbgMB49aCq\u002BOLq74G29At\u002BFYX94LZR8BXJugAKgZ4xKTPnsnSm1yPj/fcEAEgTUpHupR\u002BsKivqFI2wEHzVNc7\u002Ber04qqvKyyE3zMrgwAA5h1rnzIIcBzA\u002B8GYAPMYyzQRXXjl5WVHWJHLF1cWXE5P/90jGaV2ZiVBVuTr9489iK4\u002B0L7PwcBg/xlnY3H7nlQFWjeYLrw9\u002B\u002B5pxAgAUJVXM58amzLtmnFt9Qbmbo7OfVo5lHZ4\u002BmJBvT8CAaA6r2a\u002BemetHwBq8uvl83k1s1Xm2qDaCAAgh2QrWLCILFtkkIUgWkRNyAINWtRY3sRWXuYWANCN6X4qWj5KPupTm42sP38A\u002BPobLn6iw4AAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-06-08T11:05:07.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "QuanLyPhieuNhapViewModel.cs",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\QuanLyPhieuNhapViewModel.cs",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\QuanLyPhieuNhapViewModel.cs",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\QuanLyPhieuNhapViewModel.cs",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\ViewModels\\QuanLyPhieuNhapViewModel.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAawDEAAAANAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKmSURBVDhP7dFPSJNxHAbw5/vunQ3xbU4naqaSMxObhTkqA\u002B3PQUrwEISU9AfyX6dyEd0ko1NQblYQKdLB1ENKsDoEUSEWNrc0LaxMDwnmdJbOmZtu7/vtkBvvpZMdfW7fHx94HvgBG1lvCAC\u002BL3w39Hzr0T358gifvZPISMqAtdCK0sQCf3KyeSmCO0Y6DFpBG6owVywxXxPah01GY6zRV5ZTthIxAgAEggGboJA7xBo3iWG3qJA7Rhbdv2RNXQQCQDAUtPlX/XUA0D5sMobl0HPP0lSJ2ogAcGfIliAK4pbdibtcC8GFe4VJFpvT40wY8AxIavxwtCWBAQkAWj/aNQpiksHQqQ0BQE5LliNzc6ZUnFLSKjMcRFTX73lTuxTyd53Lr\u002Br8HfBX2j80wbfiO0VEPwD0MjgOQC0Yz0x609g2aftY94nuThEAvMuz8Aa8vS9Ovu5cK7ptbsuNJYUnREXUg4TCv/WkZ2YQoRBMOhC0IM4GSNIIUKIzDfY4h6FZaow\u002B/CNqZ2yKTY23S1PxzVK52gjq43\u002BEsNYMosH5S/7oSnNbbgMB49aCq\u002BOLq74G29At\u002BFYX94LZR8BXJugAKgZ4xKTPnsnSm1yPj/fcEAEgTUpHupR\u002BsKivqFI2wEHzVNc7\u002Ber04qqvKyyE3zMrgwAA5h1rnzIIcBzA\u002B8GYAPMYyzQRXXjl5WVHWJHLF1cWXE5P/90jGaV2ZiVBVuTr9489iK4\u002B0L7PwcBg/xlnY3H7nlQFWjeYLrw9\u002B\u002B5pxAgAUJVXM58amzLtmnFt9Qbmbo7OfVo5lHZ4\u002BmJBvT8CAaA6r2a\u002BemetHwBq8uvl83k1s1Xm2qDaCAAgh2QrWLCILFtkkIUgWkRNyAINWtRY3sRWXuYWANCN6X4qWj5KPupTm42sP38A\u002BPobLn6iw4AAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-06-09T16:18:01.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\Views\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-07T15:21:50.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PartialClasses.cs",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Models\\PartialClasses.cs",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Models\\PartialClasses.cs",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Models\\PartialClasses.cs",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\Models\\PartialClasses.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAywAwAAAAKAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKmSURBVDhP7dFPSJNxHAbw5/vunQ3xbU4naqaSMxObhTkqA\u002B3PQUrwEISU9AfyX6dyEd0ko1NQblYQKdLB1ENKsDoEUSEWNrc0LaxMDwnmdJbOmZtu7/vtkBvvpZMdfW7fHx94HvgBG1lvCAC\u002BL3w39Hzr0T358gifvZPISMqAtdCK0sQCf3KyeSmCO0Y6DFpBG6owVywxXxPah01GY6zRV5ZTthIxAgAEggGboJA7xBo3iWG3qJA7Rhbdv2RNXQQCQDAUtPlX/XUA0D5sMobl0HPP0lSJ2ogAcGfIliAK4pbdibtcC8GFe4VJFpvT40wY8AxIavxwtCWBAQkAWj/aNQpiksHQqQ0BQE5LliNzc6ZUnFLSKjMcRFTX73lTuxTyd53Lr\u002Br8HfBX2j80wbfiO0VEPwD0MjgOQC0Yz0x609g2aftY94nuThEAvMuz8Aa8vS9Ovu5cK7ptbsuNJYUnREXUg4TCv/WkZ2YQoRBMOhC0IM4GSNIIUKIzDfY4h6FZaow\u002B/CNqZ2yKTY23S1PxzVK52gjq43\u002BEsNYMosH5S/7oSnNbbgMB49aCq\u002BOLq74G29At\u002BFYX94LZR8BXJugAKgZ4xKTPnsnSm1yPj/fcEAEgTUpHupR\u002BsKivqFI2wEHzVNc7\u002Ber04qqvKyyE3zMrgwAA5h1rnzIIcBzA\u002B8GYAPMYyzQRXXjl5WVHWJHLF1cWXE5P/90jGaV2ZiVBVuTr9489iK4\u002B0L7PwcBg/xlnY3H7nlQFWjeYLrw9\u002B\u002B5pxAgAUJVXM58amzLtmnFt9Qbmbo7OfVo5lHZ4\u002BmJBvT8CAaA6r2a\u002BemetHwBq8uvl83k1s1Xm2qDaCAAgh2QrWLCILFtkkIUgWkRNyAINWtRY3sRWXuYWANCN6X4qWj5KPupTm42sP38A\u002BPobLn6iw4AAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-06-08T11:04:17.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CRUDDoiTuongView.xaml",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\CRUDDoiTuongView.xaml",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\CRUDDoiTuongView.xaml",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\CRUDDoiTuongView.xaml",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\Views\\CRUDDoiTuongView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-08T12:27:28.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\App.xaml",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\App.xaml",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\App.xaml",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-08T08:21:42.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PhieuNhapViewModel.cs",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\PhieuNhapViewModel.cs",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\PhieuNhapViewModel.cs",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\PhieuNhapViewModel.cs",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\ViewModels\\PhieuNhapViewModel.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAswI4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T11:05:05.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "KhachHangViewModel.cs",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\KhachHangViewModel.cs",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\KhachHangViewModel.cs",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\KhachHangViewModel.cs",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\ViewModels\\KhachHangViewModel.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAswGkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T08:48:20.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "DangNhapView.xaml",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\DangNhapView.xaml",
+              "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\Views\\DangNhapView.xaml",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\Views\\DangNhapView.xaml",
+              "RelativeToolTip": "QuanLyVatLieuXayDung\\Views\\DangNhapView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-06T04:56:04.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "TrangChuViewModel.cs",
-              "DocumentMoniker": "F:\\DoAnTatCa\\DoAnVLXD_DotNet\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\TrangChuViewModel.cs",
+              "DocumentMoniker": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\TrangChuViewModel.cs",
               "RelativeDocumentMoniker": "QuanLyVatLieuXayDung\\ViewModels\\TrangChuViewModel.cs",
-              "ToolTip": "F:\\DoAnTatCa\\DoAnVLXD_DotNet\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\TrangChuViewModel.cs",
+              "ToolTip": "D:\\C\u00F4ng ngh\u1EC7.NET (L\u1EDBp)\\\u0110\u1ED3_\u00C1n_NET\\Construction_material_management\\QuanLyVatLieuXayDung\\QuanLyVatLieuXayDung\\ViewModels\\TrangChuViewModel.cs",
               "RelativeToolTip": "QuanLyVatLieuXayDung\\ViewModels\\TrangChuViewModel.cs",
               "ViewState": "AgIAAIsAAAAAAAAAAAAswJcAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-06T05:00:22.494Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-06T05:00:22.494Z"
             }
           ]
         }

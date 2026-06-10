@@ -17,9 +17,10 @@ namespace QuanLyVatLieuXayDung.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NhaCungCap()
         {
-            this.VatLieux = new HashSet<VatLieu>();
+            this.PhieuChis = new HashSet<PhieuChi>();
+            this.PhieuNhaps = new HashSet<PhieuNhap>();
         }
-        public int STT { get; set; }
+    
         public string ID { get; set; }
         public string DisplayName { get; set; }
         public string Address { get; set; }
@@ -29,6 +30,8 @@ namespace QuanLyVatLieuXayDung.Models
         public Nullable<System.DateTime> ContractDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VatLieu> VatLieux { get; set; }
+        public virtual ICollection<PhieuChi> PhieuChis { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PhieuNhap> PhieuNhaps { get; set; }
     }
 }

@@ -342,6 +342,9 @@
     <Compile Include="Models\KhachHang.cs">
       <DependentUpon>QuanLyVatLieuXayDung.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\LichSuGiaVatLieu.cs">
+      <DependentUpon>QuanLyVatLieuXayDung.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\LoaiVatLieu.cs">
       <DependentUpon>QuanLyVatLieuXayDung.tt</DependentUpon>
     </Compile>
@@ -354,7 +357,14 @@
     <Compile Include="Models\NhaCungCap.cs">
       <DependentUpon>QuanLyVatLieuXayDung.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PartialClasses.cs" />
+    <Compile Include="Models\PhieuChi.cs">
+      <DependentUpon>QuanLyVatLieuXayDung.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\PhieuNhap.cs">
+      <DependentUpon>QuanLyVatLieuXayDung.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PhieuThu.cs">
       <DependentUpon>QuanLyVatLieuXayDung.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PhieuXuat.cs">
@@ -384,6 +394,10 @@
     </Compile>
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\BoolToVisibilityConverter.cs" />
+    <Compile Include="ViewModels\PhieuChiViewModel.cs" />
+    <Compile Include="ViewModels\PhieuThuViewModel.cs" />
+    <Compile Include="ViewModels\QuanLyPhieuXuatViewModel.cs" />
+    <Compile Include="ViewModels\TrangThaiColorConverter.cs" />
     <Compile Include="ViewModels\ControlBarViewModel.cs" />
     <Compile Include="ViewModels\DangNhapViewModel.cs" />
     <Compile Include="ViewModels\KhachHangViewModel.cs" />
@@ -393,10 +407,14 @@
     <Compile Include="ViewModels\NhanVienViewModel.cs" />
     <Compile Include="ViewModels\PhieuNhapViewModel.cs" />
     <Compile Include="ViewModels\PhieuXuatViewModel.cs" />
+    <Compile Include="ViewModels\QuanLyPhieuNhapViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
     <Compile Include="ViewModels\ThongTinNguoiDungViewModel.cs" />
     <Compile Include="ViewModels\TrangChuViewModel.cs" />
     <Compile Include="ViewModels\VatLieuViewModel.cs" />
+    <Compile Include="Views\LichSuGiaVatLieuView.xaml.cs">
+      <DependentUpon>LichSuGiaVatLieuView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CRUDDoiTuongView.xaml.cs">
       <DependentUpon>CRUDDoiTuongView.xaml</DependentUpon>
     </Compile>
@@ -426,6 +444,18 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Views\QuanLyPhieuChiView.xaml.cs">
+      <DependentUpon>QuanLyPhieuChiView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuNhapView.xaml.cs">
+      <DependentUpon>QuanLyPhieuNhapView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuThuView.xaml.cs">
+      <DependentUpon>QuanLyPhieuThuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuXuatView.xaml.cs">
+      <DependentUpon>QuanLyPhieuXuatView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ThongTinNguoiDungView.xaml.cs">
       <DependentUpon>ThongTinNguoiDungView.xaml</DependentUpon>
     </Compile>
@@ -437,6 +467,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControlVLXD\ucControlBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LichSuGiaVatLieuView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -473,6 +507,22 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\QuanLyPhieuChiView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\QuanLyPhieuNhapView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\QuanLyPhieuThuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\QuanLyPhieuXuatView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -602,6 +652,8 @@
     <Resource Include="Assets\Icon\material.png" />
     <Resource Include="Assets\Icon\service.png" />
     <Resource Include="Assets\Icon\staff.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Models\QuanLyVatLieuXayDung.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QuanLyVatLieuXayDung.edmx</DependentUpon>

@@ -1,4 +1,4 @@
-﻿<Window x:Class="QuanLyVatLieuXayDung.Views.CRUDKhachHangView"
+<Window x:Class="QuanLyVatLieuXayDung.Views.CRUDKhachHangView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -24,7 +24,7 @@
         <local:KhachHangViewModel/>
     </Window.DataContext>
 
-    <Grid Background="#ECF0F1">
+    <Grid Background="#ECEFF1">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -132,6 +132,7 @@
                             <GridViewColumn Header="SĐT" Width="100" DisplayMemberBinding="{Binding Phone}"></GridViewColumn>
                             <GridViewColumn Header="Email" Width="120" DisplayMemberBinding="{Binding Email}"></GridViewColumn>
                             <GridViewColumn Header="Ghi chú" Width="80" DisplayMemberBinding="{Binding MoreInfo}"></GridViewColumn>
+                            <GridViewColumn Header="Tổng công nợ" Width="110" DisplayMemberBinding="{Binding CongNoHienTai, StringFormat='{}{0:N0} VND'}"></GridViewColumn>
                             <GridViewColumn Header="Ngày hợp tác" Width="150" DisplayMemberBinding="{Binding ContractDate,StringFormat='dd/MM/yyyy'}"></GridViewColumn>
                         </GridView>
                     </ListView.View>
@@ -145,7 +146,7 @@
                             <Setter Property="Height" Value="35"/>
                             <Setter Property="Width" Value="100"/>
                             <Setter Property="Margin" Value="10,5,10,5"/>
-                            <Setter Property="Background" Value="#E67E22"/>
+                            <Setter Property="Background" Value="#4CAF50"/>
                             <Setter Property="Foreground" Value="White"/>
                             <Setter Property="Cursor" Value="Hand"/>
                             <Setter Property="Template">
@@ -156,7 +157,7 @@
                                         </Border>
                                         <ControlTemplate.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#D2691E"/>
+                                                <Setter Property="Background" Value="#388E3C"/>
                                             </Trigger>
                                         </ControlTemplate.Triggers>
                                     </ControlTemplate>
@@ -164,9 +165,9 @@
                             </Setter>
                         </Style>
                     </WrapPanel.Resources>
-                    <Button Command="{Binding AddCommand}" Content="Thêm" />
-                    <Button Command="{Binding UpdateCommand}" Content="Sửa" />
-                    <Button Command="{Binding RemoveCommand}" Content="Xóa" />
+                    <Button Command="{Binding AddCommand}" Content="Thêm mới" />
+                    <Button Command="{Binding UpdateCommand}" Content="Cập nhật" Background="#FF9800"/>
+                    <Button Command="{Binding RemoveCommand}" Content="Xóa bỏ" Background="#F44336"/>
                 </WrapPanel>
             </materialDesign:Card>
         </Grid>

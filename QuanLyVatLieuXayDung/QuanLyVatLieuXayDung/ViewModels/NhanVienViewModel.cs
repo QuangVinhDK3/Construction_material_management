@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
@@ -38,6 +38,7 @@ namespace QuanLyVatLieuXayDung.ViewModels
                 {
                     UserName = _selectedNguoiDung.UserName;
                     DisplayName = _selectedNguoiDung.DisplayName;
+                    Password = _selectedNguoiDung.Password;
                     SelectedRoleID = _selectedNguoiDung.IDRole;
                 }
             }
@@ -48,6 +49,9 @@ namespace QuanLyVatLieuXayDung.ViewModels
 
         private string _displayName;
         public string DisplayName { get => _displayName; set { _displayName = value; OnPropertyChanged(); } }
+
+        private string _password;
+        public string Password { get => _password; set { _password = value; OnPropertyChanged(); } }
 
         private string _selectedRoleID;
         public string SelectedRoleID { get => _selectedRoleID; set { _selectedRoleID = value; OnPropertyChanged(); } }
@@ -117,6 +121,7 @@ namespace QuanLyVatLieuXayDung.ViewModels
             SelectedNguoiDung = null;
             UserName = string.Empty;
             DisplayName = string.Empty;
+            Password = string.Empty;
             SelectedRoleID = null;
         }
         #endregion
@@ -126,9 +131,9 @@ namespace QuanLyVatLieuXayDung.ViewModels
         // 1. CHỨC NĂNG THÊM MỚI TÀI KHOẢN
         private void AddNhanVien()
         {
-            if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(DisplayName) || string.IsNullOrEmpty(SelectedRoleID))
+            if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(DisplayName) || string.IsNullOrEmpty(SelectedRoleID) || string.IsNullOrEmpty(Password))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ Tên đăng nhập, Tên hiển thị và Chức vụ!", "Cảnh báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Vui lòng nhập đầy đủ Tên đăng nhập, Tên hiển thị, Mật khẩu và Chức vụ!", "Cảnh báo", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
@@ -148,14 +153,14 @@ namespace QuanLyVatLieuXayDung.ViewModels
                     UserName = UserName.Trim(),
                     DisplayName = DisplayName.Trim(),
                     IDRole = SelectedRoleID,
-                    Password = "123",  // Mật khẩu mặc định hệ thống cấp
+                    Password = Password.Trim(),
                     IsLocked = false   // Mặc định tài khoản được phép hoạt động
                 };
 
                 DataProvider.Ins.DB.NguoiDungs.Add(newNhanVien);
                 DataProvider.Ins.DB.SaveChanges();
 
-                MessageBox.Show($"Thêm tài khoản nhân viên thành công!\nMã số: {newNhanVien.ID}\nMật khẩu mặc định: 123", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show($"Thêm tài khoản nhân viên thành công!\nMã số: {newNhanVien.ID}", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
                 ClearFields();
                 LoadData();
             }
@@ -174,12 +179,19 @@ namespace QuanLyVatLieuXayDung.ViewModels
                 return;
             }
 
+            if (string.IsNullOrEmpty(Password))
+            {
+                MessageBox.Show("Mật khẩu không được để trống!", "Cảnh báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
             try
             {
                 var nhanvien = DataProvider.Ins.DB.NguoiDungs.SingleOrDefault(p => p.ID == SelectedNguoiDung.ID);
                 if (nhanvien != null)
                 {
                     nhanvien.DisplayName = DisplayName.Trim();
+                    nhanvien.Password = Password.Trim();
                     nhanvien.IDRole = SelectedRoleID;
 
                     DataProvider.Ins.DB.SaveChanges();

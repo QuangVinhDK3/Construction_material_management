@@ -13,16 +13,38 @@ namespace QuanLyVatLieuXayDung.ViewModels
 {
     public class TrangChuViewModel : BaseViewModel
     {
-        private ObservableCollection<TonKho> _DSTonKho;
-        public ObservableCollection<TonKho> DSTonKho
+        private ObservableCollection<int> _ListYears;
+        public ObservableCollection<int> ListYears
         {
-            get { return _DSTonKho; }
+            get => _ListYears;
+            set { _ListYears = value; OnPropertyChanged(nameof(ListYears)); }
+        }
+
+        private int _SelectedYear;
+        public int SelectedYear
+        {
+            get => _SelectedYear;
             set
             {
-                if (value != _DSTonKho)
+                if (_SelectedYear != value)
                 {
-                    _DSTonKho = value;
-                    OnPropertyChanged(nameof(DSTonKho));
+                    _SelectedYear = value;
+                    OnPropertyChanged(nameof(SelectedYear));
+                    LoadRevenueChartData(); // Tải lại biểu đồ khi đổi năm
+                }
+            }
+        }
+
+        private ObservableCollection<KhachHang> _CongNoKhachHang;
+        public ObservableCollection<KhachHang> CongNoKhachHang
+        {
+            get { return _CongNoKhachHang; }
+            set
+            {
+                if (value != _CongNoKhachHang)
+                {
+                    _CongNoKhachHang = value;
+                    OnPropertyChanged(nameof(CongNoKhachHang));
                 }
             }
         }
@@ -69,16 +91,16 @@ namespace QuanLyVatLieuXayDung.ViewModels
             }
         }
 
-        private SeriesCollection _ChucVu;
-        public SeriesCollection ChucVu
+        private SeriesCollection _TyLeLoaiVatLieu;
+        public SeriesCollection TyLeLoaiVatLieu
         {
-            get { return _ChucVu; }
+            get { return _TyLeLoaiVatLieu; }
             set
             {
-                if (_ChucVu != value)
+                if (_TyLeLoaiVatLieu != value)
                 {
-                    _ChucVu = value;
-                    OnPropertyChanged(nameof(ChucVu));
+                    _TyLeLoaiVatLieu = value;
+                    OnPropertyChanged(nameof(TyLeLoaiVatLieu));
                 }
             }
         }
@@ -111,12 +133,46 @@ namespace QuanLyVatLieuXayDung.ViewModels
             set { _SoHoaDon = value; OnPropertyChanged(); }
         }
 
+        private string _TongDoanhThuStr;
+        public string TongDoanhThuStr
+        {
+            get => _TongDoanhThuStr;
+            set { _TongDoanhThuStr = value; OnPropertyChanged(); }
+        }
+
         public TrangChuViewModel()
         {
-            LoadTonKhoData();
-            LoadRevenueChartData();
-            LoadRolesChartData();
+            InitializeYears();
+            LoadCongNoData();
+            // LoadRevenueChartData() tự động được gọi khi SelectedYear thay đổi
+            LoadTyLeLoaiVatLieuChartData();
             LoadStatistics();
+        }
+
+        private void InitializeYears()
+        {
+            try
+            {
+                var years = DataProvider.Ins.DB.PhieuXuats
+                            .Where(x => x.DateOutput != null)
+                            .Select(x => x.DateOutput.Value.Year)
+                            .Distinct()
+                            .OrderByDescending(y => y)
+                            .ToList();
+                if (years.Count == 0) years.Add(DateTime.Now.Year);
+                
+                ListYears = new ObservableCollection<int>(years);
+                _SelectedYear = ListYears.FirstOrDefault();
+                OnPropertyChanged(nameof(SelectedYear));
+                LoadRevenueChartData();
+            }
+            catch
+            {
+                ListYears = new ObservableCollection<int> { DateTime.Now.Year };
+                _SelectedYear = DateTime.Now.Year;
+                OnPropertyChanged(nameof(SelectedYear));
+                LoadRevenueChartData();
+            }
         }
 
         public void LoadStatistics()
@@ -127,76 +183,13 @@ namespace QuanLyVatLieuXayDung.ViewModels
                 SoKhachHang = DataProvider.Ins.DB.KhachHangs.Count();
                 SoLoaiVatLieu = DataProvider.Ins.DB.LoaiVatLieux.Count();
                 SoHoaDon = DataProvider.Ins.DB.PhieuXuats.Count();
-            }
-            catch (Exception)
-            {
-                SoNhanVien = 0;
-                SoKhachHang = 0;
-                SoLoaiVatLieu = 0;
-                SoHoaDon = 0;
-            }
-        }
 
-        public void LoadTonKhoData()
-        {
-            try
-            {
-                DSTonKho = new ObservableCollection<TonKho>();
-
-                // Lấy danh sách Vật Liệu cùng Loại Vật Liệu trực tiếp từ database
-                var VatLieuList = DataProvider.Ins.DB.VatLieux
-                    .Include("LoaiVatLieu")
-                    .ToList();
-
-                // Tính tổng nhập theo từng vật liệu từ database
-                var inputCounts = DataProvider.Ins.DB.ChiTietPhieuNhaps
-                    .GroupBy(p => p.IDObject)
-                    .Select(g => new { IDObject = g.Key, TotalInput = g.Sum(p => (int?)p.Counts) ?? 0 })
-                    .ToDictionary(x => x.IDObject.Trim(), x => x.TotalInput);
-
-                // Tính tổng xuất theo từng vật liệu từ database
-                var outputCounts = DataProvider.Ins.DB.ChiTietPhieuXuats
-                    .GroupBy(p => p.IDObject)
-                    .Select(g => new { IDObject = g.Key, TotalOutput = g.Sum(p => (int?)p.Counts) ?? 0 })
-                    .ToDictionary(x => x.IDObject.Trim(), x => x.TotalOutput);
-
-                int j = 1;
-                foreach (var i in VatLieuList)
-                {
-                    string key = i.ID.Trim();
-                    int sumInput = inputCounts.ContainsKey(key) ? inputCounts[key] : 0;
-                    int sumOutput = outputCounts.ContainsKey(key) ? outputCounts[key] : 0;
-
-                    TonKho ton = new TonKho
-                    {
-                        STT = j,
-                        Count = sumInput - sumOutput,
-                        VatLieu = i,
-                        LoaiVatLieu = i.LoaiVatLieu
-                    };
-
-                    DSTonKho.Add(ton);
-                    j++;
-                }
-            }
-            catch (Exception)
-            {
-                DSTonKho = new ObservableCollection<TonKho>();
-            }
-        }
-
-        public void LoadRevenueChartData()
-        {
-            try
-            {
-                // Lấy chi tiết xuất kho phục vụ tính doanh thu
-                var salesDetails = DataProvider.Ins.DB.ChiTietPhieuXuats
+                var allSalesDetails = DataProvider.Ins.DB.ChiTietPhieuXuats
+                    .Where(x => x.PhieuXuat.Status != "Chưa xuất")
                     .Select(x => new
                     {
-                        Date = x.PhieuXuat.DateOutput,
                         Counts = x.Counts ?? 0,
                         Price = x.Price ?? 0,
-                        // Nếu giá xuất bằng 0 hoặc null, lấy giá xuất định mức (PriceOutput) từ chi tiết nhập gần nhất
                         FallbackPrice = x.VatLieu.ChiTietPhieuNhaps
                             .OrderByDescending(n => n.PhieuNhap.DateInput)
                             .Select(n => n.PriceOutput)
@@ -204,27 +197,90 @@ namespace QuanLyVatLieuXayDung.ViewModels
                     })
                     .ToList();
 
-                var latestSale = DataProvider.Ins.DB.PhieuXuats.Max(p => p.DateOutput);
-                DateTime endDate = latestSale ?? DateTime.Now;
-                DateTime startDate = new DateTime(endDate.Year, endDate.Month, 1).AddMonths(-11);
+                double tongDoanhThu = allSalesDetails.Sum(x => x.Counts * (x.Price > 0 ? x.Price : x.FallbackPrice));
+                
+                if (tongDoanhThu >= 1000000000) TongDoanhThuStr = (tongDoanhThu / 1000000000D).ToString("0.##") + " Tỷ";
+                else if (tongDoanhThu >= 1000000) TongDoanhThuStr = (tongDoanhThu / 1000000D).ToString("0.##") + " Tr";
+                else if (tongDoanhThu >= 1000) TongDoanhThuStr = (tongDoanhThu / 1000D).ToString("0.##") + " K";
+                else TongDoanhThuStr = tongDoanhThu.ToString("N0") + " đ";
+            }
+            catch (Exception)
+            {
+                SoNhanVien = 0;
+                SoKhachHang = 0;
+                SoLoaiVatLieu = 0;
+                SoHoaDon = 0;
+                TongDoanhThuStr = "0 đ";
+            }
+        }
+
+        public void LoadCongNoData()
+        {
+            try
+            {
+                var list = DataProvider.Ins.DB.KhachHangs
+                    .Include("PhieuXuats.ChiTietPhieuXuats")
+                    .ToList();
+                
+                // Chỉ lấy những khách hàng có công nợ > 0 và sắp xếp giảm dần
+                var dsCongNo = list.Where(k => k.CongNoHienTai > 0)
+                                   .OrderByDescending(k => k.CongNoHienTai)
+                                   .ToList();
+
+                for (int i = 0; i < dsCongNo.Count; i++)
+                {
+                    dsCongNo[i].STT = i + 1;
+                }
+
+                CongNoKhachHang = new ObservableCollection<KhachHang>(dsCongNo);
+            }
+            catch (Exception)
+            {
+                CongNoKhachHang = new ObservableCollection<KhachHang>();
+            }
+        }
+
+        public void LoadRevenueChartData()
+        {
+            try
+            {
+                // Lấy chi tiết xuất kho trong năm được chọn để tối ưu hiệu suất
+                var salesDetails = DataProvider.Ins.DB.ChiTietPhieuXuats
+                    .Where(x => x.PhieuXuat.DateOutput != null && x.PhieuXuat.DateOutput.Value.Year == SelectedYear && x.PhieuXuat.Status != "Chưa xuất")
+                    .Select(x => new
+                    {
+                        Date = x.PhieuXuat.DateOutput,
+                        Counts = x.Counts ?? 0,
+                        Price = x.Price ?? 0,
+                        FallbackPrice = x.VatLieu.ChiTietPhieuNhaps
+                            .OrderByDescending(n => n.PhieuNhap.DateInput)
+                            .Select(n => n.PriceOutput)
+                            .FirstOrDefault() ?? 0
+                    })
+                    .ToList();
 
                 var monthLabels = new List<string>();
                 var revenueValues = new ChartValues<double>();
 
-                for (int i = 0; i < 12; i++)
+                for (int i = 1; i <= 12; i++)
                 {
-                    var date = startDate.AddMonths(i);
-                    monthLabels.Add(date.ToString("MM/yyyy"));
+                    monthLabels.Add("T" + i);
 
                     double monthlyRevenue = salesDetails
-                        .Where(x => x.Date != null && x.Date.Value.Year == date.Year && x.Date.Value.Month == date.Month)
+                        .Where(x => x.Date != null && x.Date.Value.Month == i)
                         .Sum(x => x.Counts * (x.Price > 0 ? x.Price : x.FallbackPrice));
 
                     revenueValues.Add(monthlyRevenue);
                 }
 
                 Labels = monthLabels;
-                Formatter = value => value.ToString("N0") + " VNĐ";
+                Formatter = value => 
+                {
+                    if (value >= 1000000000) return (value / 1000000000D).ToString("0.##") + " Tỷ";
+                    if (value >= 1000000) return (value / 1000000D).ToString("0.##") + " Tr";
+                    if (value >= 1000) return (value / 1000D).ToString("0.##") + " K";
+                    return value.ToString("N0") + " đ";
+                };
 
                 DoanhThu = new SeriesCollection
                 {
@@ -233,7 +289,15 @@ namespace QuanLyVatLieuXayDung.ViewModels
                         Title = "Doanh thu",
                         Values = revenueValues,
                         DataLabels = true,
-                        LabelPoint = point => point.Y.ToString("N0") + " VNĐ",
+                        Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(255, 143, 0)),
+                        MaxColumnWidth = 40,
+                        LabelPoint = point => 
+                        {
+                            if (point.Y >= 1000000000) return (point.Y / 1000000000D).ToString("0.##") + " Tỷ";
+                            if (point.Y >= 1000000) return (point.Y / 1000000D).ToString("0.##") + " Tr";
+                            if (point.Y >= 1000) return (point.Y / 1000D).ToString("0.##") + " K";
+                            return point.Y.ToString("N0") + " đ";
+                        },
                         Foreground = System.Windows.Media.Brushes.White
                     }
                 };
@@ -246,23 +310,23 @@ namespace QuanLyVatLieuXayDung.ViewModels
             }
         }
 
-        public void LoadRolesChartData()
+        public void LoadTyLeLoaiVatLieuChartData()
         {
             try
             {
-                // Nhóm tài khoản nhân viên theo vai trò để vẽ biểu đồ tròn
-                var rolesData = DataProvider.Ins.DB.NguoiDungs
-                    .Include("NguoiDungRole")
-                    .GroupBy(u => u.NguoiDungRole.DisplayName)
-                    .Select(g => new { RoleName = g.Key, Count = g.Count() })
+                // Nhóm vật liệu theo loại vật liệu để vẽ biểu đồ tròn
+                var categoryData = DataProvider.Ins.DB.VatLieux
+                    .Include("LoaiVatLieu")
+                    .GroupBy(v => v.LoaiVatLieu.DisplayName)
+                    .Select(g => new { CategoryName = g.Key, Count = g.Count() })
                     .ToList();
 
-                ChucVu = new SeriesCollection();
-                foreach (var item in rolesData)
+                TyLeLoaiVatLieu = new SeriesCollection();
+                foreach (var item in categoryData)
                 {
-                    ChucVu.Add(new PieSeries
+                    TyLeLoaiVatLieu.Add(new PieSeries
                     {
-                        Title = item.RoleName,
+                        Title = item.CategoryName,
                         Values = new ChartValues<int> { item.Count },
                         DataLabels = true,
                         LabelPoint = chartPoint => string.Format("{0} ({1:P})", chartPoint.Y, chartPoint.Participation)
@@ -271,7 +335,7 @@ namespace QuanLyVatLieuXayDung.ViewModels
             }
             catch (Exception)
             {
-                ChucVu = new SeriesCollection();
+                TyLeLoaiVatLieu = new SeriesCollection();
             }
         }
     }

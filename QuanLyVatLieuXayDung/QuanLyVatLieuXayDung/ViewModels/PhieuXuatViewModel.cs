@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.ObjectModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
@@ -52,12 +53,9 @@ namespace QuanLyVatLieuXayDung.ViewModels
                 {
                     IDOutput = _SelectedCTPX.IDOutput;
                     IDObject = _SelectedCTPX.IDObject;
-                    IDCustomer = _SelectedCTPX.IDCustomer;
                     Counts = _SelectedCTPX.Counts ?? 0;
-                    Status = _SelectedCTPX.Status;
-
+                    Price = _SelectedCTPX.Price ?? 0;
                     var phieuXuat = DSPhieuXuat?.FirstOrDefault(p => p.ID == _SelectedCTPX.IDOutput);
-                    if (phieuXuat != null) DateOutput = phieuXuat.DateOutput;
                 }
             }
         }
@@ -66,19 +64,61 @@ namespace QuanLyVatLieuXayDung.ViewModels
         public string IDOutput { get => _IDOutput; set { _IDOutput = value; OnPropertyChanged(); } }
 
         private string _IDObject;
-        public string IDObject { get => _IDObject; set { _IDObject = value; OnPropertyChanged(); } }
+        public string IDObject 
+        { 
+            get => _IDObject; 
+            set 
+            { 
+                if (_IDObject != value)
+                {
+                    _IDObject = value; 
+                    OnPropertyChanged(); 
+                    
+                    if (!string.IsNullOrEmpty(_IDObject))
+                    {
+                        var latestInput = DataProvider.Ins.DB.ChiTietPhieuNhaps
+                            .Where(c => c.IDObject == _IDObject)
+                            .OrderByDescending(c => c.PhieuNhap.DateInput)
+                            .FirstOrDefault();
 
-        private string _IDCustomer;
-        public string IDCustomer { get => _IDCustomer; set { _IDCustomer = value; OnPropertyChanged(); } }
-
-        private DateTime? _DateOutput;
-        public DateTime? DateOutput { get => _DateOutput; set { _DateOutput = value; OnPropertyChanged(); } }
+                        if (latestInput != null && latestInput.PriceOutput.HasValue)
+                        {
+                            Price = latestInput.PriceOutput.Value;
+                        }
+                        else
+                        {
+                            Price = 0;
+                        }
+                    }
+                }
+            } 
+        }
 
         private int _Counts;
-        public int Counts { get => _Counts; set { _Counts = value; OnPropertyChanged(); } }
+        public int Counts 
+        { 
+            get => _Counts; 
+            set 
+            { 
+                _Counts = value; 
+                OnPropertyChanged(); 
+                OnPropertyChanged(nameof(ThanhTien));
+            } 
+        }
 
-        private string _Status;
-        public string Status { get => _Status; set { _Status = value; OnPropertyChanged(); } }
+        private double _Price;
+        public double Price 
+        { 
+            get => _Price; 
+            set 
+            { 
+                _Price = value; 
+                OnPropertyChanged(); 
+                OnPropertyChanged(nameof(ThanhTien));
+            } 
+        }
+
+        public double ThanhTien => Counts * Price;
         #endregion
 
         #region Commands
@@ -103,8 +143,11 @@ namespace QuanLyVatLieuXayDung.ViewModels
         #region Helper Methods
         private void RefreshData()
         {
-           
-            var list = DataProvider.Ins.DB.ChiTietPhieuXuats.ToList();
+            var list = DataProvider.Ins.DB.ChiTietPhieuXuats
+                        .Include(c => c.VatLieu)
+                        .Include(c => c.PhieuXuat)
+                        .Include(c => c.PhieuXuat.KhachHang)
+                        .ToList();
             for (int i = 0; i < list.Count; i++)
             {
                 list[i].STT = i + 1;
@@ -142,19 +185,17 @@ namespace QuanLyVatLieuXayDung.ViewModels
             SelectedCTPX = null;
             IDOutput = string.Empty;
             IDObject = string.Empty;
-            IDCustomer = string.Empty;
             Counts = 0;
-            Status = string.Empty;
-            DateOutput = null;
+            Price = 0;
         }
         #endregion
 
         #region CRUD Operations
         public void Add()
         {
-            if (string.IsNullOrEmpty(IDOutput) || string.IsNullOrEmpty(IDObject) || string.IsNullOrEmpty(IDCustomer))
+            if (string.IsNullOrEmpty(IDOutput) || string.IsNullOrEmpty(IDObject))
             {
-                MessageBox.Show("Vui lòng chọn đầy đủ Mã phiếu xuất, Khách hàng và Vật liệu!", "Cảnh báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Vui lòng chọn đầy đủ Mã phiếu xuất và Vật liệu!", "Cảnh báo", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
@@ -178,12 +219,12 @@ namespace QuanLyVatLieuXayDung.ViewModels
                     ID = AutoCreateID(),
                     IDOutput = IDOutput,
                     IDObject = IDObject,
-                    IDCustomer = IDCustomer,
                     Counts = Counts,
-                    Status = Status
+                    Price = Price
                 };
 
                 DataProvider.Ins.DB.ChiTietPhieuXuats.Add(ctpx);
+                
                 DataProvider.Ins.DB.SaveChanges();
 
                 MessageBox.Show("Thêm chi tiết phiếu xuất thành công!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -198,7 +239,7 @@ namespace QuanLyVatLieuXayDung.ViewModels
 
         public void Update()
         {
-            if (string.IsNullOrEmpty(IDOutput) || string.IsNullOrEmpty(IDObject) || string.IsNullOrEmpty(IDCustomer))
+            if (string.IsNullOrEmpty(IDOutput) || string.IsNullOrEmpty(IDObject))
             {
                 MessageBox.Show("Vui lòng chọn đầy đủ thông tin!", "Cảnh báo", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
@@ -225,9 +266,8 @@ namespace QuanLyVatLieuXayDung.ViewModels
 
                     ctpx.IDOutput = IDOutput;
                     ctpx.IDObject = IDObject;
-                    ctpx.IDCustomer = IDCustomer;
                     ctpx.Counts = Counts;
-                    ctpx.Status = Status;
+                    ctpx.Price = Price;
 
                     DataProvider.Ins.DB.SaveChanges();
 

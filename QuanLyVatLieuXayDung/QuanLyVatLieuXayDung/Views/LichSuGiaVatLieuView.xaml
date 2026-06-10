@@ -1,0 +1,42 @@
+<Window x:Class="QuanLyVatLieuXayDung.Views.LichSuGiaVatLieuView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        mc:Ignorable="d"
+        Title="Lịch sử giá vật liệu" Height="400" Width="600" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Row="0" x:Name="txtTitle" Text="Lịch sử giá của vật liệu: " FontSize="18" FontWeight="Bold" Foreground="#3F51B5" Margin="0 0 0 10"/>
+
+        <materialDesign:Card Grid.Row="1" VerticalAlignment="Stretch">
+            <ListView x:Name="lvLichSuGia">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Ngày thay đổi" Width="150" DisplayMemberBinding="{Binding NgayThayDoi, StringFormat='dd/MM/yyyy HH:mm'}"></GridViewColumn>
+                        <GridViewColumn Header="Giá cũ" Width="120" DisplayMemberBinding="{Binding GiaCu, StringFormat='{}{0:N0} VND'}"></GridViewColumn>
+                        <GridViewColumn Header="Giá mới" Width="120" DisplayMemberBinding="{Binding GiaMoi, StringFormat='{}{0:N0} VND'}"></GridViewColumn>
+                        <GridViewColumn Header="Người thay đổi" Width="150" DisplayMemberBinding="{Binding NguoiThayDoi}"></GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </materialDesign:Card>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 10 0 0">
+            <Button Content="Đóng" IsCancel="True" Width="100" Background="#9E9E9E" BorderBrush="#9E9E9E"/>
+        </StackPanel>
+    </Grid>
+</Window>

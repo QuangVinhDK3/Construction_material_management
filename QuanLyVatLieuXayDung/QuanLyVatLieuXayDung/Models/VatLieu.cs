@@ -19,12 +19,13 @@ namespace QuanLyVatLieuXayDung.Models
         {
             this.ChiTietPhieuNhaps = new HashSet<ChiTietPhieuNhap>();
             this.ChiTietPhieuXuats = new HashSet<ChiTietPhieuXuat>();
+            this.LichSuGiaVatLieux = new HashSet<LichSuGiaVatLieu>();
         }
-        public int STT {  get; set; }
+    
         public string ID { get; set; }
         public string DisplayName { get; set; }
         public string IDLoaiVatLieu { get; set; }
-        public string IDNhaCungCap { get; set; }
+        public string DonViTinh { get; set; }
         public string QRCode { get; set; }
         public string Barcode { get; set; }
     
@@ -32,7 +33,8 @@ namespace QuanLyVatLieuXayDung.Models
         public virtual ICollection<ChiTietPhieuNhap> ChiTietPhieuNhaps { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietPhieuXuat> ChiTietPhieuXuats { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LichSuGiaVatLieu> LichSuGiaVatLieux { get; set; }
         public virtual LoaiVatLieu LoaiVatLieu { get; set; }
-        public virtual NhaCungCap NhaCungCap { get; set; }
     }
 }

@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.ObjectModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
@@ -46,7 +47,6 @@ namespace QuanLyVatLieuXayDung.ViewModels
                     Count = SelectedCTPN.Counts ?? 0;
                     PriceInput = SelectedCTPN.PriceInput ?? 0;
                     PriceOutput = SelectedCTPN.PriceOutput ?? 0;
-                    Status = SelectedCTPN.Status;
                     var phieuNhap = DSPhieuNhap?.FirstOrDefault(p => p.ID == SelectedCTPN.IDINput);
                     if (phieuNhap != null)
                     {
@@ -112,13 +112,6 @@ namespace QuanLyVatLieuXayDung.ViewModels
             set { _PriceOutput = value; OnPropertyChanged(); }
         }
 
-        private string _Status;
-        public string Status
-        {
-            get => _Status;
-            set { _Status = value; OnPropertyChanged(); }
-        }
-
         public ICommand AddCommand { get; set; }
         public ICommand UpdateCommand { get; set; }
         public ICommand RemoveCommand { get; set; }
@@ -137,7 +130,10 @@ namespace QuanLyVatLieuXayDung.ViewModels
 
         private void RefreshData()
         {
-            var list = DataProvider.Ins.DB.ChiTietPhieuNhaps.ToList();
+            var list = DataProvider.Ins.DB.ChiTietPhieuNhaps
+                        .Include("VatLieu")
+                        .Include("PhieuNhap")
+                        .ToList();
             for (int i = 0; i < list.Count; i++)
             {
                 list[i].STT = i + 1;
@@ -162,7 +158,6 @@ namespace QuanLyVatLieuXayDung.ViewModels
 
         private void ClearFields()
         {
-            SelectedCTPN = null;
             SelectedPN = null;
             SelectedVL = null;
             IDPhieuNhap = string.Empty;
@@ -170,7 +165,7 @@ namespace QuanLyVatLieuXayDung.ViewModels
             Count = 0;
             PriceInput = 0;
             PriceOutput = 0;
-            Status = string.Empty;
+            SelectedCTPN = null;
             DateInput = null;
         }
 
@@ -193,11 +188,34 @@ namespace QuanLyVatLieuXayDung.ViewModels
                     IDObject = IDVatLieu,
                     Counts = Count,
                     PriceInput = PriceInput,
-                    PriceOutput = PriceOutput,
-                    Status = Status
+                    PriceOutput = PriceOutput
                 };
 
                 DataProvider.Ins.DB.ChiTietPhieuNhaps.Add(ctpn);
+
+                // Lưu lại Lịch sử giá
+                if (PriceOutput > 0)
+                {
+                    // Lấy giá cũ (giá lớn nhất trước đó của vật liệu này)
+                    double giaCu = DataProvider.Ins.DB.ChiTietPhieuNhaps
+                        .Where(c => c.IDObject == IDVatLieu && c.PriceOutput.HasValue)
+                        .Select(c => c.PriceOutput.Value)
+                        .DefaultIfEmpty(0)
+                        .Max();
+
+                    if (giaCu != PriceOutput)
+                    {
+                        var lichSu = new LichSuGiaVatLieu()
+                        {
+                            IDVatLieu = IDVatLieu,
+                            GiaCu = giaCu,
+                            GiaMoi = (double)PriceOutput,
+                            NgayThayDoi = DateTime.Now,
+                            NguoiThayDoi = "System"
+                        };
+                        DataProvider.Ins.DB.LichSuGiaVatLieux.Add(lichSu);
+                    }
+                }
                 DataProvider.Ins.DB.SaveChanges();
 
                 MessageBox.Show("Thêm chi tiết phiếu nhập thành công!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -206,7 +224,10 @@ namespace QuanLyVatLieuXayDung.ViewModels
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Đã xảy ra lỗi khi thêm dữ liệu: " + ex.Message, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                var innerMsg = ex.InnerException?.InnerException?.Message 
+                            ?? ex.InnerException?.Message 
+                            ?? ex.Message;
+                MessageBox.Show("Chi tiết lỗi: " + innerMsg, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -223,12 +244,32 @@ namespace QuanLyVatLieuXayDung.ViewModels
                 var ctpn = DataProvider.Ins.DB.ChiTietPhieuNhaps.SingleOrDefault(p => p.ID == SelectedCTPN.ID);
                 if (ctpn != null)
                 {
+                    // Tính giá cũ để so sánh
+                    double giaCu = DataProvider.Ins.DB.ChiTietPhieuNhaps
+                        .Where(c => c.IDObject == IDVatLieu && c.PriceOutput.HasValue && c.ID != ctpn.ID)
+                        .Select(c => c.PriceOutput.Value)
+                        .DefaultIfEmpty(0)
+                        .Max();
+
                     ctpn.IDINput = IDPhieuNhap;
                     ctpn.IDObject = IDVatLieu;
                     ctpn.Counts = Count;
                     ctpn.PriceInput = PriceInput;
                     ctpn.PriceOutput = PriceOutput;
-                    ctpn.Status = Status;
+
+                    // Lưu lại Lịch sử giá nếu có sửa PriceOutput
+                    if (PriceOutput > 0 && giaCu != PriceOutput)
+                    {
+                        var lichSu = new LichSuGiaVatLieu()
+                        {
+                            IDVatLieu = IDVatLieu,
+                            GiaCu = giaCu,
+                            GiaMoi = (double)PriceOutput,
+                            NgayThayDoi = DateTime.Now,
+                            NguoiThayDoi = "System"
+                        };
+                        DataProvider.Ins.DB.LichSuGiaVatLieux.Add(lichSu);
+                    }
 
                     DataProvider.Ins.DB.SaveChanges();
 

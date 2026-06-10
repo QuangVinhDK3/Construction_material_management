@@ -17,9 +17,11 @@ namespace QuanLyVatLieuXayDung.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NguoiDung()
         {
+            this.PhieuChis = new HashSet<PhieuChi>();
+            this.PhieuThus = new HashSet<PhieuThu>();
             this.PhieuXuats = new HashSet<PhieuXuat>();
         }
-        public bool IsLocked { get; set; }
+    
         public string ID { get; set; }
         public string DisplayName { get; set; }
         public string UserName { get; set; }
@@ -27,6 +29,10 @@ namespace QuanLyVatLieuXayDung.Models
         public string IDRole { get; set; }
     
         public virtual NguoiDungRole NguoiDungRole { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PhieuChi> PhieuChis { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PhieuThu> PhieuThus { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuXuat> PhieuXuats { get; set; }
     }

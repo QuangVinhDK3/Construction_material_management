@@ -4,109 +4,150 @@
     <EntitySetMapping Name="ChiTietPhieuNhaps">
       <EntityTypeMapping TypeName="QuanLyVatLieuXayDungModel.ChiTietPhieuNhap">
         <MappingFragment StoreEntitySet="ChiTietPhieuNhap">
-          <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="PriceOutput" ColumnName="PriceOutput" />
-          <ScalarProperty Name="PriceInput" ColumnName="PriceInput" />
-          <ScalarProperty Name="Counts" ColumnName="Counts" />
-          <ScalarProperty Name="IDINput" ColumnName="IDINput" />
-          <ScalarProperty Name="IDObject" ColumnName="IDObject" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDObject" ColumnName="IDObject" />
+          <ScalarProperty Name="IDINput" ColumnName="IDINput" />
+          <ScalarProperty Name="Counts" ColumnName="Counts" />
+          <ScalarProperty Name="PriceInput" ColumnName="PriceInput" />
+          <ScalarProperty Name="PriceOutput" ColumnName="PriceOutput" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ChiTietPhieuXuats">
       <EntityTypeMapping TypeName="QuanLyVatLieuXayDungModel.ChiTietPhieuXuat">
         <MappingFragment StoreEntitySet="ChiTietPhieuXuat">
-          <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
-          <ScalarProperty Name="Counts" ColumnName="Counts" />
-          <ScalarProperty Name="IDCustomer" ColumnName="IDCustomer" />
-          <ScalarProperty Name="IDOutput" ColumnName="IDOutput" />
-          <ScalarProperty Name="IDObject" ColumnName="IDObject" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDObject" ColumnName="IDObject" />
+          <ScalarProperty Name="IDOutput" ColumnName="IDOutput" />
+          <ScalarProperty Name="Counts" ColumnName="Counts" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="KhachHangs">
       <EntityTypeMapping TypeName="QuanLyVatLieuXayDungModel.KhachHang">
         <MappingFragment StoreEntitySet="KhachHang">
-          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
-          <ScalarProperty Name="MoreInfo" ColumnName="MoreInfo" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Phone" ColumnName="Phone" />
-          <ScalarProperty Name="Address" ColumnName="Address" />
-          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MoreInfo" ColumnName="MoreInfo" />
+          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LichSuGiaVatLieux">
+      <EntityTypeMapping TypeName="QuanLyVatLieuXayDungModel.LichSuGiaVatLieu">
+        <MappingFragment StoreEntitySet="LichSuGiaVatLieu">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDVatLieu" ColumnName="IDVatLieu" />
+          <ScalarProperty Name="GiaCu" ColumnName="GiaCu" />
+          <ScalarProperty Name="GiaMoi" ColumnName="GiaMoi" />
+          <ScalarProperty Name="NgayThayDoi" ColumnName="NgayThayDoi" />
+          <ScalarProperty Name="NguoiThayDoi" ColumnName="NguoiThayDoi" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="LoaiVatLieux">
       <EntityTypeMapping TypeName="QuanLyVatLieuXayDungModel.LoaiVatLieu">
         <MappingFragment StoreEntitySet="LoaiVatLieu">
-          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="NguoiDungs">
       <EntityTypeMapping TypeName="QuanLyVatLieuXayDungModel.NguoiDung">
         <MappingFragment StoreEntitySet="NguoiDung">
-          <ScalarProperty Name="IDRole" ColumnName="IDRole" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="UserName" ColumnName="UserName" />
-          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IDRole" ColumnName="IDRole" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="NguoiDungRoles">
       <EntityTypeMapping TypeName="QuanLyVatLieuXayDungModel.NguoiDungRole">
         <MappingFragment StoreEntitySet="NguoiDungRole">
-          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="NhaCungCaps">
       <EntityTypeMapping TypeName="QuanLyVatLieuXayDungModel.NhaCungCap">
         <MappingFragment StoreEntitySet="NhaCungCap">
-          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
-          <ScalarProperty Name="MoreInfo" ColumnName="MoreInfo" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Phone" ColumnName="Phone" />
-          <ScalarProperty Name="Address" ColumnName="Address" />
-          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MoreInfo" ColumnName="MoreInfo" />
+          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhieuChis">
+      <EntityTypeMapping TypeName="QuanLyVatLieuXayDungModel.PhieuChi">
+        <MappingFragment StoreEntitySet="PhieuChi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDNhaCungCap" ColumnName="IDNhaCungCap" />
+          <ScalarProperty Name="NgayChi" ColumnName="NgayChi" />
+          <ScalarProperty Name="SoTien" ColumnName="SoTien" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PhieuNhaps">
       <EntityTypeMapping TypeName="QuanLyVatLieuXayDungModel.PhieuNhap">
         <MappingFragment StoreEntitySet="PhieuNhap">
-          <ScalarProperty Name="DateInput" ColumnName="DateInput" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDNhaCungCap" ColumnName="IDNhaCungCap" />
+          <ScalarProperty Name="DateInput" ColumnName="DateInput" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhieuThus">
+      <EntityTypeMapping TypeName="QuanLyVatLieuXayDungModel.PhieuThu">
+        <MappingFragment StoreEntitySet="PhieuThu">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDKhachHang" ColumnName="IDKhachHang" />
+          <ScalarProperty Name="NgayThu" ColumnName="NgayThu" />
+          <ScalarProperty Name="SoTien" ColumnName="SoTien" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PhieuXuats">
       <EntityTypeMapping TypeName="QuanLyVatLieuXayDungModel.PhieuXuat">
         <MappingFragment StoreEntitySet="PhieuXuat">
-          <ScalarProperty Name="Total" ColumnName="Total" />
-          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
-          <ScalarProperty Name="DateOutput" ColumnName="DateOutput" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateOutput" ColumnName="DateOutput" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="IDCustomer" ColumnName="IDCustomer" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ChietKhau" ColumnName="ChietKhau" />
+          <ScalarProperty Name="SoTienDaThanhToan" ColumnName="SoTienDaThanhToan" />
+          <ScalarProperty Name="PhuongThucThanhToan" ColumnName="PhuongThucThanhToan" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="VatLieux">
       <EntityTypeMapping TypeName="QuanLyVatLieuXayDungModel.VatLieu">
         <MappingFragment StoreEntitySet="VatLieu">
-          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
-          <ScalarProperty Name="QRCode" ColumnName="QRCode" />
-          <ScalarProperty Name="IDNhaCungCap" ColumnName="IDNhaCungCap" />
-          <ScalarProperty Name="IDLoaiVatLieu" ColumnName="IDLoaiVatLieu" />
-          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="IDLoaiVatLieu" ColumnName="IDLoaiVatLieu" />
+          <ScalarProperty Name="DonViTinh" ColumnName="DonViTinh" />
+          <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

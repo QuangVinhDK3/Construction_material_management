@@ -1,4 +1,4 @@
-﻿<Application x:Class="QuanLyVatLieuXayDung.App"
+<Application x:Class="QuanLyVatLieuXayDung.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:QuanLyVatLieuXayDung"
@@ -8,11 +8,11 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <materialDesign:BundledTheme BaseTheme="Light" 
-                                             PrimaryColor="DeepPurple" 
-                                             SecondaryColor="Lime" />
+                                             PrimaryColor="BlueGrey" 
+                                             SecondaryColor="Amber" />
                 
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.BlueGrey.xaml" />
                 <ResourceDictionary Source="Resources/MainResource.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

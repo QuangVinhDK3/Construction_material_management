@@ -28,11 +28,14 @@ namespace QuanLyVatLieuXayDung.Models
         public virtual DbSet<ChiTietPhieuNhap> ChiTietPhieuNhaps { get; set; }
         public virtual DbSet<ChiTietPhieuXuat> ChiTietPhieuXuats { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
+        public virtual DbSet<LichSuGiaVatLieu> LichSuGiaVatLieux { get; set; }
         public virtual DbSet<LoaiVatLieu> LoaiVatLieux { get; set; }
         public virtual DbSet<NguoiDung> NguoiDungs { get; set; }
         public virtual DbSet<NguoiDungRole> NguoiDungRoles { get; set; }
         public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; }
+        public virtual DbSet<PhieuChi> PhieuChis { get; set; }
         public virtual DbSet<PhieuNhap> PhieuNhaps { get; set; }
+        public virtual DbSet<PhieuThu> PhieuThus { get; set; }
         public virtual DbSet<PhieuXuat> PhieuXuats { get; set; }
         public virtual DbSet<VatLieu> VatLieux { get; set; }
     }

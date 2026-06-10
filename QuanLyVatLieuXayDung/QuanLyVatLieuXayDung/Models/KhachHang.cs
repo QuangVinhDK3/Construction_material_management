@@ -17,9 +17,10 @@ namespace QuanLyVatLieuXayDung.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public KhachHang()
         {
-            this.ChiTietPhieuXuats = new HashSet<ChiTietPhieuXuat>();
+            this.PhieuThus = new HashSet<PhieuThu>();
+            this.PhieuXuats = new HashSet<PhieuXuat>();
         }
-        public int STT {  get; set; }
+    
         public string ID { get; set; }
         public string DisplayName { get; set; }
         public string Address { get; set; }
@@ -29,6 +30,8 @@ namespace QuanLyVatLieuXayDung.Models
         public Nullable<System.DateTime> ContractDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietPhieuXuat> ChiTietPhieuXuats { get; set; }
+        public virtual ICollection<PhieuThu> PhieuThus { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PhieuXuat> PhieuXuats { get; set; }
     }
 }

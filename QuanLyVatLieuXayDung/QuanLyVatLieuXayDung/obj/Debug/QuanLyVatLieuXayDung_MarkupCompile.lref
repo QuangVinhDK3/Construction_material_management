@@ -1,15 +1,19 @@
 ﻿
-FF:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\App.xaml;;
-FF:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\UserControlVLXD\ucControlBar.xaml;;
-FF:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\CRUDDoiTuongView.xaml;;
-FF:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\CRUDKhachHangView.xaml;;
-FF:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\CRUDLoaiVatLieuView.xaml;;
-FF:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\CRUDNhaCungCapView.xaml;;
-FF:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\CRUDNhanVienView.xaml;;
-FF:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\CRUDPhieuNhapView.xaml;;
-FF:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\CRUDPhieuXuatView.xaml;;
-FF:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\DangNhapView.xaml;;
-FF:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\MainWindow.xaml;;
-FF:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\ThongTinNguoiDungView.xaml;;
-FF:\DoAnTatCa\DoAnVLXD_DotNet\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\TrangChuView.xaml;;
+FD:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\App.xaml;;
+FD:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\UserControlVLXD\ucControlBar.xaml;;
+FD:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\CRUDDoiTuongView.xaml;;
+FD:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\CRUDKhachHangView.xaml;;
+FD:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\CRUDLoaiVatLieuView.xaml;;
+FD:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\CRUDNhaCungCapView.xaml;;
+FD:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\CRUDNhanVienView.xaml;;
+FD:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\CRUDPhieuNhapView.xaml;;
+FD:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\CRUDPhieuXuatView.xaml;;
+FD:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\DangNhapView.xaml;;
+FD:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\MainWindow.xaml;;
+FD:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\QuanLyPhieuChiView.xaml;;
+FD:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\QuanLyPhieuNhapView.xaml;;
+FD:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\QuanLyPhieuThuView.xaml;;
+FD:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\QuanLyPhieuXuatView.xaml;;
+FD:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\ThongTinNguoiDungView.xaml;;
+FD:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\Views\TrangChuView.xaml;;
 

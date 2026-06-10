@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,5 +12,6 @@ namespace QuanLyVatLieuXayDung.Models
         public int STT { get; set; }
         public int Count { get; set; }
         public LoaiVatLieu LoaiVatLieu { get; set; }
+        public double GiaBan { get; set; }
     }
 }

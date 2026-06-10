@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using QuanLyVatLieuXayDung.Models;
 using System.Windows.Input; // Thêm để sử dụng ICommand
 using System.Windows;       // Thêm để sử dụng MessageBox
+using System.Data.Entity;   // Thêm để sử dụng Include()
 
 namespace QuanLyVatLieuXayDung.ViewModels
 {
@@ -27,12 +28,6 @@ namespace QuanLyVatLieuXayDung.ViewModels
             set { if (_DSLoaiVL != value) { _DSLoaiVL = value; OnPropertyChanged(nameof(DSLoaiVL)); } }
         }
 
-        private ObservableCollection<NhaCungCap> _DSNhaCC;
-        public ObservableCollection<NhaCungCap> DSNhaCC
-        {
-            get { return _DSNhaCC; }
-            set { if (_DSNhaCC != value) { _DSNhaCC = value; OnPropertyChanged(nameof(DSNhaCC)); } }
-        }
         #endregion
 
         #region Selected Item
@@ -51,12 +46,12 @@ namespace QuanLyVatLieuXayDung.ViewModels
                 {
                     IDVatLieu = SelectedVL.ID;
                     DisplayName = SelectedVL.DisplayName;
-                    IDLoaiVL = SelectedVL.IDLoaiVatLieu;
-                    IDNhaCC = SelectedVL.IDNhaCungCap;
-                    QRCode = SelectedVL.QRCode;
-                    Barcode = SelectedVL.Barcode;
-                    SelectedLoaiVL = SelectedVL.LoaiVatLieu;
-                    SelectedNCC=SelectedVL.NhaCungCap;
+                    IDLoaiVL = _SelectedVL.IDLoaiVatLieu;
+                    SelectedLoaiVL = _SelectedVL.LoaiVatLieu;
+                    QRCode = _SelectedVL.QRCode;
+                    Barcode = _SelectedVL.Barcode;
+                    DonViTinh = _SelectedVL.DonViTinh;
+                    GiaXuat = _SelectedVL.GiaXuat;
                 }
             }
         }
@@ -70,19 +65,6 @@ namespace QuanLyVatLieuXayDung.ViewModels
                 {
                     _SelectedLoaiVL = value;
                     OnPropertyChanged(nameof(SelectedLoaiVL));
-                }
-            }
-        }
-        private NhaCungCap _SelectedNCC;
-        public NhaCungCap SelectedNCC
-        {
-            get { return _SelectedNCC; }
-            set
-            {
-                if (_SelectedNCC != value)
-                {
-                    _SelectedNCC = value;
-                    OnPropertyChanged(nameof(SelectedNCC));
                 }
             }
         }
@@ -110,12 +92,6 @@ namespace QuanLyVatLieuXayDung.ViewModels
             set { if (_IDLoaiVL != value) { _IDLoaiVL = value; OnPropertyChanged(nameof(IDLoaiVL)); } }
         }
 
-        private string _IDNhaCC;
-        public string IDNhaCC
-        {
-            get { return _IDNhaCC; }
-            set { if (_IDNhaCC != value) { _IDNhaCC = value; OnPropertyChanged(nameof(IDNhaCC)); } }
-        }
 
         private string _QRCode;
         public string QRCode
@@ -130,32 +106,86 @@ namespace QuanLyVatLieuXayDung.ViewModels
             get { return _Barcode; }
             set { if (_Barcode != value) { _Barcode = value; OnPropertyChanged(nameof(Barcode)); } }
         }
+
+        private string _DonViTinh;
+        public string DonViTinh
+        {
+            get { return _DonViTinh; }
+            set { if (_DonViTinh != value) { _DonViTinh = value; OnPropertyChanged(nameof(DonViTinh)); } }
+        }
+
+        private double _GiaXuat;
+        public double GiaXuat
+        {
+            get { return _GiaXuat; }
+            set { if (_GiaXuat != value) { _GiaXuat = value; OnPropertyChanged(nameof(GiaXuat)); } }
+        }
         #endregion
 
         #region Commands
         public ICommand AddCommand { get; set; }
         public ICommand UpdateCommand { get; set; }
         public ICommand RemoveCommand { get; set; }
+        public ICommand ViewPriceHistoryCommand { get; set; }
         #endregion
 
         public VatLieuViewModel()
         {
             RefreshData();
             DSLoaiVL = new ObservableCollection<LoaiVatLieu>(DataProvider.Ins.DB.LoaiVatLieux.ToList());
-            DSNhaCC = new ObservableCollection<NhaCungCap>(DataProvider.Ins.DB.NhaCungCaps.ToList());
 
             // ĐÃ BỔ SUNG: Khởi tạo Command để các nút bấm trên XAML hoạt động được
             AddCommand = new RelayCommand<object>((p) => true, (p) => Add());
             UpdateCommand = new RelayCommand<object>((p) => true, (p) => Update());
             RemoveCommand = new RelayCommand<object>((p) => true, (p) => Remove());
+            ViewPriceHistoryCommand = new RelayCommand<object>((p) => SelectedVL != null, (p) => ViewPriceHistory());
         }
 
         private void RefreshData()
         {
-            var list = DataProvider.Ins.DB.VatLieux.ToList();
+            // Dùng AsNoTracking để tránh lỗi đếm kép do DbContext singleton
+            var list = DataProvider.Ins.DB.VatLieux
+                .AsNoTracking()
+                .Include(v => v.LoaiVatLieu)
+                .ToList();
+
+            // Lấy tổng nhập và xuất bằng truy vấn trực tiếp (không qua navigation)
+            var tongNhapDict = DataProvider.Ins.DB.ChiTietPhieuNhaps
+                .AsNoTracking()
+                .GroupBy(c => c.IDObject)
+                .Select(g => new { IDObject = g.Key, Total = g.Sum(c => (int?)c.Counts ?? 0) })
+                .ToDictionary(x => x.IDObject.Trim(), x => x.Total);
+
+            var tongXuatDict = DataProvider.Ins.DB.ChiTietPhieuXuats
+                .AsNoTracking()
+                .GroupBy(c => c.IDObject)
+                .Select(g => new { IDObject = g.Key, Total = g.Sum(c => (int?)c.Counts ?? 0) })
+                .ToDictionary(x => x.IDObject.Trim(), x => x.Total);
+
+            var giaXuatDict = DataProvider.Ins.DB.ChiTietPhieuNhaps
+                .AsNoTracking()
+                .Where(c => c.PriceOutput.HasValue)
+                .GroupBy(c => c.IDObject)
+                .Select(g => new { IDObject = g.Key, MaxPrice = g.Max(c => c.PriceOutput) })
+                .ToDictionary(x => x.IDObject.Trim(), x => x.MaxPrice ?? 0);
+
             for (int i = 0; i < list.Count; i++)
             {
                 list[i].STT = i + 1;
+
+                string id = list[i].ID.Trim();
+                int tongNhap = tongNhapDict.ContainsKey(id) ? tongNhapDict[id] : 0;
+                int tongXuat = tongXuatDict.ContainsKey(id) ? tongXuatDict[id] : 0;
+                list[i].SoLuongTon = tongNhap - tongXuat;
+                list[i].GiaXuat = giaXuatDict.ContainsKey(id) ? giaXuatDict[id] : 0;
+
+                // Xác định trạng thái
+                if (list[i].SoLuongTon <= 0)
+                    list[i].TrangThai = "Hết hàng";
+                else if (list[i].SoLuongTon <= 10)
+                    list[i].TrangThai = "Sắp hết";
+                else
+                    list[i].TrangThai = "Còn hàng";
             }
             DSVatLieu = new ObservableCollection<VatLieu>(list);
         }
@@ -166,9 +196,10 @@ namespace QuanLyVatLieuXayDung.ViewModels
             IDVatLieu = string.Empty;
             DisplayName = string.Empty;
             IDLoaiVL = null;
-            IDNhaCC = null;
             QRCode = string.Empty;
             Barcode = string.Empty;
+            DonViTinh = string.Empty;
+            GiaXuat = 0;
         }
 
         public void Add()
@@ -196,12 +227,13 @@ namespace QuanLyVatLieuXayDung.ViewModels
                 ID = IDVatLieu,
                 DisplayName = DisplayName,
                 IDLoaiVatLieu = IDLoaiVL,
-                IDNhaCungCap = IDNhaCC,
                 Barcode = Barcode,
                 QRCode = QRCode,
+                DonViTinh = DonViTinh,
             };
 
             DataProvider.Ins.DB.VatLieux.Add(vl);
+
             DataProvider.Ins.DB.SaveChanges();
 
             RefreshData();
@@ -265,9 +297,9 @@ namespace QuanLyVatLieuXayDung.ViewModels
             {
                 vl.DisplayName = DisplayName;
                 vl.IDLoaiVatLieu = IDLoaiVL;
-                vl.IDNhaCungCap = IDNhaCC;
                 vl.Barcode = Barcode;
                 vl.QRCode = QRCode;
+                vl.DonViTinh = DonViTinh;
 
                 DataProvider.Ins.DB.SaveChanges();
                 RefreshData();
@@ -276,6 +308,14 @@ namespace QuanLyVatLieuXayDung.ViewModels
                 ClearFields();
                 SelectedVL = null;
             }
+        }
+
+        public void ViewPriceHistory()
+        {
+            if (SelectedVL == null) return;
+            
+            var view = new QuanLyVatLieuXayDung.Views.LichSuGiaVatLieuView(SelectedVL.ID, SelectedVL.DisplayName);
+            view.ShowDialog();
         }
     }
 }

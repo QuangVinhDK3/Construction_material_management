@@ -21,9 +21,12 @@ namespace QuanLyVatLieuXayDung.Models
         }
     
         public string ID { get; set; }
+        public string IDNhaCungCap { get; set; }
         public Nullable<System.DateTime> DateInput { get; set; }
+        public string Status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietPhieuNhap> ChiTietPhieuNhaps { get; set; }
+        public virtual NhaCungCap NhaCungCap { get; set; }
     }
 }

@@ -1,173 +1,173 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="QuanLyVatLieuXayDungModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityContainer Name="QuanLyVatLieuXayDungEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="ChiTietPhieuNhaps" EntityType="QuanLyVatLieuXayDungModel.ChiTietPhieuNhap" />
-    <EntitySet Name="ChiTietPhieuXuats" EntityType="QuanLyVatLieuXayDungModel.ChiTietPhieuXuat" />
-    <EntitySet Name="KhachHangs" EntityType="QuanLyVatLieuXayDungModel.KhachHang" />
-    <EntitySet Name="LoaiVatLieux" EntityType="QuanLyVatLieuXayDungModel.LoaiVatLieu" />
-    <EntitySet Name="NguoiDungs" EntityType="QuanLyVatLieuXayDungModel.NguoiDung" />
-    <EntitySet Name="NguoiDungRoles" EntityType="QuanLyVatLieuXayDungModel.NguoiDungRole" />
-    <EntitySet Name="NhaCungCaps" EntityType="QuanLyVatLieuXayDungModel.NhaCungCap" />
-    <EntitySet Name="PhieuNhaps" EntityType="QuanLyVatLieuXayDungModel.PhieuNhap" />
-    <EntitySet Name="PhieuXuats" EntityType="QuanLyVatLieuXayDungModel.PhieuXuat" />
-    <EntitySet Name="VatLieux" EntityType="QuanLyVatLieuXayDungModel.VatLieu" />
-    <AssociationSet Name="FK__ChiTietPh__IDINp__7A672E12" Association="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDINp__7A672E12">
-      <End Role="PhieuNhap" EntitySet="PhieuNhaps" />
-      <End Role="ChiTietPhieuNhap" EntitySet="ChiTietPhieuNhaps" />
-    </AssociationSet>
-    <AssociationSet Name="FK__ChiTietPh__IDObj__797309D9" Association="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDObj__797309D9">
-      <End Role="VatLieu" EntitySet="VatLieux" />
-      <End Role="ChiTietPhieuNhap" EntitySet="ChiTietPhieuNhaps" />
-    </AssociationSet>
-    <AssociationSet Name="FK__ChiTietPh__IDCus__7D439ABD" Association="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDCus__7D439ABD">
-      <End Role="KhachHang" EntitySet="KhachHangs" />
-      <End Role="ChiTietPhieuXuat" EntitySet="ChiTietPhieuXuats" />
-    </AssociationSet>
-    <AssociationSet Name="FK__ChiTietPh__IDObj__7B5B524B" Association="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDObj__7B5B524B">
-      <End Role="VatLieu" EntitySet="VatLieux" />
-      <End Role="ChiTietPhieuXuat" EntitySet="ChiTietPhieuXuats" />
-    </AssociationSet>
-    <AssociationSet Name="FK__ChiTietPh__IDOut__7C4F7684" Association="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDOut__7C4F7684">
-      <End Role="PhieuXuat" EntitySet="PhieuXuats" />
-      <End Role="ChiTietPhieuXuat" EntitySet="ChiTietPhieuXuats" />
-    </AssociationSet>
-    <AssociationSet Name="FK__VatLieu__IDLoaiV__76969D2E" Association="QuanLyVatLieuXayDungModel.FK__VatLieu__IDLoaiV__76969D2E">
-      <End Role="LoaiVatLieu" EntitySet="LoaiVatLieux" />
-      <End Role="VatLieu" EntitySet="VatLieux" />
-    </AssociationSet>
-    <AssociationSet Name="FK__NguoiDung__IDRol__787EE5A0" Association="QuanLyVatLieuXayDungModel.FK__NguoiDung__IDRol__787EE5A0">
-      <End Role="NguoiDungRole" EntitySet="NguoiDungRoles" />
-      <End Role="NguoiDung" EntitySet="NguoiDungs" />
-    </AssociationSet>
-    <AssociationSet Name="FK__PhieuXuat__IDUse__7E37BEF6" Association="QuanLyVatLieuXayDungModel.FK__PhieuXuat__IDUse__7E37BEF6">
-      <End Role="NguoiDung" EntitySet="NguoiDungs" />
-      <End Role="PhieuXuat" EntitySet="PhieuXuats" />
-    </AssociationSet>
-    <AssociationSet Name="FK__VatLieu__IDNhaCu__778AC167" Association="QuanLyVatLieuXayDungModel.FK__VatLieu__IDNhaCu__778AC167">
-      <End Role="NhaCungCap" EntitySet="NhaCungCaps" />
-      <End Role="VatLieu" EntitySet="VatLieux" />
-    </AssociationSet>
-  </EntityContainer>
   <EntityType Name="ChiTietPhieuNhap">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
-    <Property Name="IDObject" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
-    <Property Name="IDINput" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IDObject" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IDINput" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="Counts" Type="Int32" />
     <Property Name="PriceInput" Type="Double" />
     <Property Name="PriceOutput" Type="Double" />
     <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="PhieuNhap" Relationship="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDINp__7A672E12" FromRole="ChiTietPhieuNhap" ToRole="PhieuNhap" />
-    <NavigationProperty Name="VatLieu" Relationship="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDObj__797309D9" FromRole="ChiTietPhieuNhap" ToRole="VatLieu" />
+    <NavigationProperty Name="PhieuNhap" Relationship="Self.FK__ChiTietPh__IDINp__0B91BA14" FromRole="ChiTietPhieuNhap" ToRole="PhieuNhap" />
+    <NavigationProperty Name="VatLieu" Relationship="Self.FK__ChiTietPh__IDObj__0A9D95DB" FromRole="ChiTietPhieuNhap" ToRole="VatLieu" />
   </EntityType>
   <EntityType Name="ChiTietPhieuXuat">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
-    <Property Name="IDObject" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
-    <Property Name="IDOutput" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
-    <Property Name="IDCustomer" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IDObject" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IDOutput" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="Counts" Type="Int32" />
     <Property Name="Price" Type="Double" />
-    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="KhachHang" Relationship="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDCus__7D439ABD" FromRole="ChiTietPhieuXuat" ToRole="KhachHang" />
-    <NavigationProperty Name="VatLieu" Relationship="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDObj__7B5B524B" FromRole="ChiTietPhieuXuat" ToRole="VatLieu" />
-    <NavigationProperty Name="PhieuXuat" Relationship="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDOut__7C4F7684" FromRole="ChiTietPhieuXuat" ToRole="PhieuXuat" />
+    <NavigationProperty Name="VatLieu" Relationship="Self.FK__ChiTietPh__IDObj__0C85DE4D" FromRole="ChiTietPhieuXuat" ToRole="VatLieu" />
+    <NavigationProperty Name="PhieuXuat" Relationship="Self.FK__ChiTietPh__IDOut__0D7A0286" FromRole="ChiTietPhieuXuat" ToRole="PhieuXuat" />
   </EntityType>
   <EntityType Name="KhachHang">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
-    <Property Name="DisplayName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="MoreInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="ContractDate" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="ChiTietPhieuXuats" Relationship="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDCus__7D439ABD" FromRole="KhachHang" ToRole="ChiTietPhieuXuat" />
+    <NavigationProperty Name="PhieuThus" Relationship="Self.FK__PhieuThu__IDKhac__7B5B524B" FromRole="KhachHang" ToRole="PhieuThu" />
+    <NavigationProperty Name="PhieuXuats" Relationship="Self.FK__PhieuXuat__IDCus__0E6E26BF" FromRole="KhachHang" ToRole="PhieuXuat" />
+  </EntityType>
+  <EntityType Name="LichSuGiaVatLieu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDVatLieu" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="GiaCu" Type="Double" />
+    <Property Name="GiaMoi" Type="Double" Nullable="false" />
+    <Property Name="NgayThayDoi" Type="DateTime" Precision="3" />
+    <Property Name="NguoiThayDoi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="VatLieu" Relationship="Self.FK__LichSuGia__IDVat__76969D2E" FromRole="LichSuGiaVatLieu" ToRole="VatLieu" />
   </EntityType>
   <EntityType Name="LoaiVatLieu">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="VatLieux" Relationship="QuanLyVatLieuXayDungModel.FK__VatLieu__IDLoaiV__76969D2E" FromRole="LoaiVatLieu" ToRole="VatLieu" />
+    <NavigationProperty Name="VatLieux" Relationship="Self.FK__VatLieu__IDLoaiV__07C12930" FromRole="LoaiVatLieu" ToRole="VatLieu" />
   </EntityType>
   <EntityType Name="NguoiDung">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="IDRole" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
-    <NavigationProperty Name="NguoiDungRole" Relationship="QuanLyVatLieuXayDungModel.FK__NguoiDung__IDRol__787EE5A0" FromRole="NguoiDung" ToRole="NguoiDungRole" />
-    <NavigationProperty Name="PhieuXuats" Relationship="QuanLyVatLieuXayDungModel.FK__PhieuXuat__IDUse__7E37BEF6" FromRole="NguoiDung" ToRole="PhieuXuat" />
+    <Property Name="IDRole" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="NguoiDungRole" Relationship="Self.FK__NguoiDung__IDRol__08B54D69" FromRole="NguoiDung" ToRole="NguoiDungRole" />
+    <NavigationProperty Name="PhieuChis" Relationship="Self.FK__PhieuChi__IDUser__02084FDA" FromRole="NguoiDung" ToRole="PhieuChi" />
+    <NavigationProperty Name="PhieuThus" Relationship="Self.FK__PhieuThu__IDUser__7C4F7684" FromRole="NguoiDung" ToRole="PhieuThu" />
+    <NavigationProperty Name="PhieuXuats" Relationship="Self.FK__PhieuXuat__IDUse__0F624AF8" FromRole="NguoiDung" ToRole="PhieuXuat" />
   </EntityType>
   <EntityType Name="NguoiDungRole">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="NguoiDungs" Relationship="QuanLyVatLieuXayDungModel.FK__NguoiDung__IDRol__787EE5A0" FromRole="NguoiDungRole" ToRole="NguoiDung" />
+    <NavigationProperty Name="NguoiDungs" Relationship="Self.FK__NguoiDung__IDRol__08B54D69" FromRole="NguoiDungRole" ToRole="NguoiDung" />
   </EntityType>
   <EntityType Name="NhaCungCap">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
-    <Property Name="DisplayName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="MoreInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="ContractDate" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="VatLieux" Relationship="QuanLyVatLieuXayDungModel.FK__VatLieu__IDNhaCu__778AC167" FromRole="NhaCungCap" ToRole="VatLieu" />
+    <NavigationProperty Name="PhieuChis" Relationship="Self.FK__PhieuChi__IDNhaC__01142BA1" FromRole="NhaCungCap" ToRole="PhieuChi" />
+    <NavigationProperty Name="PhieuNhaps" Relationship="Self.FK__PhieuNhap__IDNha__09A971A2" FromRole="NhaCungCap" ToRole="PhieuNhap" />
+  </EntityType>
+  <EntityType Name="PhieuChi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IDNhaCungCap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="NgayChi" Type="DateTime" Precision="3" />
+    <Property Name="SoTien" Type="Double" />
+    <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IDUser" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="NguoiDung" Relationship="Self.FK__PhieuChi__IDUser__02084FDA" FromRole="PhieuChi" ToRole="NguoiDung" />
+    <NavigationProperty Name="NhaCungCap" Relationship="Self.FK__PhieuChi__IDNhaC__01142BA1" FromRole="PhieuChi" ToRole="NhaCungCap" />
   </EntityType>
   <EntityType Name="PhieuNhap">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IDNhaCungCap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
     <Property Name="DateInput" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="ChiTietPhieuNhaps" Relationship="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDINp__7A672E12" FromRole="PhieuNhap" ToRole="ChiTietPhieuNhap" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ChiTietPhieuNhaps" Relationship="Self.FK__ChiTietPh__IDINp__0B91BA14" FromRole="PhieuNhap" ToRole="ChiTietPhieuNhap" />
+    <NavigationProperty Name="NhaCungCap" Relationship="Self.FK__PhieuNhap__IDNha__09A971A2" FromRole="PhieuNhap" ToRole="NhaCungCap" />
+  </EntityType>
+  <EntityType Name="PhieuThu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IDKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="NgayThu" Type="DateTime" Precision="3" />
+    <Property Name="SoTien" Type="Double" />
+    <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IDUser" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="KhachHang" Relationship="Self.FK__PhieuThu__IDKhac__7B5B524B" FromRole="PhieuThu" ToRole="KhachHang" />
+    <NavigationProperty Name="NguoiDung" Relationship="Self.FK__PhieuThu__IDUser__7C4F7684" FromRole="PhieuThu" ToRole="NguoiDung" />
   </EntityType>
   <EntityType Name="PhieuXuat">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="DateOutput" Type="DateTime" Precision="3" />
     <Property Name="IDUser" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
     <Property Name="Total" Type="Double" />
-    <NavigationProperty Name="ChiTietPhieuXuats" Relationship="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDOut__7C4F7684" FromRole="PhieuXuat" ToRole="ChiTietPhieuXuat" />
-    <NavigationProperty Name="NguoiDung" Relationship="QuanLyVatLieuXayDungModel.FK__PhieuXuat__IDUse__7E37BEF6" FromRole="PhieuXuat" ToRole="NguoiDung" />
+    <Property Name="IDCustomer" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChietKhau" Type="Double" />
+    <Property Name="SoTienDaThanhToan" Type="Double" />
+    <Property Name="PhuongThucThanhToan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ChiTietPhieuXuats" Relationship="Self.FK__ChiTietPh__IDOut__0D7A0286" FromRole="PhieuXuat" ToRole="ChiTietPhieuXuat" />
+    <NavigationProperty Name="KhachHang" Relationship="Self.FK__PhieuXuat__IDCus__0E6E26BF" FromRole="PhieuXuat" ToRole="KhachHang" />
+    <NavigationProperty Name="NguoiDung" Relationship="Self.FK__PhieuXuat__IDUse__0F624AF8" FromRole="PhieuXuat" ToRole="NguoiDung" />
   </EntityType>
   <EntityType Name="VatLieu">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="IDLoaiVatLieu" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
-    <Property Name="IDNhaCungCap" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="IDLoaiVatLieu" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DonViTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="QRCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Barcode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="ChiTietPhieuNhaps" Relationship="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDObj__797309D9" FromRole="VatLieu" ToRole="ChiTietPhieuNhap" />
-    <NavigationProperty Name="ChiTietPhieuXuats" Relationship="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDObj__7B5B524B" FromRole="VatLieu" ToRole="ChiTietPhieuXuat" />
-    <NavigationProperty Name="LoaiVatLieu" Relationship="QuanLyVatLieuXayDungModel.FK__VatLieu__IDLoaiV__76969D2E" FromRole="VatLieu" ToRole="LoaiVatLieu" />
-    <NavigationProperty Name="NhaCungCap" Relationship="QuanLyVatLieuXayDungModel.FK__VatLieu__IDNhaCu__778AC167" FromRole="VatLieu" ToRole="NhaCungCap" />
+    <NavigationProperty Name="ChiTietPhieuNhaps" Relationship="Self.FK__ChiTietPh__IDObj__0A9D95DB" FromRole="VatLieu" ToRole="ChiTietPhieuNhap" />
+    <NavigationProperty Name="ChiTietPhieuXuats" Relationship="Self.FK__ChiTietPh__IDObj__0C85DE4D" FromRole="VatLieu" ToRole="ChiTietPhieuXuat" />
+    <NavigationProperty Name="LichSuGiaVatLieux" Relationship="Self.FK__LichSuGia__IDVat__76969D2E" FromRole="VatLieu" ToRole="LichSuGiaVatLieu" />
+    <NavigationProperty Name="LoaiVatLieu" Relationship="Self.FK__VatLieu__IDLoaiV__07C12930" FromRole="VatLieu" ToRole="LoaiVatLieu" />
   </EntityType>
-  <Association Name="FK__ChiTietPh__IDINp__7A672E12">
-    <End Type="QuanLyVatLieuXayDungModel.PhieuNhap" Role="PhieuNhap" Multiplicity="1" />
-    <End Type="QuanLyVatLieuXayDungModel.ChiTietPhieuNhap" Role="ChiTietPhieuNhap" Multiplicity="*" />
+  <Association Name="FK__ChiTietPh__IDINp__0B91BA14">
+    <End Role="PhieuNhap" Type="Self.PhieuNhap" Multiplicity="1" />
+    <End Role="ChiTietPhieuNhap" Type="Self.ChiTietPhieuNhap" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PhieuNhap">
         <PropertyRef Name="ID" />
@@ -177,9 +177,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietPh__IDObj__797309D9">
-    <End Type="QuanLyVatLieuXayDungModel.VatLieu" Role="VatLieu" Multiplicity="1" />
-    <End Type="QuanLyVatLieuXayDungModel.ChiTietPhieuNhap" Role="ChiTietPhieuNhap" Multiplicity="*" />
+  <Association Name="FK__ChiTietPh__IDObj__0A9D95DB">
+    <End Role="VatLieu" Type="Self.VatLieu" Multiplicity="1" />
+    <End Role="ChiTietPhieuNhap" Type="Self.ChiTietPhieuNhap" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="VatLieu">
         <PropertyRef Name="ID" />
@@ -189,21 +189,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietPh__IDCus__7D439ABD">
-    <End Type="QuanLyVatLieuXayDungModel.KhachHang" Role="KhachHang" Multiplicity="1" />
-    <End Type="QuanLyVatLieuXayDungModel.ChiTietPhieuXuat" Role="ChiTietPhieuXuat" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="KhachHang">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="ChiTietPhieuXuat">
-        <PropertyRef Name="IDCustomer" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ChiTietPh__IDObj__7B5B524B">
-    <End Type="QuanLyVatLieuXayDungModel.VatLieu" Role="VatLieu" Multiplicity="1" />
-    <End Type="QuanLyVatLieuXayDungModel.ChiTietPhieuXuat" Role="ChiTietPhieuXuat" Multiplicity="*" />
+  <Association Name="FK__ChiTietPh__IDObj__0C85DE4D">
+    <End Role="VatLieu" Type="Self.VatLieu" Multiplicity="1" />
+    <End Role="ChiTietPhieuXuat" Type="Self.ChiTietPhieuXuat" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="VatLieu">
         <PropertyRef Name="ID" />
@@ -213,9 +201,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietPh__IDOut__7C4F7684">
-    <End Type="QuanLyVatLieuXayDungModel.PhieuXuat" Role="PhieuXuat" Multiplicity="1" />
-    <End Type="QuanLyVatLieuXayDungModel.ChiTietPhieuXuat" Role="ChiTietPhieuXuat" Multiplicity="*" />
+  <Association Name="FK__ChiTietPh__IDOut__0D7A0286">
+    <End Role="PhieuXuat" Type="Self.PhieuXuat" Multiplicity="1" />
+    <End Role="ChiTietPhieuXuat" Type="Self.ChiTietPhieuXuat" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PhieuXuat">
         <PropertyRef Name="ID" />
@@ -225,9 +213,45 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__VatLieu__IDLoaiV__76969D2E">
-    <End Type="QuanLyVatLieuXayDungModel.LoaiVatLieu" Role="LoaiVatLieu" Multiplicity="1" />
-    <End Type="QuanLyVatLieuXayDungModel.VatLieu" Role="VatLieu" Multiplicity="*" />
+  <Association Name="FK__PhieuThu__IDKhac__7B5B524B">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
+    <End Role="PhieuThu" Type="Self.PhieuThu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PhieuThu">
+        <PropertyRef Name="IDKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PhieuXuat__IDCus__0E6E26BF">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
+    <End Role="PhieuXuat" Type="Self.PhieuXuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PhieuXuat">
+        <PropertyRef Name="IDCustomer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LichSuGia__IDVat__76969D2E">
+    <End Role="VatLieu" Type="Self.VatLieu" Multiplicity="1" />
+    <End Role="LichSuGiaVatLieu" Type="Self.LichSuGiaVatLieu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VatLieu">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LichSuGiaVatLieu">
+        <PropertyRef Name="IDVatLieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__VatLieu__IDLoaiV__07C12930">
+    <End Role="LoaiVatLieu" Type="Self.LoaiVatLieu" Multiplicity="1" />
+    <End Role="VatLieu" Type="Self.VatLieu" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoaiVatLieu">
         <PropertyRef Name="ID" />
@@ -237,9 +261,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__NguoiDung__IDRol__787EE5A0">
-    <End Type="QuanLyVatLieuXayDungModel.NguoiDungRole" Role="NguoiDungRole" Multiplicity="1" />
-    <End Type="QuanLyVatLieuXayDungModel.NguoiDung" Role="NguoiDung" Multiplicity="*" />
+  <Association Name="FK__NguoiDung__IDRol__08B54D69">
+    <End Role="NguoiDungRole" Type="Self.NguoiDungRole" Multiplicity="1" />
+    <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NguoiDungRole">
         <PropertyRef Name="ID" />
@@ -249,9 +273,33 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PhieuXuat__IDUse__7E37BEF6">
-    <End Type="QuanLyVatLieuXayDungModel.NguoiDung" Role="NguoiDung" Multiplicity="0..1" />
-    <End Type="QuanLyVatLieuXayDungModel.PhieuXuat" Role="PhieuXuat" Multiplicity="*" />
+  <Association Name="FK__PhieuChi__IDUser__02084FDA">
+    <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="0..1" />
+    <End Role="PhieuChi" Type="Self.PhieuChi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NguoiDung">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PhieuChi">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PhieuThu__IDUser__7C4F7684">
+    <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="0..1" />
+    <End Role="PhieuThu" Type="Self.PhieuThu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NguoiDung">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PhieuThu">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PhieuXuat__IDUse__0F624AF8">
+    <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="0..1" />
+    <End Role="PhieuXuat" Type="Self.PhieuXuat" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NguoiDung">
         <PropertyRef Name="ID" />
@@ -261,16 +309,99 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__VatLieu__IDNhaCu__778AC167">
-    <End Type="QuanLyVatLieuXayDungModel.NhaCungCap" Role="NhaCungCap" Multiplicity="1" />
-    <End Type="QuanLyVatLieuXayDungModel.VatLieu" Role="VatLieu" Multiplicity="*" />
+  <Association Name="FK__PhieuChi__IDNhaC__01142BA1">
+    <End Role="NhaCungCap" Type="Self.NhaCungCap" Multiplicity="1" />
+    <End Role="PhieuChi" Type="Self.PhieuChi" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NhaCungCap">
         <PropertyRef Name="ID" />
       </Principal>
-      <Dependent Role="VatLieu">
+      <Dependent Role="PhieuChi">
         <PropertyRef Name="IDNhaCungCap" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__PhieuNhap__IDNha__09A971A2">
+    <End Role="NhaCungCap" Type="Self.NhaCungCap" Multiplicity="0..1" />
+    <End Role="PhieuNhap" Type="Self.PhieuNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhaCungCap">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PhieuNhap">
+        <PropertyRef Name="IDNhaCungCap" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLyVatLieuXayDungEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ChiTietPhieuNhaps" EntityType="Self.ChiTietPhieuNhap" />
+    <EntitySet Name="ChiTietPhieuXuats" EntityType="Self.ChiTietPhieuXuat" />
+    <EntitySet Name="KhachHangs" EntityType="Self.KhachHang" />
+    <EntitySet Name="LichSuGiaVatLieux" EntityType="Self.LichSuGiaVatLieu" />
+    <EntitySet Name="LoaiVatLieux" EntityType="Self.LoaiVatLieu" />
+    <EntitySet Name="NguoiDungs" EntityType="Self.NguoiDung" />
+    <EntitySet Name="NguoiDungRoles" EntityType="Self.NguoiDungRole" />
+    <EntitySet Name="NhaCungCaps" EntityType="Self.NhaCungCap" />
+    <EntitySet Name="PhieuChis" EntityType="Self.PhieuChi" />
+    <EntitySet Name="PhieuNhaps" EntityType="Self.PhieuNhap" />
+    <EntitySet Name="PhieuThus" EntityType="Self.PhieuThu" />
+    <EntitySet Name="PhieuXuats" EntityType="Self.PhieuXuat" />
+    <EntitySet Name="VatLieux" EntityType="Self.VatLieu" />
+    <AssociationSet Name="FK__ChiTietPh__IDINp__0B91BA14" Association="Self.FK__ChiTietPh__IDINp__0B91BA14">
+      <End Role="PhieuNhap" EntitySet="PhieuNhaps" />
+      <End Role="ChiTietPhieuNhap" EntitySet="ChiTietPhieuNhaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ChiTietPh__IDObj__0A9D95DB" Association="Self.FK__ChiTietPh__IDObj__0A9D95DB">
+      <End Role="VatLieu" EntitySet="VatLieux" />
+      <End Role="ChiTietPhieuNhap" EntitySet="ChiTietPhieuNhaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ChiTietPh__IDObj__0C85DE4D" Association="Self.FK__ChiTietPh__IDObj__0C85DE4D">
+      <End Role="VatLieu" EntitySet="VatLieux" />
+      <End Role="ChiTietPhieuXuat" EntitySet="ChiTietPhieuXuats" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ChiTietPh__IDOut__0D7A0286" Association="Self.FK__ChiTietPh__IDOut__0D7A0286">
+      <End Role="PhieuXuat" EntitySet="PhieuXuats" />
+      <End Role="ChiTietPhieuXuat" EntitySet="ChiTietPhieuXuats" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhieuThu__IDKhac__7B5B524B" Association="Self.FK__PhieuThu__IDKhac__7B5B524B">
+      <End Role="KhachHang" EntitySet="KhachHangs" />
+      <End Role="PhieuThu" EntitySet="PhieuThus" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhieuXuat__IDCus__0E6E26BF" Association="Self.FK__PhieuXuat__IDCus__0E6E26BF">
+      <End Role="KhachHang" EntitySet="KhachHangs" />
+      <End Role="PhieuXuat" EntitySet="PhieuXuats" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LichSuGia__IDVat__76969D2E" Association="Self.FK__LichSuGia__IDVat__76969D2E">
+      <End Role="VatLieu" EntitySet="VatLieux" />
+      <End Role="LichSuGiaVatLieu" EntitySet="LichSuGiaVatLieux" />
+    </AssociationSet>
+    <AssociationSet Name="FK__VatLieu__IDLoaiV__07C12930" Association="Self.FK__VatLieu__IDLoaiV__07C12930">
+      <End Role="LoaiVatLieu" EntitySet="LoaiVatLieux" />
+      <End Role="VatLieu" EntitySet="VatLieux" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NguoiDung__IDRol__08B54D69" Association="Self.FK__NguoiDung__IDRol__08B54D69">
+      <End Role="NguoiDungRole" EntitySet="NguoiDungRoles" />
+      <End Role="NguoiDung" EntitySet="NguoiDungs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhieuChi__IDUser__02084FDA" Association="Self.FK__PhieuChi__IDUser__02084FDA">
+      <End Role="NguoiDung" EntitySet="NguoiDungs" />
+      <End Role="PhieuChi" EntitySet="PhieuChis" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhieuThu__IDUser__7C4F7684" Association="Self.FK__PhieuThu__IDUser__7C4F7684">
+      <End Role="NguoiDung" EntitySet="NguoiDungs" />
+      <End Role="PhieuThu" EntitySet="PhieuThus" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhieuXuat__IDUse__0F624AF8" Association="Self.FK__PhieuXuat__IDUse__0F624AF8">
+      <End Role="NguoiDung" EntitySet="NguoiDungs" />
+      <End Role="PhieuXuat" EntitySet="PhieuXuats" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhieuChi__IDNhaC__01142BA1" Association="Self.FK__PhieuChi__IDNhaC__01142BA1">
+      <End Role="NhaCungCap" EntitySet="NhaCungCaps" />
+      <End Role="PhieuChi" EntitySet="PhieuChis" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhieuNhap__IDNha__09A971A2" Association="Self.FK__PhieuNhap__IDNha__09A971A2">
+      <End Role="NhaCungCap" EntitySet="NhaCungCaps" />
+      <End Role="PhieuNhap" EntitySet="PhieuNhaps" />
+    </AssociationSet>
+  </EntityContainer>
 </Schema>

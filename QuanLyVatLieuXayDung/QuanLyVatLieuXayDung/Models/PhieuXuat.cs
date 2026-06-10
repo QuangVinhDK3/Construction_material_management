@@ -24,9 +24,15 @@ namespace QuanLyVatLieuXayDung.Models
         public Nullable<System.DateTime> DateOutput { get; set; }
         public string IDUser { get; set; }
         public Nullable<double> Total { get; set; }
+        public string IDCustomer { get; set; }
+        public string Status { get; set; }
+        public Nullable<double> ChietKhau { get; set; }
+        public Nullable<double> SoTienDaThanhToan { get; set; }
+        public string PhuongThucThanhToan { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietPhieuXuat> ChiTietPhieuXuats { get; set; }
+        public virtual KhachHang KhachHang { get; set; }
         public virtual NguoiDung NguoiDung { get; set; }
     }
 }

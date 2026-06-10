@@ -1,4 +1,4 @@
-﻿using QuanLyVatLieuXayDung.Models;
+using QuanLyVatLieuXayDung.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -100,7 +100,9 @@ namespace QuanLyVatLieuXayDung.ViewModels
 
         private void RefreshData()
         {
-            var list = DataProvider.Ins.DB.KhachHangs.ToList();
+            var list = DataProvider.Ins.DB.KhachHangs
+                .Include("PhieuXuats.ChiTietPhieuXuats")
+                .ToList();
             for (int i = 0; i < list.Count; i++)
             {
                 list[i].STT = i + 1;

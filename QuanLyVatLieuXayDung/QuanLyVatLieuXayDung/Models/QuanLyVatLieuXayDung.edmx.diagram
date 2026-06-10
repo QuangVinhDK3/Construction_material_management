@@ -4,26 +4,34 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ef08b126b1564ab291571909f73ed1d4" Name="Diagram1" ZoomLevel="97">
-        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.ChiTietPhieuNhap" Width="1.5" PointX="8.25" PointY="4.25" />
-        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.ChiTietPhieuXuat" Width="1.5" PointX="5.25" PointY="4.125" />
-        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.KhachHang" Width="1.5" PointX="3" PointY="0.75" />
-        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.LoaiVatLieu" Width="1.5" PointX="0.75" PointY="1.75" />
-        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.NguoiDung" Width="1.5" PointX="0.75" PointY="8" />
-        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.NguoiDungRole" Width="1.5" PointX="1.5" PointY="11.5" />
-        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.NhaCungCap" Width="1.5" PointX="0.75" PointY="4.25" />
-        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.PhieuNhap" Width="1.5" PointX="6" PointY="0.75" />
-        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.PhieuXuat" Width="1.5" PointX="3" PointY="8.125" />
-        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.VatLieu" Width="1.5" PointX="3" PointY="4.125" />
-        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDINp__7A672E12" />
-        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDObj__797309D9" />
-        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDCus__7D439ABD" />
-        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDObj__7B5B524B" />
-        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDOut__7C4F7684" />
-        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__VatLieu__IDLoaiV__76969D2E" />
-        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__NguoiDung__IDRol__787EE5A0" />
-        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__PhieuXuat__IDUse__7E37BEF6" />
-        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__VatLieu__IDNhaCu__778AC167" />
+      <Diagram DiagramId="a85c95e703744a168b7b3cd11f92b619" Name="Diagram1">
+        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.ChiTietPhieuNhap" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.ChiTietPhieuXuat" Width="1.5" PointX="8.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.KhachHang" Width="1.5" PointX="3.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.LichSuGiaVatLieu" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.LoaiVatLieu" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.NguoiDung" Width="1.5" PointX="3.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.NguoiDungRole" Width="1.5" PointX="1.5" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.NhaCungCap" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.PhieuChi" Width="1.5" PointX="8" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.PhieuNhap" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.PhieuThu" Width="1.5" PointX="9" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.PhieuXuat" Width="1.5" PointX="6" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyVatLieuXayDungModel.VatLieu" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDINp__0B91BA14" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDObj__0A9D95DB" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDObj__0C85DE4D" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__ChiTietPh__IDOut__0D7A0286" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__PhieuThu__IDKhac__7B5B524B" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__PhieuXuat__IDCus__0E6E26BF" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__LichSuGia__IDVat__76969D2E" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__VatLieu__IDLoaiV__07C12930" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__NguoiDung__IDRol__08B54D69" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__PhieuChi__IDUser__02084FDA" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__PhieuThu__IDUser__7C4F7684" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__PhieuXuat__IDUse__0F624AF8" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__PhieuChi__IDNhaC__01142BA1" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyVatLieuXayDungModel.FK__PhieuNhap__IDNha__09A971A2" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

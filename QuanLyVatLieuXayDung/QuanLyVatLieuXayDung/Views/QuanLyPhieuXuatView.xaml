@@ -1,0 +1,191 @@
+<Window x:Class="QuanLyVatLieuXayDung.Views.QuanLyPhieuXuatView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLyVatLieuXayDung.ViewModels"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:uc="clr-namespace:QuanLyVatLieuXayDung.UserControlVLXD"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Name="window"
+        Title="Quản lý phiếu xuất" Height="500" Width="850">
+    <Window.DataContext>
+        <local:QuanLyPhieuXuatViewModel/>
+    </Window.DataContext>
+    <Grid Background="#ECEFF1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <uc:ucControlBar Tag="{Binding Title,ElementName=window}"></uc:ucControlBar>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <materialDesign:Card Grid.Row="0" Margin="5">
+                <GroupBox Height="auto" Header=" Thông tin tổng quát phiếu xuất " Margin="5">
+                    <StackPanel Height="auto">
+                        <TextBlock Height="5"></TextBlock>
+
+                        <StackPanel Orientation="Horizontal" Height="35" >
+                            <Label Content="Mã phiếu xuất: " Margin="15 0 0 0" Width="110" VerticalAlignment="Center"/>
+                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="240" Height="30" Background="White">
+                                <TextBox Text="{Binding IDPhieuXuat, Mode=TwoWay}"
+                                         Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
+                            </Border>
+
+                            <Label Content="Ngày xuất: " Margin="5 0 0 0" Width="85" VerticalAlignment="Center"/>
+                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="240" Height="30" Background="White">
+                                <DatePicker IsEnabled="True" SelectedDate="{Binding DateOutput,UpdateSourceTrigger=PropertyChanged}" 
+                                            Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
+                            </Border>
+                        </StackPanel>
+
+                        <TextBlock Height="10"></TextBlock>
+
+                        <StackPanel Orientation="Horizontal" Height="35" >
+                            <Label Content="Khách hàng: " Margin="15 0 0 0" Width="110" VerticalAlignment="Center"/>
+                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="240" Height="30" Background="White">
+                                <ComboBox ItemsSource="{Binding DSKhachHang}" 
+                                          SelectedItem="{Binding SelectedKH}"
+                                          SelectedValue="{Binding IDKhachHang, Mode=TwoWay}"
+                                          SelectedValuePath="ID"
+                                          DisplayMemberPath="DisplayName"
+                                          Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
+                            </Border>
+                            
+                            <Label Content="Trạng thái: " Margin="5 0 0 0" Width="85" VerticalAlignment="Center"/>
+                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="240" Height="30" Background="White">
+                                <ComboBox Text="{Binding Status, Mode=TwoWay}"
+                                         Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0">
+                                    <ComboBoxItem Content="Đã xuất"/>
+                                    <ComboBoxItem Content="Chưa xuất"/>
+                                    <ComboBoxItem Content="Đang giao"/>
+                                    <ComboBoxItem Content="Hoàn thành"/>
+                                </ComboBox>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Height="35" >
+                            <Label Content="Nhân viên: " Margin="15 0 0 0" Width="110" VerticalAlignment="Center"/>
+                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="240" Height="30" Background="White">
+                                <ComboBox ItemsSource="{Binding DSNguoiDung}" 
+                                          SelectedItem="{Binding SelectedND}"
+                                          SelectedValue="{Binding IDUser, Mode=TwoWay}"
+                                          SelectedValuePath="ID"
+                                          DisplayMemberPath="DisplayName"
+                                          Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
+                            </Border>
+                            
+                            <Label Content="Đã thanh toán: " Margin="5 0 0 0" Width="95" VerticalAlignment="Center"/>
+                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="230" Height="30" Background="White">
+                                <TextBox Text="{Binding SoTienDaThanhToan, Mode=TwoWay}"
+                                         Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0"/>
+                            </Border>
+                        </StackPanel>
+
+                        <TextBlock Height="10"></TextBlock>
+                        
+                        <StackPanel Orientation="Horizontal" Height="35" >
+                            <Label Content="Hình thức TT: " Margin="15 0 0 0" Width="110" VerticalAlignment="Center"/>
+                            <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Width="240" Height="30" Background="White">
+                                <ComboBox SelectedValuePath="Content" SelectedValue="{Binding PhuongThucThanhToan, Mode=TwoWay}" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0">
+                                    <ComboBoxItem Content="Tiền mặt"/>
+                                    <ComboBoxItem Content="Chuyển khoản"/>
+                                    <ComboBoxItem Content="Ghi nợ"/>
+                                </ComboBox>
+                            </Border>
+                            
+                            <Label Content="Chiết khấu (VNĐ): " Margin="5 0 0 0" Width="120" VerticalAlignment="Center" Foreground="#E53935" FontWeight="Bold"/>
+                            <Border CornerRadius="5" BorderBrush="#E53935" BorderThickness="1" Width="205" Height="30" Background="White">
+                                <TextBox Text="{Binding ChietKhau, Mode=TwoWay, StringFormat='{}{0:N0}'}" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" Padding="5,0" Foreground="#E53935" FontWeight="Bold"/>
+                            </Border>
+                        </StackPanel>
+                        
+                        <TextBlock Height="5"></TextBlock>
+                        <TextBlock Height="5"></TextBlock>
+                    </StackPanel>
+                </GroupBox>
+            </materialDesign:Card>
+
+            <materialDesign:Card Grid.Row="1" Margin="5" VerticalAlignment="Stretch">
+                <ListView ItemsSource="{Binding DSPhieuXuat}" 
+                          SelectedItem="{Binding SelectedPX,Mode=TwoWay}"
+                          ScrollViewer.VerticalScrollBarVisibility="Auto"
+                          ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            <Setter Property="Height" Value="35"/>
+                            <EventSetter Event="MouseDoubleClick" Handler="ListViewItem_MouseDoubleClick" />
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Mã phiếu xuất" Width="110" DisplayMemberBinding="{Binding ID}"></GridViewColumn>
+                            <GridViewColumn Header="Ngày xuất" Width="140" DisplayMemberBinding="{Binding DateOutput, StringFormat='dd/MM/yyyy HH:mm'}"></GridViewColumn>
+                            <GridViewColumn Header="Khách hàng" Width="160" DisplayMemberBinding="{Binding KhachHang.DisplayName}"></GridViewColumn>
+                            <GridViewColumn Header="Nhân viên" Width="150" DisplayMemberBinding="{Binding NguoiDung.DisplayName}"></GridViewColumn>
+                            <GridViewColumn Header="Tổng tiền" Width="120" DisplayMemberBinding="{Binding TongTien, StringFormat='{}{0:N0} VND'}"></GridViewColumn>
+                            <GridViewColumn Header="Đã TT" Width="120" DisplayMemberBinding="{Binding SoTienDaThanhToan, StringFormat='{}{0:N0} VND'}"></GridViewColumn>
+                            <GridViewColumn Header="Chiết khấu" Width="100" DisplayMemberBinding="{Binding ChietKhau, StringFormat='{}{0:N0} VND'}"></GridViewColumn>
+                            <GridViewColumn Header="Còn nợ" Width="120" DisplayMemberBinding="{Binding ConNo, StringFormat='{}{0:N0} VND'}"></GridViewColumn>
+                            <GridViewColumn Header="Hình thức TT" Width="110" DisplayMemberBinding="{Binding PhuongThucThanhToan}"></GridViewColumn>
+                            <GridViewColumn Header="Trạng thái" Width="100" DisplayMemberBinding="{Binding Status}"></GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </materialDesign:Card>
+
+            <materialDesign:Card Grid.Row="2" Margin="5">
+                <WrapPanel HorizontalAlignment="Center" Margin="0 5 0 5">
+                    <WrapPanel.Resources>
+                        <Style TargetType="Button">
+                            <Setter Property="Height" Value="35"/>
+                            <Setter Property="Width" Value="100"/>
+                            <Setter Property="Margin" Value="10 5 10 5"/>
+                            <Setter Property="Background" Value="#4CAF50"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="{TemplateBinding Background}" CornerRadius="8">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#388E3C"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </WrapPanel.Resources>
+
+                    <Button Command="{Binding AddCommand}" Content="Lập phiếu" />
+                    <Button Command="{Binding UpdateCommand}" Content="Sửa" Background="#FF9800"/>
+                    <Button Command="{Binding RemoveCommand}" Content="Xóa" Background="#F44336"/>
+                    <Button x:Name="btnPrint" Content="🖨️ In Hóa Đơn" Background="#00BCD4" Click="btnPrint_Click" />
+                </WrapPanel>
+            </materialDesign:Card>
+        </Grid>
+    </Grid>
+</Window>
