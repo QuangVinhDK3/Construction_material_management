@@ -95,7 +95,39 @@
             </materialDesign:Card>
 
             <materialDesign:Card Grid.Row="1" Margin="0,0,0,10" VerticalAlignment="Stretch">
-                <ListView ItemsSource="{Binding DSVatLieu}" SelectedItem="{Binding SelectedVL,Mode=TwoWay}" BorderThickness="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+                        <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Background="White" Height="35">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Magnify" Width="20" Height="20" VerticalAlignment="Center" Foreground="#90A4AE" Margin="10,0,5,0"/>
+                                <Grid>
+                                    <TextBlock Text="Tìm kiếm theo tên vật liệu, tên loại vật liệu..." Foreground="#B0BEC5" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="13" IsHitTestVisible="False">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Text, ElementName=txtSearch}" Value="">
+                                                        <Setter Property="Visibility" Value="Visible"/>
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding Text, ElementName=txtSearch}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Visible"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBox x:Name="txtSearch" Width="300" 
+                                             BorderThickness="0" Background="Transparent" VerticalContentAlignment="Center"
+                                             Text="{Binding SearchKeyword, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" FontSize="13" Padding="5,0,5,0"/>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                <ListView Grid.Row="1" ItemsSource="{Binding VatLieuView}" SelectedItem="{Binding SelectedVL,Mode=TwoWay}" BorderThickness="0">
                     <ListView.Resources>
                         <Style TargetType="{x:Type ListViewItem}">
                             <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
@@ -125,6 +157,7 @@
                         </GridView>
                     </ListView.View>
                 </ListView>
+                </Grid>
             </materialDesign:Card>
 
             <materialDesign:Card Grid.Row="2">

@@ -80,7 +80,45 @@
             </materialDesign:Card>
 
             <materialDesign:Card Grid.Row="1" Margin="5" VerticalAlignment="Stretch">
-                <ListView ItemsSource="{Binding DSPhieuChi}" 
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+                        <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Background="White" Height="35" Margin="0,0,10,0">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Magnify" Width="20" Height="20" VerticalAlignment="Center" Foreground="#90A4AE" Margin="10,0,5,0"/>
+                                <Grid>
+                                    <TextBlock Text="Tìm kiếm theo mã phiếu chi..." Foreground="#B0BEC5" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="13" IsHitTestVisible="False">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Text, ElementName=txtSearch}" Value="">
+                                                        <Setter Property="Visibility" Value="Visible"/>
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding Text, ElementName=txtSearch}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Visible"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBox x:Name="txtSearch" Width="200" 
+                                             BorderThickness="0" Background="Transparent" VerticalContentAlignment="Center"
+                                             Text="{Binding SearchKeyword, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" FontSize="13" Padding="5,0,5,0"/>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                        
+                        <Label Content="Từ ngày:" VerticalAlignment="Center"/>
+                        <DatePicker Width="120" Margin="5,0,10,0" SelectedDate="{Binding FilterTuNgay, UpdateSourceTrigger=PropertyChanged}"/>
+                        
+                        <Label Content="Đến ngày:" VerticalAlignment="Center"/>
+                        <DatePicker Width="120" Margin="5,0,10,0" SelectedDate="{Binding FilterDenNgay, UpdateSourceTrigger=PropertyChanged}"/>
+                    </StackPanel>
+                <ListView Grid.Row="1" ItemsSource="{Binding PhieuChiView}" 
                           SelectedItem="{Binding SelectedPhieuChi,Mode=TwoWay}"
                           ScrollViewer.VerticalScrollBarVisibility="Auto"
                           ScrollViewer.HorizontalScrollBarVisibility="Auto">
@@ -101,6 +139,7 @@
                         </GridView>
                     </ListView.View>
                 </ListView>
+                </Grid>
             </materialDesign:Card>
 
             <materialDesign:Card Grid.Row="2" Margin="5">
@@ -133,6 +172,7 @@
                     <Button Command="{Binding AddCommand}" Content="Lập phiếu chi" />
                     <Button Command="{Binding UpdateCommand}" Content="Sửa" Background="#FF9800"/>
                     <Button Command="{Binding RemoveCommand}" Content="Xóa" Background="#F44336"/>
+                    <Button x:Name="btnPrint" Content="🖨️ In Phiếu Chi" Background="#00BCD4" Width="120" Click="btnPrint_Click"/>
                 </WrapPanel>
             </materialDesign:Card>
         </Grid>

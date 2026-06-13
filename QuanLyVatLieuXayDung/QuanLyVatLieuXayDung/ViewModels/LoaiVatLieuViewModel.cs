@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.ComponentModel;
+using System.Windows.Data;
 
 namespace QuanLyVatLieuXayDung.ViewModels
 {
@@ -27,6 +29,26 @@ namespace QuanLyVatLieuXayDung.ViewModels
 				}
 			}
 		}
+
+        private ICollectionView _LoaiVatLieuView;
+        public ICollectionView LoaiVatLieuView
+        {
+            get => _LoaiVatLieuView;
+            set { _LoaiVatLieuView = value; OnPropertyChanged(nameof(LoaiVatLieuView)); }
+        }
+
+        private string _SearchKeyword;
+        public string SearchKeyword
+        {
+            get => _SearchKeyword;
+            set
+            {
+                _SearchKeyword = value;
+                OnPropertyChanged(nameof(SearchKeyword));
+                LoaiVatLieuView?.Refresh();
+            }
+        }
+
 		private LoaiVatLieu _SelectedLoai;
 
 		public LoaiVatLieu SelectedLoai
@@ -78,6 +100,14 @@ namespace QuanLyVatLieuXayDung.ViewModels
                 list[i].STT = i + 1;
             }
             DSLoai = new ObservableCollection<LoaiVatLieu>(list);
+
+            LoaiVatLieuView = CollectionViewSource.GetDefaultView(DSLoai);
+            LoaiVatLieuView.Filter = (obj) =>
+            {
+                if (string.IsNullOrWhiteSpace(SearchKeyword)) return true;
+                var item = obj as LoaiVatLieu;
+                return item != null && item.DisplayName != null && item.DisplayName.ToLower().Contains(SearchKeyword.ToLower());
+            };
         }
         private string AutoCreateID()
         {

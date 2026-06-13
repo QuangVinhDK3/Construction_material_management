@@ -3,7 +3,10 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
+using System.ComponentModel;
+using System.Windows.Data;
 using QuanLyVatLieuXayDung.Models;
+
 
 namespace QuanLyVatLieuXayDung.ViewModels
 {
@@ -22,6 +25,27 @@ namespace QuanLyVatLieuXayDung.ViewModels
         {
             get => _role;
             set { _role = value; OnPropertyChanged(); }
+        }
+
+        private ICollectionView _NhanVienView;
+        public ICollectionView NhanVienView
+        {
+            get => _NhanVienView;
+            set { _NhanVienView = value; OnPropertyChanged(); }
+        }
+
+        private string _SearchKeyword;
+        public string SearchKeyword
+        {
+            get => _SearchKeyword;
+            set { _SearchKeyword = value; OnPropertyChanged(); NhanVienView?.Refresh(); }
+        }
+
+        private string _FilterRole;
+        public string FilterRole
+        {
+            get => _FilterRole;
+            set { _FilterRole = value; OnPropertyChanged(); NhanVienView?.Refresh(); }
         }
         #endregion
 
@@ -98,6 +122,23 @@ namespace QuanLyVatLieuXayDung.ViewModels
                     }
                 }
                 ListNguoiDung = new ObservableCollection<NguoiDung>(list);
+
+                NhanVienView = CollectionViewSource.GetDefaultView(ListNguoiDung);
+                NhanVienView.Filter = (obj) =>
+                {
+                    var item = obj as NguoiDung;
+                    if (item == null) return false;
+                    
+                    bool matchKeyword = string.IsNullOrWhiteSpace(SearchKeyword) || 
+                                        (item.ID != null && item.ID.ToLower().Contains(SearchKeyword.ToLower())) ||
+                                        (item.DisplayName != null && item.DisplayName.ToLower().Contains(SearchKeyword.ToLower())) ||
+                                        (item.UserName != null && item.UserName.ToLower().Contains(SearchKeyword.ToLower()));
+                    
+                    bool matchRole = string.IsNullOrWhiteSpace(FilterRole) || FilterRole == "Tất cả" || 
+                                     (item.NguoiDungRole != null && item.NguoiDungRole.DisplayName == FilterRole);
+                                       
+                    return matchKeyword && matchRole;
+                };
             }
             catch (Exception ex)
             {

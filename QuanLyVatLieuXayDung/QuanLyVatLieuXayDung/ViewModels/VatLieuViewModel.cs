@@ -8,6 +8,9 @@ using QuanLyVatLieuXayDung.Models;
 using System.Windows.Input; // Thêm để sử dụng ICommand
 using System.Windows;       // Thêm để sử dụng MessageBox
 using System.Data.Entity;   // Thêm để sử dụng Include()
+using System.ComponentModel;
+using System.Windows.Data;
+
 
 namespace QuanLyVatLieuXayDung.ViewModels
 {
@@ -26,6 +29,25 @@ namespace QuanLyVatLieuXayDung.ViewModels
         {
             get { return _DSLoaiVL; }
             set { if (_DSLoaiVL != value) { _DSLoaiVL = value; OnPropertyChanged(nameof(DSLoaiVL)); } }
+        }
+
+        private ICollectionView _VatLieuView;
+        public ICollectionView VatLieuView
+        {
+            get => _VatLieuView;
+            set { _VatLieuView = value; OnPropertyChanged(nameof(VatLieuView)); }
+        }
+
+        private string _SearchKeyword;
+        public string SearchKeyword
+        {
+            get => _SearchKeyword;
+            set 
+            { 
+                _SearchKeyword = value; 
+                OnPropertyChanged(nameof(SearchKeyword)); 
+                VatLieuView?.Refresh(); 
+            }
         }
 
         #endregion
@@ -188,7 +210,19 @@ namespace QuanLyVatLieuXayDung.ViewModels
                     list[i].TrangThai = "Còn hàng";
             }
             DSVatLieu = new ObservableCollection<VatLieu>(list);
+
+            VatLieuView = CollectionViewSource.GetDefaultView(DSVatLieu);
+            VatLieuView.Filter = (obj) =>
+            {
+                if (string.IsNullOrWhiteSpace(SearchKeyword)) return true;
+                var item = obj as VatLieu;
+                if (item == null) return false;
+                string keyword = SearchKeyword.ToLower();
+                return (item.DisplayName != null && item.DisplayName.ToLower().Contains(keyword)) ||
+                       (item.LoaiVatLieu != null && item.LoaiVatLieu.DisplayName != null && item.LoaiVatLieu.DisplayName.ToLower().Contains(keyword));
+            };
         }
+
 
         // ĐÃ SỬA: Dọn dẹp chính xác các trường nhập liệu của Vật liệu
         private void ClearFields()

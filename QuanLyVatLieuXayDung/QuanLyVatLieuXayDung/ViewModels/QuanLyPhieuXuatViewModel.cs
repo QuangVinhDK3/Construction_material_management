@@ -6,6 +6,9 @@ using System.Windows;
 using System.Windows.Input;
 using QuanLyVatLieuXayDung.Models;
 using QuanLyVatLieuXayDung.Views; // For opening CRUDPhieuXuatView
+using System.ComponentModel;
+using System.Windows.Data;
+
 
 namespace QuanLyVatLieuXayDung.ViewModels
 {
@@ -31,6 +34,48 @@ namespace QuanLyVatLieuXayDung.ViewModels
         {
             get => _DSNguoiDung;
             set { _DSNguoiDung = value; OnPropertyChanged(nameof(DSNguoiDung)); }
+        }
+
+        private ICollectionView _PhieuXuatView;
+        public ICollectionView PhieuXuatView
+        {
+            get => _PhieuXuatView;
+            set { _PhieuXuatView = value; OnPropertyChanged(nameof(PhieuXuatView)); }
+        }
+
+        private string _SearchKeyword;
+        public string SearchKeyword
+        {
+            get => _SearchKeyword;
+            set { _SearchKeyword = value; OnPropertyChanged(nameof(SearchKeyword)); PhieuXuatView?.Refresh(); }
+        }
+
+        private DateTime? _FilterTuNgay;
+        public DateTime? FilterTuNgay
+        {
+            get => _FilterTuNgay;
+            set { _FilterTuNgay = value; OnPropertyChanged(nameof(FilterTuNgay)); PhieuXuatView?.Refresh(); }
+        }
+
+        private DateTime? _FilterDenNgay;
+        public DateTime? FilterDenNgay
+        {
+            get => _FilterDenNgay;
+            set { _FilterDenNgay = value; OnPropertyChanged(nameof(FilterDenNgay)); PhieuXuatView?.Refresh(); }
+        }
+
+        private string _FilterStatus;
+        public string FilterStatus
+        {
+            get => _FilterStatus;
+            set { _FilterStatus = value; OnPropertyChanged(nameof(FilterStatus)); PhieuXuatView?.Refresh(); }
+        }
+
+        private string _FilterPhuongThucThanhToan;
+        public string FilterPhuongThucThanhToan
+        {
+            get => _FilterPhuongThucThanhToan;
+            set { _FilterPhuongThucThanhToan = value; OnPropertyChanged(nameof(FilterPhuongThucThanhToan)); PhieuXuatView?.Refresh(); }
         }
         #endregion
 
@@ -141,6 +186,7 @@ namespace QuanLyVatLieuXayDung.ViewModels
         public ICommand UpdateCommand { get; set; }
         public ICommand RemoveCommand { get; set; }
         public ICommand OpenDetailsCommand { get; set; }
+        public ICommand ThuNoCommand { get; set; }
         #endregion
 
         public QuanLyPhieuXuatViewModel()
@@ -155,6 +201,7 @@ namespace QuanLyVatLieuXayDung.ViewModels
             RemoveCommand = new RelayCommand<object>((p) => SelectedPX != null, (p) => Remove());
 
             OpenDetailsCommand = new RelayCommand<object>((p) => true, (p) => OpenDetails());
+            ThuNoCommand = new RelayCommand<object>((p) => SelectedPX != null && SelectedPX.ConNo > 0, (p) => ThuNo());
         }
 
         private void RefreshData()
@@ -166,6 +213,27 @@ namespace QuanLyVatLieuXayDung.ViewModels
                 .AsNoTracking()
                 .ToList();
             DSPhieuXuat = new ObservableCollection<PhieuXuat>(list);
+
+            PhieuXuatView = CollectionViewSource.GetDefaultView(DSPhieuXuat);
+            PhieuXuatView.Filter = (obj) =>
+            {
+                var item = obj as PhieuXuat;
+                if (item == null) return false;
+                
+                bool matchKeyword = string.IsNullOrWhiteSpace(SearchKeyword) || 
+                                    (item.ID != null && item.ID.ToLower().Contains(SearchKeyword.ToLower()));
+                
+                bool matchTuNgay = !FilterTuNgay.HasValue || (item.DateOutput >= FilterTuNgay.Value.Date);
+                bool matchDenNgay = !FilterDenNgay.HasValue || (item.DateOutput <= FilterDenNgay.Value.Date.AddDays(1).AddTicks(-1));
+                
+                bool matchStatus = string.IsNullOrWhiteSpace(FilterStatus) || FilterStatus == "Tất cả" || 
+                                   (item.Status == FilterStatus);
+                                   
+                bool matchPTTT = string.IsNullOrWhiteSpace(FilterPhuongThucThanhToan) || FilterPhuongThucThanhToan == "Tất cả" || 
+                                 (item.PhuongThucThanhToan == FilterPhuongThucThanhToan);
+                                   
+                return matchKeyword && matchTuNgay && matchDenNgay && matchStatus && matchPTTT;
+            };
         }
 
         private void ClearFields()
@@ -180,6 +248,24 @@ namespace QuanLyVatLieuXayDung.ViewModels
             SoTienDaThanhToan = 0;
             PhuongThucThanhToan = string.Empty;
             SelectedPX = null;
+        }
+
+        private void ThuNo()
+        {
+            if (SelectedPX == null) return;
+            
+            var view = new QuanLyPhieuThuView();
+            if (view.DataContext is PhieuThuViewModel vm)
+            {
+                vm.IDKhachHang = SelectedPX.IDCustomer;
+                vm.SelectedKhachHang = vm.DSKhachHang.FirstOrDefault(k => k.ID == SelectedPX.IDCustomer);
+                vm.SoTien = SelectedPX.ConNo;
+                vm.NoiDung = $"Thu nợ cho Phiếu xuất {SelectedPX.ID}";
+            }
+            view.ShowDialog();
+            
+            // Reload data after close
+            RefreshData();
         }
 
         public void Add()

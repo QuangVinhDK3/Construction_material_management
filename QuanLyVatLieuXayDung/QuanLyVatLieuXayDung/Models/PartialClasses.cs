@@ -86,7 +86,7 @@ namespace QuanLyVatLieuXayDung.Models
             get
             {
                 double tongGiaTri = 0;
-                if (ChiTietPhieuXuats != null)
+                if (ChiTietPhieuXuats != null && ChiTietPhieuXuats.Count > 0)
                 {
                     tongGiaTri = ChiTietPhieuXuats.Sum(ct => (ct.Counts ?? 0) * (ct.Price ?? 0));
                 }
@@ -95,9 +95,7 @@ namespace QuanLyVatLieuXayDung.Models
                     tongGiaTri = Total ?? 0;
                 }
                 
-                // Trừ đi chiết khấu
-                double chietKhau = this.ChietKhau ?? 0;
-                return tongGiaTri - chietKhau;
+                return tongGiaTri;
             }
         }
 
@@ -105,7 +103,8 @@ namespace QuanLyVatLieuXayDung.Models
         {
             get
             {
-                return TongTien - (this.SoTienDaThanhToan ?? 0);
+                double chietKhau = this.ChietKhau ?? 0;
+                return TongTien - chietKhau - (this.SoTienDaThanhToan ?? 0);
             }
         }
     }
@@ -116,6 +115,7 @@ namespace QuanLyVatLieuXayDung.Models
         public int SoLuongTon { get; set; }
         public double GiaXuat { get; set; }
         public string TrangThai { get; set; }
+        public int SoNgayUDong { get; set; }
     }
 
     public partial class NguoiDung

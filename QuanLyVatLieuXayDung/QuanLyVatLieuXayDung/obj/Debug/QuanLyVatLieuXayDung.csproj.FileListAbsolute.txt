@@ -202,3 +202,5 @@ D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanL
 D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\QuanLyPhieuThuView.baml
 D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\LichSuGiaVatLieuView.baml
 D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\obj\Debug\Views\LichSuGiaVatLieuView.g.cs
+D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\EPPlus.dll
+D:\Công nghệ.NET (Lớp)\Đồ_Án_NET\Construction_material_management\QuanLyVatLieuXayDung\QuanLyVatLieuXayDung\bin\Debug\EPPlus.xml

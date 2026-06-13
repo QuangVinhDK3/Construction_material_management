@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows; // Bổ sung thư viện này cho MessageBox
 using System.Windows.Input;
+using System.ComponentModel;
+using System.Windows.Data;
+
 
 namespace QuanLyVatLieuXayDung.ViewModels
 {
@@ -19,6 +22,34 @@ namespace QuanLyVatLieuXayDung.ViewModels
         {
             get { return _DSKhach; }
             set { if (_DSKhach != value) { _DSKhach = value; OnPropertyChanged(nameof(DSKhach)); } }
+        }
+
+        private ICollectionView _KhachHangView;
+        public ICollectionView KhachHangView
+        {
+            get => _KhachHangView;
+            set { _KhachHangView = value; OnPropertyChanged(nameof(KhachHangView)); }
+        }
+
+        private string _SearchKeyword;
+        public string SearchKeyword
+        {
+            get => _SearchKeyword;
+            set { _SearchKeyword = value; OnPropertyChanged(nameof(SearchKeyword)); KhachHangView?.Refresh(); }
+        }
+
+        private DateTime? _FilterTuNgay;
+        public DateTime? FilterTuNgay
+        {
+            get => _FilterTuNgay;
+            set { _FilterTuNgay = value; OnPropertyChanged(nameof(FilterTuNgay)); KhachHangView?.Refresh(); }
+        }
+
+        private DateTime? _FilterDenNgay;
+        public DateTime? FilterDenNgay
+        {
+            get => _FilterDenNgay;
+            set { _FilterDenNgay = value; OnPropertyChanged(nameof(FilterDenNgay)); KhachHangView?.Refresh(); }
         }
 
         private KhachHang _SelectedKH;
@@ -108,6 +139,22 @@ namespace QuanLyVatLieuXayDung.ViewModels
                 list[i].STT = i + 1;
             }
             DSKhach = new ObservableCollection<KhachHang>(list);
+
+            KhachHangView = CollectionViewSource.GetDefaultView(DSKhach);
+            KhachHangView.Filter = (obj) =>
+            {
+                var item = obj as KhachHang;
+                if (item == null) return false;
+                
+                bool matchKeyword = string.IsNullOrWhiteSpace(SearchKeyword) || 
+                                    (item.ID != null && item.ID.ToLower().Contains(SearchKeyword.ToLower())) ||
+                                    (item.DisplayName != null && item.DisplayName.ToLower().Contains(SearchKeyword.ToLower()));
+                
+                bool matchTuNgay = !FilterTuNgay.HasValue || (item.ContractDate >= FilterTuNgay.Value.Date);
+                bool matchDenNgay = !FilterDenNgay.HasValue || (item.ContractDate <= FilterDenNgay.Value.Date.AddDays(1).AddTicks(-1));
+                                   
+                return matchKeyword && matchTuNgay && matchDenNgay;
+            };
         }
 
         private string AutoCreateID()

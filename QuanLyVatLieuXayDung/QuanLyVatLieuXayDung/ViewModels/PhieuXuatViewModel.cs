@@ -5,6 +5,9 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using QuanLyVatLieuXayDung.Models;
+using System.ComponentModel;
+using System.Windows.Data;
+
 
 namespace QuanLyVatLieuXayDung.ViewModels
 {
@@ -16,6 +19,20 @@ namespace QuanLyVatLieuXayDung.ViewModels
         {
             get => _DSCTPhieuXuat;
             set { _DSCTPhieuXuat = value; OnPropertyChanged(); }
+        }
+
+        private ICollectionView _CTPhieuXuatView;
+        public ICollectionView CTPhieuXuatView
+        {
+            get => _CTPhieuXuatView;
+            set { _CTPhieuXuatView = value; OnPropertyChanged(); }
+        }
+
+        private string _SearchKeyword;
+        public string SearchKeyword
+        {
+            get => _SearchKeyword;
+            set { _SearchKeyword = value; OnPropertyChanged(); CTPhieuXuatView?.Refresh(); }
         }
 
         private ObservableCollection<VatLieu> _DSVatLieu;
@@ -153,6 +170,17 @@ namespace QuanLyVatLieuXayDung.ViewModels
                 list[i].STT = i + 1;
             }
             DSCTPhieuXuat = new ObservableCollection<ChiTietPhieuXuat>(list);
+
+            CTPhieuXuatView = CollectionViewSource.GetDefaultView(DSCTPhieuXuat);
+            CTPhieuXuatView.Filter = (obj) =>
+            {
+                var item = obj as ChiTietPhieuXuat;
+                if (item == null) return false;
+                if (string.IsNullOrWhiteSpace(SearchKeyword)) return true;
+                string keyword = SearchKeyword.ToLower();
+                return (item.ID != null && item.ID.ToLower().Contains(keyword)) ||
+                       (item.IDOutput != null && item.IDOutput.ToLower().Contains(keyword));
+            };
         }
 
         // HÀM XỬ LÝ LOGIC TỒN KHO
@@ -292,6 +320,10 @@ namespace QuanLyVatLieuXayDung.ViewModels
                     var ctpx = DataProvider.Ins.DB.ChiTietPhieuXuats.SingleOrDefault(p => p.ID == SelectedCTPX.ID);
                     if (ctpx != null)
                     {
+                        // Remove from parent collections to prevent EF from trying to UPDATE FK to NULL
+                        if (ctpx.PhieuXuat != null) ctpx.PhieuXuat.ChiTietPhieuXuats.Remove(ctpx);
+                        if (ctpx.VatLieu != null) ctpx.VatLieu.ChiTietPhieuXuats.Remove(ctpx);
+
                         DataProvider.Ins.DB.ChiTietPhieuXuats.Remove(ctpx);
                         DataProvider.Ins.DB.SaveChanges();
 

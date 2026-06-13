@@ -44,7 +44,14 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Background="#263238" Grid.Column="0">
+            <Grid Background="#263238" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                
+                <StackPanel Grid.Row="0">
                 <Grid Height="50" Margin="0,30,0,0">
                     <Border Background="#FF8F00" Height="25" CornerRadius="3,0,0,3" Width="6" HorizontalAlignment="Right"/>
                     <TextBlock Text="Xây Dựng 3V"
@@ -184,7 +191,30 @@
                         
                     </MenuItem>
                 </Menu>
-            </StackPanel>
+                </StackPanel>
+                
+                <!-- Nút Đăng Xuất cố định dưới cùng -->
+                <Button Grid.Row="2" Command="{Binding DangXuatCommand}" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
+                        Margin="15,10,15,20" Height="45" Background="#37474F" Foreground="White" BorderThickness="0"
+                        HorizontalContentAlignment="Left" Cursor="Hand">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="border" Background="{TemplateBinding Background}" CornerRadius="8">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="180" Margin="10,0,0,0">
+                                    <materialDesign:PackIcon x:Name="icon" Kind="Logout" Width="22" Height="22" Foreground="#FF5252" VerticalAlignment="Center"/>
+                                    <TextBlock x:Name="text" Text="Đăng xuất" Margin="15,0,0,0" VerticalAlignment="Center" FontSize="15" FontWeight="SemiBold" Foreground="White"/>
+                                </StackPanel>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="border" Property="Background" Value="#E53935"/>
+                                    <Setter TargetName="icon" Property="Foreground" Value="White"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
 
             <Grid Name="Main" Grid.Column="1">
                 <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Orientation="Horizontal" Margin="0,0,15,10" Grid.Row="2" Height="15" Width="84">

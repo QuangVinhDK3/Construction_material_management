@@ -6,6 +6,9 @@ using System.Windows;
 using System.Windows.Input;
 using QuanLyVatLieuXayDung.Models;
 using QuanLyVatLieuXayDung.Views; // For opening CRUDPhieuNhapView
+using System.ComponentModel;
+using System.Windows.Data;
+
 
 namespace QuanLyVatLieuXayDung.ViewModels
 {
@@ -24,6 +27,41 @@ namespace QuanLyVatLieuXayDung.ViewModels
         {
             get => _DSNhaCC;
             set { _DSNhaCC = value; OnPropertyChanged(nameof(DSNhaCC)); }
+        }
+
+        private ICollectionView _PhieuNhapView;
+        public ICollectionView PhieuNhapView
+        {
+            get => _PhieuNhapView;
+            set { _PhieuNhapView = value; OnPropertyChanged(nameof(PhieuNhapView)); }
+        }
+
+        private string _SearchKeyword;
+        public string SearchKeyword
+        {
+            get => _SearchKeyword;
+            set { _SearchKeyword = value; OnPropertyChanged(nameof(SearchKeyword)); PhieuNhapView?.Refresh(); }
+        }
+
+        private DateTime? _FilterTuNgay;
+        public DateTime? FilterTuNgay
+        {
+            get => _FilterTuNgay;
+            set { _FilterTuNgay = value; OnPropertyChanged(nameof(FilterTuNgay)); PhieuNhapView?.Refresh(); }
+        }
+
+        private DateTime? _FilterDenNgay;
+        public DateTime? FilterDenNgay
+        {
+            get => _FilterDenNgay;
+            set { _FilterDenNgay = value; OnPropertyChanged(nameof(FilterDenNgay)); PhieuNhapView?.Refresh(); }
+        }
+
+        private string _FilterStatus;
+        public string FilterStatus
+        {
+            get => _FilterStatus;
+            set { _FilterStatus = value; OnPropertyChanged(nameof(FilterStatus)); PhieuNhapView?.Refresh(); }
         }
         #endregion
 
@@ -115,6 +153,24 @@ namespace QuanLyVatLieuXayDung.ViewModels
                 .AsNoTracking()
                 .ToList();
             DSPhieuNhap = new ObservableCollection<PhieuNhap>(list);
+
+            PhieuNhapView = CollectionViewSource.GetDefaultView(DSPhieuNhap);
+            PhieuNhapView.Filter = (obj) =>
+            {
+                var item = obj as PhieuNhap;
+                if (item == null) return false;
+                
+                bool matchKeyword = string.IsNullOrWhiteSpace(SearchKeyword) || 
+                                    (item.ID != null && item.ID.ToLower().Contains(SearchKeyword.ToLower()));
+                
+                bool matchTuNgay = !FilterTuNgay.HasValue || (item.DateInput >= FilterTuNgay.Value.Date);
+                bool matchDenNgay = !FilterDenNgay.HasValue || (item.DateInput <= FilterDenNgay.Value.Date.AddDays(1).AddTicks(-1));
+                
+                bool matchStatus = string.IsNullOrWhiteSpace(FilterStatus) || FilterStatus == "Tất cả" || 
+                                   (item.Status == FilterStatus);
+                                   
+                return matchKeyword && matchTuNgay && matchDenNgay && matchStatus;
+            };
         }
 
         private void ClearFields()

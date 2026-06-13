@@ -4,6 +4,10 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
+using System.ComponentModel;
+using System.Windows.Data;
+using QuanLyVatLieuXayDung.Views;
+
 
 namespace QuanLyVatLieuXayDung.ViewModels
 {
@@ -14,6 +18,34 @@ namespace QuanLyVatLieuXayDung.ViewModels
         {
             get => _DSPhieuChi;
             set { _DSPhieuChi = value; OnPropertyChanged(); }
+        }
+
+        private ICollectionView _PhieuChiView;
+        public ICollectionView PhieuChiView
+        {
+            get => _PhieuChiView;
+            set { _PhieuChiView = value; OnPropertyChanged(); }
+        }
+
+        private string _SearchKeyword;
+        public string SearchKeyword
+        {
+            get => _SearchKeyword;
+            set { _SearchKeyword = value; OnPropertyChanged(); PhieuChiView?.Refresh(); }
+        }
+
+        private DateTime? _FilterTuNgay;
+        public DateTime? FilterTuNgay
+        {
+            get => _FilterTuNgay;
+            set { _FilterTuNgay = value; OnPropertyChanged(); PhieuChiView?.Refresh(); }
+        }
+
+        private DateTime? _FilterDenNgay;
+        public DateTime? FilterDenNgay
+        {
+            get => _FilterDenNgay;
+            set { _FilterDenNgay = value; OnPropertyChanged(); PhieuChiView?.Refresh(); }
         }
 
         private ObservableCollection<NhaCungCap> _DSNhaCungCap;
@@ -89,12 +121,27 @@ namespace QuanLyVatLieuXayDung.ViewModels
         {
             DSNhaCungCap = new ObservableCollection<NhaCungCap>(DataProvider.Ins.DB.NhaCungCaps.ToList());
             
-            var list = DataProvider.Ins.DB.PhieuChis.ToList();
+            var list = DataProvider.Ins.DB.PhieuChis.Include("NguoiDung").Include("NhaCungCap").ToList();
             for (int i = 0; i < list.Count; i++)
             {
                 list[i].STT = i + 1;
             }
             DSPhieuChi = new ObservableCollection<PhieuChi>(list);
+
+            PhieuChiView = CollectionViewSource.GetDefaultView(DSPhieuChi);
+            PhieuChiView.Filter = (obj) =>
+            {
+                var item = obj as PhieuChi;
+                if (item == null) return false;
+                
+                bool matchKeyword = string.IsNullOrWhiteSpace(SearchKeyword) || 
+                                    (item.ID != null && item.ID.ToLower().Contains(SearchKeyword.ToLower()));
+                
+                bool matchTuNgay = !FilterTuNgay.HasValue || (item.NgayChi >= FilterTuNgay.Value.Date);
+                bool matchDenNgay = !FilterDenNgay.HasValue || (item.NgayChi <= FilterDenNgay.Value.Date.AddDays(1).AddTicks(-1));
+                                   
+                return matchKeyword && matchTuNgay && matchDenNgay;
+            };
         }
 
         private void ClearFields()
@@ -128,7 +175,8 @@ namespace QuanLyVatLieuXayDung.ViewModels
             }
 
             string currentUserId = null;
-            if (Application.Current.MainWindow != null && Application.Current.MainWindow.DataContext is MainWindowViewModel mainVM)
+            var mainWin = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+            if (mainWin != null && mainWin.DataContext is MainWindowViewModel mainVM)
             {
                 currentUserId = mainVM.CurrentNguoiDung?.ID;
             }

@@ -1,4 +1,4 @@
-﻿using QuanLyVatLieuXayDung.Models;
+using QuanLyVatLieuXayDung.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -7,6 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.ComponentModel;
+using System.Windows.Data;
+
 
 namespace QuanLyVatLieuXayDung.ViewModels
 {
@@ -26,6 +29,35 @@ namespace QuanLyVatLieuXayDung.ViewModels
                 }
             }
         }
+        
+        private ICollectionView _NhaCungCapView;
+        public ICollectionView NhaCungCapView
+        {
+            get => _NhaCungCapView;
+            set { _NhaCungCapView = value; OnPropertyChanged(nameof(NhaCungCapView)); }
+        }
+
+        private string _SearchKeyword;
+        public string SearchKeyword
+        {
+            get => _SearchKeyword;
+            set { _SearchKeyword = value; OnPropertyChanged(nameof(SearchKeyword)); NhaCungCapView?.Refresh(); }
+        }
+
+        private DateTime? _FilterTuNgay;
+        public DateTime? FilterTuNgay
+        {
+            get => _FilterTuNgay;
+            set { _FilterTuNgay = value; OnPropertyChanged(nameof(FilterTuNgay)); NhaCungCapView?.Refresh(); }
+        }
+
+        private DateTime? _FilterDenNgay;
+        public DateTime? FilterDenNgay
+        {
+            get => _FilterDenNgay;
+            set { _FilterDenNgay = value; OnPropertyChanged(nameof(FilterDenNgay)); NhaCungCapView?.Refresh(); }
+        }
+
         
 
         private NhaCungCap _SelectedNCC;
@@ -118,6 +150,22 @@ namespace QuanLyVatLieuXayDung.ViewModels
                 list[i].STT = i + 1;
             }
             DSNhaCC = new ObservableCollection<NhaCungCap>(list);
+
+            NhaCungCapView = CollectionViewSource.GetDefaultView(DSNhaCC);
+            NhaCungCapView.Filter = (obj) =>
+            {
+                var item = obj as NhaCungCap;
+                if (item == null) return false;
+                
+                bool matchKeyword = string.IsNullOrWhiteSpace(SearchKeyword) || 
+                                    (item.ID != null && item.ID.ToLower().Contains(SearchKeyword.ToLower())) ||
+                                    (item.DisplayName != null && item.DisplayName.ToLower().Contains(SearchKeyword.ToLower()));
+                
+                bool matchTuNgay = !FilterTuNgay.HasValue || (item.ContractDate >= FilterTuNgay.Value.Date);
+                bool matchDenNgay = !FilterDenNgay.HasValue || (item.ContractDate <= FilterDenNgay.Value.Date.AddDays(1).AddTicks(-1));
+                                   
+                return matchKeyword && matchTuNgay && matchDenNgay;
+            };
         }
 
         private string AutoCreateID()

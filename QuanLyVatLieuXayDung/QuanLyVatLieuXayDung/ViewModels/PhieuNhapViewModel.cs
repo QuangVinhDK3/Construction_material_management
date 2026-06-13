@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input; // ĐÃ BỔ SUNG THƯ VIỆN NÀY ĐỂ DÙNG ICOMMAND
 using QuanLyVatLieuXayDung.Models;
+using System.ComponentModel;
+using System.Windows.Data;
+
 
 namespace QuanLyVatLieuXayDung.ViewModels
 {
@@ -16,6 +19,20 @@ namespace QuanLyVatLieuXayDung.ViewModels
         {
             get => _DSCTPhieuNhap;
             set { _DSCTPhieuNhap = value; OnPropertyChanged(); }
+        }
+
+        private ICollectionView _CTPhieuNhapView;
+        public ICollectionView CTPhieuNhapView
+        {
+            get => _CTPhieuNhapView;
+            set { _CTPhieuNhapView = value; OnPropertyChanged(); }
+        }
+
+        private string _SearchKeyword;
+        public string SearchKeyword
+        {
+            get => _SearchKeyword;
+            set { _SearchKeyword = value; OnPropertyChanged(); CTPhieuNhapView?.Refresh(); }
         }
 
         private ObservableCollection<VatLieu> _DSVatLieu;
@@ -139,6 +156,17 @@ namespace QuanLyVatLieuXayDung.ViewModels
                 list[i].STT = i + 1;
             }
             DSCTPhieuNhap = new ObservableCollection<ChiTietPhieuNhap>(list);
+
+            CTPhieuNhapView = CollectionViewSource.GetDefaultView(DSCTPhieuNhap);
+            CTPhieuNhapView.Filter = (obj) =>
+            {
+                var item = obj as ChiTietPhieuNhap;
+                if (item == null) return false;
+                if (string.IsNullOrWhiteSpace(SearchKeyword)) return true;
+                string keyword = SearchKeyword.ToLower();
+                return (item.ID != null && item.ID.ToLower().Contains(keyword)) ||
+                       (item.IDINput != null && item.IDINput.ToLower().Contains(keyword));
+            };
         }
 
         private string AutoCreateID()
@@ -295,6 +323,10 @@ namespace QuanLyVatLieuXayDung.ViewModels
                     var ctpn = DataProvider.Ins.DB.ChiTietPhieuNhaps.SingleOrDefault(p => p.ID == SelectedCTPN.ID);
                     if (ctpn != null)
                     {
+                        // Remove from parent collections to prevent EF from trying to UPDATE FK to NULL
+                        if (ctpn.PhieuNhap != null) ctpn.PhieuNhap.ChiTietPhieuNhaps.Remove(ctpn);
+                        if (ctpn.VatLieu != null) ctpn.VatLieu.ChiTietPhieuNhaps.Remove(ctpn);
+
                         DataProvider.Ins.DB.ChiTietPhieuNhaps.Remove(ctpn);
                         DataProvider.Ins.DB.SaveChanges();
 
@@ -303,9 +335,18 @@ namespace QuanLyVatLieuXayDung.ViewModels
                         RefreshData();
                     }
                 }
-                catch (Exception)
+                catch (System.Data.Entity.Validation.DbEntityValidationException ex)
                 {
-                    MessageBox.Show("Không thể xóa do dữ liệu này đang được liên kết ở nơi khác!", "Lỗi hệ thống", MessageBoxButton.OK, MessageBoxImage.Error);
+                    var errorMessages = ex.EntityValidationErrors
+                            .SelectMany(x => x.ValidationErrors)
+                            .Select(x => x.PropertyName + ": " + x.ErrorMessage);
+                    string fullErrorMessage = string.Join("\n", errorMessages);
+                    MessageBox.Show("Lỗi xác thực dữ liệu:\n" + fullErrorMessage, "Lỗi hệ thống", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                catch (Exception ex)
+                {
+                    string msg = ex.InnerException?.InnerException?.Message ?? ex.InnerException?.Message ?? ex.Message;
+                    MessageBox.Show("Lỗi chi tiết: " + msg, "Lỗi hệ thống", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }

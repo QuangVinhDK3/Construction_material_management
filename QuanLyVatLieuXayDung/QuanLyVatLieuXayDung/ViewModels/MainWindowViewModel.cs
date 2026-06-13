@@ -77,25 +77,25 @@ namespace QuanLyVatLieuXayDung.ViewModels
         private void InitCommands()
         {
             // Tận dụng các biến IsAdmin, IsKho... để kiểm tra điều kiện bấm nút (CanExecute)
-            LoaiVatLieuCommand = new RelayCommand<object>((p) => true, (p) => { var wd = new CRUDLoaiVatLieuView(); wd.ShowDialog(); });
-            NhaCungCapCommand = new RelayCommand<object>((p) => IsDoiTac, (p) => { var wd = new CRUDNhaCungCapView(); wd.ShowDialog(); });
-            KhachHangCommand = new RelayCommand<object>((p) => IsDoiTac, (p) => { var wd = new CRUDKhachHangView(); wd.ShowDialog(); });
-            DoiTuongCommand = new RelayCommand<object>((p) => IsAdmin, (p) => { var wd = new CRUDDoiTuongView(); wd.ShowDialog(); });
+            LoaiVatLieuCommand = new RelayCommand<object>((p) => true, (p) => { var wd = new CRUDLoaiVatLieuView(); wd.ShowDialog(); TrangChuViewModel.RefreshDashboardData?.Invoke(); });
+            NhaCungCapCommand = new RelayCommand<object>((p) => IsDoiTac, (p) => { var wd = new CRUDNhaCungCapView(); wd.ShowDialog(); TrangChuViewModel.RefreshDashboardData?.Invoke(); });
+            KhachHangCommand = new RelayCommand<object>((p) => IsDoiTac, (p) => { var wd = new CRUDKhachHangView(); wd.ShowDialog(); TrangChuViewModel.RefreshDashboardData?.Invoke(); });
+            DoiTuongCommand = new RelayCommand<object>((p) => IsAdmin, (p) => { var wd = new CRUDDoiTuongView(); wd.ShowDialog(); TrangChuViewModel.RefreshDashboardData?.Invoke(); });
 
             // Chỉ Admin mới được quản lý nhân viên
-            NhanVienCommand = new RelayCommand<object>((p) => IsAdmin, (p) => { var wd = new CRUDNhanVienView(); wd.ShowDialog(); });
+            NhanVienCommand = new RelayCommand<object>((p) => IsAdmin, (p) => { var wd = new CRUDNhanVienView(); wd.ShowDialog(); TrangChuViewModel.RefreshDashboardData?.Invoke(); });
 
             // Chỉ kho hoặc Admin mới được nhập
-            QuanLyPhieuNhapCommand = new RelayCommand<object>((p) => IsKho, (p) => { var wd = new QuanLyPhieuNhapView(); wd.ShowDialog(); });
-            NhapKhoCommand = new RelayCommand<object>((p) => IsKho, (p) => { var wd = new CRUDPhieuNhapView(); wd.ShowDialog(); });
+            QuanLyPhieuNhapCommand = new RelayCommand<object>((p) => IsKho, (p) => { var wd = new QuanLyPhieuNhapView(); wd.ShowDialog(); TrangChuViewModel.RefreshDashboardData?.Invoke(); });
+            NhapKhoCommand = new RelayCommand<object>((p) => IsKho, (p) => { var wd = new CRUDPhieuNhapView(); wd.ShowDialog(); TrangChuViewModel.RefreshDashboardData?.Invoke(); });
 
             // Bán hàng (hoặc Admin) mới được quản lý phiếu xuất và phiếu thu
-            QuanLyPhieuXuatCommand = new RelayCommand<object>((p) => IsBanHang, (p) => { var wd = new QuanLyPhieuXuatView(); wd.ShowDialog(); });
-            XuatKhoCommand = new RelayCommand<object>((p) => IsBanHang, (p) => { var wd = new CRUDPhieuXuatView(); wd.ShowDialog(); });
-            QuanLyPhieuThuCommand = new RelayCommand<object>((p) => IsBanHang, (p) => { var wd = new QuanLyPhieuThuView(); wd.ShowDialog(); });
+            QuanLyPhieuXuatCommand = new RelayCommand<object>((p) => IsBanHang, (p) => { var wd = new QuanLyPhieuXuatView(); wd.ShowDialog(); TrangChuViewModel.RefreshDashboardData?.Invoke(); });
+            XuatKhoCommand = new RelayCommand<object>((p) => IsBanHang, (p) => { var wd = new CRUDPhieuXuatView(); wd.ShowDialog(); TrangChuViewModel.RefreshDashboardData?.Invoke(); });
+            QuanLyPhieuThuCommand = new RelayCommand<object>((p) => IsBanHang, (p) => { var wd = new QuanLyPhieuThuView(); wd.ShowDialog(); TrangChuViewModel.RefreshDashboardData?.Invoke(); });
             
             // Kế toán chi trả hoặc Admin
-            QuanLyPhieuChiCommand = new RelayCommand<object>((p) => IsKho || IsBanHang, (p) => { var wd = new QuanLyPhieuChiView(); wd.ShowDialog(); });
+            QuanLyPhieuChiCommand = new RelayCommand<object>((p) => IsKho || IsBanHang, (p) => { var wd = new QuanLyPhieuChiView(); wd.ShowDialog(); TrangChuViewModel.RefreshDashboardData?.Invoke(); });
 
             DangXuatCommand = new RelayCommand<object>((p) => true, (p) => DangXuat(p as Window));
             // Kích hoạt cập nhật lại giao diện tên người dùng trên Main khi tắt Form hồ sơ

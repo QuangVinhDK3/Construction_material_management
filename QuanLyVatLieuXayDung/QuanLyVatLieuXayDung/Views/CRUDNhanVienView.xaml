@@ -112,7 +112,49 @@
                         </materialDesign:Card>
 
                         <materialDesign:Card Grid.Row="1" Margin="0,0,0,10">
-                            <ListView ItemsSource="{Binding ListNguoiDung}" SelectedItem="{Binding SelectedNguoiDung, Mode=TwoWay}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                
+                                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+                                    <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Background="White" Height="35" Margin="0,0,10,0">
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="Magnify" Width="20" Height="20" VerticalAlignment="Center" Foreground="#90A4AE" Margin="10,0,5,0"/>
+                                            <Grid>
+                                                <TextBlock Text="Tìm kiếm theo mã, tên nhân viên..." Foreground="#B0BEC5" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="13" IsHitTestVisible="False">
+                                                    <TextBlock.Style>
+                                                        <Style TargetType="TextBlock">
+                                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding Text, ElementName=txtSearch}" Value="">
+                                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding Text, ElementName=txtSearch}" Value="{x:Null}">
+                                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </TextBlock.Style>
+                                                </TextBlock>
+                                                <TextBox x:Name="txtSearch" Width="250" 
+                                                         BorderThickness="0" Background="Transparent" VerticalContentAlignment="Center"
+                                                         Text="{Binding SearchKeyword, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" FontSize="13" Padding="5,0,5,0"/>
+                                            </Grid>
+                                        </StackPanel>
+                                    </Border>
+                                    
+                                    <Label Content="Bộ phận:" VerticalAlignment="Center"/>
+                                    <ComboBox Width="150" Margin="5,0,10,0" Text="{Binding FilterRole, UpdateSourceTrigger=PropertyChanged}">
+                                        <ComboBoxItem Content="Tất cả"/>
+                                        <ComboBoxItem Content="Quản trị viên"/>
+                                        <ComboBoxItem Content="Nhân viên kho"/>
+                                        <ComboBoxItem Content="Nhân viên kế toán"/>
+                                        <ComboBoxItem Content="Giám đốc"/>
+                                    </ComboBox>
+                                </StackPanel>
+                            <ListView Grid.Row="1" ItemsSource="{Binding NhanVienView}" SelectedItem="{Binding SelectedNguoiDung, Mode=TwoWay}">
                                 <ListView.ItemContainerStyle>
                                     <Style TargetType="ListViewItem">
                                         <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -128,6 +170,7 @@
                                     </GridView>
                                 </ListView.View>
                             </ListView>
+                            </Grid>
                         </materialDesign:Card>
 
                         <materialDesign:Card Grid.Row="2" Padding="5">
@@ -173,7 +216,42 @@
                         </Grid.RowDefinitions>
 
                         <materialDesign:Card Grid.Row="0" Margin="0,0,0,10">
-                            <ListView ItemsSource="{Binding ListNguoiDung}" SelectedItem="{Binding SelectedNguoiDung, Mode=TwoWay}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                
+                                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+                                    <Border CornerRadius="5" BorderBrush="#B0BEC5" BorderThickness="1" Background="White" Height="35" Margin="0,0,10,0">
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="Magnify" Width="20" Height="20" VerticalAlignment="Center" Foreground="#90A4AE" Margin="10,0,5,0"/>
+                                            <Grid>
+                                                <TextBlock Text="Tìm kiếm theo mã, tên nhân viên..." Foreground="#B0BEC5" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="13" IsHitTestVisible="False">
+                                                    <TextBlock.Style>
+                                                        <Style TargetType="TextBlock">
+                                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding Text, ElementName=txtSearchStatus}" Value="">
+                                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding Text, ElementName=txtSearchStatus}" Value="{x:Null}">
+                                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </TextBlock.Style>
+                                                </TextBlock>
+                                                <TextBox x:Name="txtSearchStatus" Width="250" 
+                                                         BorderThickness="0" Background="Transparent" VerticalContentAlignment="Center"
+                                                         Text="{Binding SearchKeyword, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" FontSize="13" Padding="5,0,5,0"/>
+                                            </Grid>
+                                        </StackPanel>
+                                    </Border>
+                                    
+
+                                </StackPanel>
+                            <ListView Grid.Row="1" ItemsSource="{Binding NhanVienView}" SelectedItem="{Binding SelectedNguoiDung, Mode=TwoWay}">
                                 <ListView.ItemContainerStyle>
                                     <Style TargetType="ListViewItem">
                                         <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -226,6 +304,7 @@
                                     </GridView>
                                 </ListView.View>
                             </ListView>
+                            </Grid>
                         </materialDesign:Card>
 
                         <materialDesign:Card Grid.Row="1" Padding="5">
